@@ -116,6 +116,57 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\Blue Goalie\Blue Goalie1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\BluePlayer\BluePlayer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\BluePlayer\BluePlayer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\Green Goalie\Green Goalie1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\GreenPlayer\GreenPlayer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\GreenPlayer\GreenPlayer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\Orange Goalie\Orange Goalie1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\OrangePlayer\OrangePlayer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\OrangePlayer\OrangePlayer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\Puck\Puck1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\Red Goalie\Red Goalie1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\RedPlayer\RedPlayer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\RedPlayer\RedPlayer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\White Goalie\White Goalie1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\WhitePlayer\WhitePlayer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\WhitePlayer\WhitePlayer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\graphics\Hockeyrink.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

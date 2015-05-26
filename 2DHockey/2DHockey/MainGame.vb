@@ -175,7 +175,7 @@
 
     Private Sub FrameTimer_Tick(sender As Object, e As EventArgs) Handles FrameTimer.Tick
         Framenum = Framenum + 1
-        If Framenum = 4 Then
+        If Framenum = 1 Then
             Framenum = 0
         End If
     End Sub
