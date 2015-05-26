@@ -3,8 +3,15 @@
     Dim playerXV, playerYV As Integer 'Player's X and Y Velocity
     Dim playerAccelerating As Boolean 'Whether the player is in the process of accelerating
     Dim heldByPlayer As Boolean 'Whether the puck is held by the player
+    Dim playerScore, compScore As Integer 'the scores of the respective teams
+
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
+        If objectCollisionDetect(puck, playerNet) Then
+            goalScored("player")
+        ElseIf objectCollisionDetect(puck, compNet) Then
+            goalScored("comp")
+        End If
         moveObject(player, playerXV, playerYV, playerAccelerating) 'calculates movement of player
         If objectCollisionDetect(puck, player) Then 'checks if player is touching puck
             heldByPlayer = True
@@ -116,8 +123,49 @@
     Private Sub shoot() 'makes the player shoot the puck, giving it a set forward velocity and random vertical velocity
         If heldByPlayer = True Then
             heldByPlayer = False
-            puckXV = -20
+            puckXV = 20
             puckYV = 10 - Rnd() * 20
         End If
+    End Sub
+
+    Sub goalScored(ByVal team As String) 'adds 1 to the score, then checks if any teams have at least 9 points, then triggers win if it's met
+        If team = "player" Then
+            playerScore += 1
+            updateScoreBoard()
+            resetGoal()
+        ElseIf team = "comp" Then
+            compScore += 1
+            updateScoreBoard()
+            resetGoal()
+        End If
+        If playerScore >= 9 Then
+            gameWin("player")
+        ElseIf compScore >= 9 Then
+            gameWin("comp")
+        End If
+    End Sub
+
+    Sub gameWin(ByRef team As String) 'announces winner of the game and allows player to replay or return to main menu
+        If team = "player" Then
+
+        Else
+
+        End If
+    End Sub
+
+    Sub updateScoreBoard() 'updates the scoreboard graphic to reflect the latest scores
+
+    End Sub
+
+    Sub resetGoal() 'resets the game after goals
+        tick.Stop()
+        puckXV = 0
+        puckYV = 0
+        playerXV = 0
+        playerYV = 0
+        Dim puckResetPosition As Point
+        Dim playerResetPosition As Point
+        Dim compResetPosition As Point
+        tick.Start()
     End Sub
 End Class

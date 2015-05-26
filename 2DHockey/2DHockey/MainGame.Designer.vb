@@ -26,8 +26,12 @@ Partial Class MainGame
         Me.tick = New System.Windows.Forms.Timer(Me.components)
         Me.player = New System.Windows.Forms.PictureBox()
         Me.puck = New System.Windows.Forms.PictureBox()
+        Me.playerNet = New System.Windows.Forms.PictureBox()
+        Me.compNet = New System.Windows.Forms.PictureBox()
         CType(Me.player, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.playerNet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.compNet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tick
@@ -51,22 +55,44 @@ Partial Class MainGame
         Me.puck.TabIndex = 1
         Me.puck.TabStop = False
         '
+        'playerNet
+        '
+        Me.playerNet.Location = New System.Drawing.Point(68, 121)
+        Me.playerNet.Name = "playerNet"
+        Me.playerNet.Size = New System.Drawing.Size(50, 100)
+        Me.playerNet.TabIndex = 2
+        Me.playerNet.TabStop = False
+        '
+        'compNet
+        '
+        Me.compNet.Location = New System.Drawing.Point(544, 121)
+        Me.compNet.Name = "compNet"
+        Me.compNet.Size = New System.Drawing.Size(50, 100)
+        Me.compNet.TabIndex = 3
+        Me.compNet.TabStop = False
+        '
         'MainGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(784, 361)
+        Me.Controls.Add(Me.compNet)
+        Me.Controls.Add(Me.playerNet)
         Me.Controls.Add(Me.puck)
         Me.Controls.Add(Me.player)
         Me.Name = "MainGame"
         Me.Text = "2D Hockey"
         CType(Me.player, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.playerNet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.compNet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents tick As System.Windows.Forms.Timer
     Friend WithEvents player As System.Windows.Forms.PictureBox
     Friend WithEvents puck As System.Windows.Forms.PictureBox
+    Friend WithEvents playerNet As System.Windows.Forms.PictureBox
+    Friend WithEvents compNet As System.Windows.Forms.PictureBox
 
 End Class
