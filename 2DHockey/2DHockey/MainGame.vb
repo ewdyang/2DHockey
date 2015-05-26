@@ -138,9 +138,9 @@
             updateScoreBoard()
             resetGoal()
         End If
-        If playerScore >= 9 Then
+        If playerScore >= 7 Then
             gameWin("player")
-        ElseIf compScore >= 9 Then
+        ElseIf compScore >= 7 Then
             gameWin("comp")
         End If
     End Sub
