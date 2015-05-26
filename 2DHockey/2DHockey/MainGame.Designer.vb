@@ -91,6 +91,9 @@ Partial Class MainGame
         Me.Controls.Add(Me.playerNet)
         Me.Controls.Add(Me.puck)
         Me.Controls.Add(Me.player)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "MainGame"
         Me.Text = "2D Hockey"
         CType(Me.player, System.ComponentModel.ISupportInitialize).EndInit()
