@@ -173,7 +173,7 @@
         tick.Start()
     End Sub
 
-    Private Sub FrameTimer_Tick(sender As Object, e As EventArgs) Handles FrameTimer.Tick
+    Private Sub FrameTimer_Tick(sender As Object, e As EventArgs) Handles FrameTimer.Tick 'used for animating players
         Framenum = Framenum + 1
         If Framenum = 1 Then
             Framenum = 0
