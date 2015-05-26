@@ -28,6 +28,8 @@ Partial Class MainGame
         Me.puck = New System.Windows.Forms.PictureBox()
         Me.playerNet = New System.Windows.Forms.PictureBox()
         Me.compNet = New System.Windows.Forms.PictureBox()
+        Me.PlayerAnimationList = New System.Windows.Forms.ImageList(Me.components)
+        Me.FrameTimer = New System.Windows.Forms.Timer(Me.components)
         CType(Me.player, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.playerNet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,6 +73,15 @@ Partial Class MainGame
         Me.compNet.TabIndex = 3
         Me.compNet.TabStop = False
         '
+        'PlayerAnimationList
+        '
+        Me.PlayerAnimationList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
+        Me.PlayerAnimationList.ImageSize = New System.Drawing.Size(16, 16)
+        Me.PlayerAnimationList.TransparentColor = System.Drawing.Color.Transparent
+        '
+        'FrameTimer
+        '
+        '
         'MainGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -94,5 +105,7 @@ Partial Class MainGame
     Friend WithEvents puck As System.Windows.Forms.PictureBox
     Friend WithEvents playerNet As System.Windows.Forms.PictureBox
     Friend WithEvents compNet As System.Windows.Forms.PictureBox
+    Friend WithEvents PlayerAnimationList As System.Windows.Forms.ImageList
+    Friend WithEvents FrameTimer As System.Windows.Forms.Timer
 
 End Class

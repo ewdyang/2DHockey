@@ -4,6 +4,7 @@
     Dim playerAccelerating As Boolean 'Whether the player is in the process of accelerating
     Dim heldByPlayer As Boolean 'Whether the puck is held by the player
     Dim playerScore, compScore As Integer 'the scores of the respective teams
+    Dim Framenum As Integer
 
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
@@ -31,12 +32,15 @@
                 End If
                 playerAccelerating = True 'player is accelerating
                 e.Handled = True 'control has been handled
+                player.Image = PlayerAnimationList.Images(Framenum)
             Case Keys.Right 'right arrow key
                 If playerXV < 15 Then
                     playerXV = playerXV + 15
                 End If
                 playerAccelerating = True
                 e.Handled = True
+                player.Image = PlayerAnimationList.Images(Framenum)
+                player.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
             Case Keys.Up 'up arrow key
                 If playerYV > -15 Then
                     playerYV = playerYV - 15
@@ -167,5 +171,12 @@
         Dim playerResetPosition As Point
         Dim compResetPosition As Point
         tick.Start()
+    End Sub
+
+    Private Sub FrameTimer_Tick(sender As Object, e As EventArgs) Handles FrameTimer.Tick
+        Framenum = Framenum + 1
+        If Framenum = 4 Then
+            Framenum = 0
+        End If
     End Sub
 End Class
