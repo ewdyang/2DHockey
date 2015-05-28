@@ -6,6 +6,9 @@
     Dim playerScore, compScore As Integer 'the scores of the respective teams
     Dim Framenum As Integer
 
+    Dim maxPlayerSpeed As Integer = 15 'max speed a player can accelerate to
+    Dim playerAccelerationSpeed As Integer = 5 'increments the player accelerates by
+
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
         If objectCollisionDetect(puck, playerNet) Then
@@ -27,29 +30,29 @@
     Private Sub arrowControls(sender As Object, e As KeyEventArgs) Handles Me.KeyDown 'Allows for control of player using arrow keys
         Select Case e.KeyCode
             Case Keys.Left 'left arrow key
-                If playerXV > -15 Then 'caps player max speed
-                    playerXV = playerXV - 15 'sets speed
+                If playerXV > -maxPlayerSpeed Then 'caps player max speed
+                    playerXV = playerXV - playerAccelerationSpeed 'sets speed
                 End If
                 playerAccelerating = True 'player is accelerating
                 e.Handled = True 'control has been handled
-                player.Image = PlayerAnimationList.Images(Framenum)
+                'player.Image = PlayerAnimationList.Images(Framenum)
             Case Keys.Right 'right arrow key
-                If playerXV < 15 Then
-                    playerXV = playerXV + 15
+                If playerXV < maxPlayerSpeed Then
+                    playerXV = playerXV + playerAccelerationSpeed
                 End If
                 playerAccelerating = True
                 e.Handled = True
-                player.Image = PlayerAnimationList.Images(Framenum)
-                player.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
+                'player.Image = PlayerAnimationList.Images(Framenum)
+                'player.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
             Case Keys.Up 'up arrow key
-                If playerYV > -15 Then
-                    playerYV = playerYV - 15
+                If playerYV > -maxPlayerSpeed Then
+                    playerYV = playerYV - playerAccelerationSpeed
                 End If
                 playerAccelerating = True
                 e.Handled = True
             Case Keys.Down 'down arrow key
-                If playerYV < 15 Then
-                    playerYV = playerYV + 15
+                If playerYV < maxPlayerSpeed Then
+                    playerYV = playerYV + playerAccelerationSpeed
                 End If
                 playerAccelerating = True
                 e.Handled = True
@@ -127,7 +130,7 @@
     Private Sub shoot() 'makes the player shoot the puck, giving it a set forward velocity and random vertical velocity
         If heldByPlayer = True Then
             heldByPlayer = False
-            puckXV = 20
+            puckXV = -20
             puckYV = 10 - Rnd() * 20
         End If
     End Sub
