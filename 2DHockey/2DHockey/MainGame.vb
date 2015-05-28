@@ -4,7 +4,7 @@
     Dim playerAccelerating As Boolean 'Whether the player is in the process of accelerating
     Dim heldByPlayer As Boolean 'Whether the puck is held by the player
     Dim playerScore, compScore As Integer 'the scores of the respective teams
-    Dim Framenum As Integer
+    Dim Framenum As Integer = 0
 
     Dim maxPlayerSpeed As Integer = 15 'max speed a player can accelerate to
     Dim playerAccelerationSpeed As Integer = 5 'increments the player accelerates by
@@ -28,6 +28,7 @@
     End Sub
 
     Private Sub arrowControls(sender As Object, e As KeyEventArgs) Handles Me.KeyDown 'Allows for control of player using arrow keys
+        FrameTimer.Start()
         Select Case e.KeyCode
             Case Keys.Left 'left arrow key
                 If playerXV > -maxPlayerSpeed Then 'caps player max speed
@@ -62,9 +63,12 @@
     End Sub
 
     Private Sub Bouncing_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp 'resets playerAccelerating after key is unpressed
+        FrameTimer.Stop()
+        Framenum = 0
         Select Case e.KeyCode
             Case Keys.Left, Keys.Right, Keys.Up, Keys.Down
                 playerAccelerating = False
+
         End Select
     End Sub
 

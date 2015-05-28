@@ -23,6 +23,7 @@ Partial Class MainGame
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainGame))
         Me.tick = New System.Windows.Forms.Timer(Me.components)
         Me.player = New System.Windows.Forms.PictureBox()
         Me.puck = New System.Windows.Forms.PictureBox()
@@ -75,12 +76,14 @@ Partial Class MainGame
         '
         'PlayerAnimationList
         '
-        Me.PlayerAnimationList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
-        Me.PlayerAnimationList.ImageSize = New System.Drawing.Size(16, 16)
+        Me.PlayerAnimationList.ImageStream = CType(resources.GetObject("PlayerAnimationList.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.PlayerAnimationList.TransparentColor = System.Drawing.Color.Transparent
+        Me.PlayerAnimationList.Images.SetKeyName(0, "BluePlayer1.png")
+        Me.PlayerAnimationList.Images.SetKeyName(1, "BluePlayer2.png")
         '
         'FrameTimer
         '
+        Me.FrameTimer.Interval = 250
         '
         'MainGame
         '
