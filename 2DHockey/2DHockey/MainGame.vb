@@ -9,19 +9,23 @@
     Dim maxPlayerSpeed As Integer = 15 'max speed a player can accelerate to
     Dim playerAccelerationSpeed As Integer = 5 'increments the player accelerates by
 
+    Dim puckResetPosition As New Point(350, 150)
+    Dim userPlayerResetPosition As New Point(200, 150)
+    Dim compPlayerResetPosition As New Point(500, 150)
+
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
         If objectCollisionDetect(puck, playerNet) Then
-            goalScored("player")
+            goalScored("user")
         ElseIf objectCollisionDetect(puck, compNet) Then
             goalScored("comp")
         End If
-        moveObject(player, playerXV, playerYV, playerAccelerating) 'calculates movement of player
-        If objectCollisionDetect(puck, player) Then 'checks if player is touching puck
+        moveObject(userPlayer, playerXV, playerYV, playerAccelerating) 'calculates movement of player
+        If objectCollisionDetect(puck, userPlayer) Then 'checks if player is touching puck
             heldByPlayer = True
         End If
         If heldByPlayer = True Then
-            followPlayer(puck, player) 'makes the puck follow the player
+            followPlayer(puck, userPlayer) 'makes the puck follow the player
         Else
             moveObject(puck, puckXV, puckYV) 'puck moves normally
         End If
@@ -126,7 +130,7 @@
 
     Sub followPlayer(ByVal followingPuck, ByVal followedPlayer) 'makes an object follow the player (used by the puck)
         Dim newlocation As Point
-        newlocation.X = followedPlayer.location.x
+        newlocation.X = followedPlayer.location.x - 10
         newlocation.Y = followedPlayer.location.y + followedPlayer.height + 4
         followingPuck.location = newlocation
     End Sub
@@ -140,7 +144,7 @@
     End Sub
 
     Sub goalScored(ByVal team As String) 'adds 1 to the score, then checks if any teams have at least 9 points, then triggers win if it's met
-        If team = "player" Then
+        If team = "user" Then
             playerScore += 1
             updateScoreBoard()
             resetGoal()
@@ -150,14 +154,14 @@
             resetGoal()
         End If
         If playerScore >= 7 Then
-            gameWin("player")
+            gameWin("user")
         ElseIf compScore >= 7 Then
             gameWin("comp")
         End If
     End Sub
 
     Sub gameWin(ByRef team As String) 'announces winner of the game and allows player to replay or return to main menu
-        If team = "player" Then
+        If team = "user" Then
 
         Else
 
@@ -174,9 +178,9 @@
         puckYV = 0
         playerXV = 0
         playerYV = 0
-        Dim puckResetPosition As Point
-        Dim playerResetPosition As Point
-        Dim compResetPosition As Point
+        puck.Location = puckResetPosition
+        userPlayer.Location = userPlayerResetPosition
+        compPlayer.Location = compPlayerResetPosition
         tick.Start()
     End Sub
 
