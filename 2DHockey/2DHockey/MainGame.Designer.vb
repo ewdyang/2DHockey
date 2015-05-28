@@ -40,10 +40,11 @@ Partial Class MainGame
         'tick
         '
         Me.tick.Enabled = True
-        Me.tick.Interval = 40
+        Me.tick.Interval = 10
         '
         'player
         '
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         Me.userPlayer.Location = New System.Drawing.Point(200, 150)
@@ -57,6 +58,9 @@ Partial Class MainGame
         Me.puck.Location = New System.Drawing.Point(350, 150)
 =======
         Me.player.Location = New System.Drawing.Point(139, 199)
+=======
+        Me.player.Location = New System.Drawing.Point(141, 156)
+>>>>>>> parent of 6928e46... i made changes to the arrow key movements
         Me.player.Name = "player"
         Me.player.Size = New System.Drawing.Size(50, 50)
         Me.player.TabIndex = 0
@@ -64,6 +68,7 @@ Partial Class MainGame
         '
         'puck
         '
+<<<<<<< HEAD
         Me.puck.Location = New System.Drawing.Point(651, 316)
 >>>>>>> origin/master
 =======
@@ -77,6 +82,9 @@ Partial Class MainGame
         '
         Me.puck.Location = New System.Drawing.Point(296, 156)
 >>>>>>> parent of f63bd2e... Reset Mechanism + CompPlayer
+=======
+        Me.puck.Location = New System.Drawing.Point(296, 156)
+>>>>>>> parent of 6928e46... i made changes to the arrow key movements
         Me.puck.Name = "puck"
         Me.puck.Size = New System.Drawing.Size(50, 50)
         Me.puck.TabIndex = 1
@@ -84,7 +92,7 @@ Partial Class MainGame
         '
         'playerNet
         '
-        Me.playerNet.Location = New System.Drawing.Point(12, 282)
+        Me.playerNet.Location = New System.Drawing.Point(68, 121)
         Me.playerNet.Name = "playerNet"
         Me.playerNet.Size = New System.Drawing.Size(50, 100)
         Me.playerNet.TabIndex = 2
@@ -92,7 +100,7 @@ Partial Class MainGame
         '
         'compNet
         '
-        Me.compNet.Location = New System.Drawing.Point(707, 249)
+        Me.compNet.Location = New System.Drawing.Point(544, 121)
         Me.compNet.Name = "compNet"
         Me.compNet.Size = New System.Drawing.Size(50, 100)
         Me.compNet.TabIndex = 3
@@ -107,7 +115,7 @@ Partial Class MainGame
         '
         'FrameTimer
         '
-        Me.FrameTimer.Interval = 333
+        Me.FrameTimer.Interval = 250
         '
         'MainGame
         '
