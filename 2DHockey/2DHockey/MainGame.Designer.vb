@@ -42,10 +42,11 @@ Partial Class MainGame
         'tick
         '
         Me.tick.Enabled = True
-        Me.tick.Interval = 10
+        Me.tick.Interval = 40
         '
         'userPlayer
         '
+<<<<<<< HEAD
         Me.userPlayer.Location = New System.Drawing.Point(200, 150)
         Me.userPlayer.Name = "userPlayer"
         Me.userPlayer.Size = New System.Drawing.Size(50, 50)
@@ -55,6 +56,17 @@ Partial Class MainGame
         'puck
         '
         Me.puck.Location = New System.Drawing.Point(350, 150)
+=======
+        Me.player.Location = New System.Drawing.Point(139, 199)
+        Me.player.Name = "player"
+        Me.player.Size = New System.Drawing.Size(50, 50)
+        Me.player.TabIndex = 0
+        Me.player.TabStop = False
+        '
+        'puck
+        '
+        Me.puck.Location = New System.Drawing.Point(651, 316)
+>>>>>>> origin/master
         Me.puck.Name = "puck"
         Me.puck.Size = New System.Drawing.Size(50, 50)
         Me.puck.TabIndex = 1
@@ -62,7 +74,7 @@ Partial Class MainGame
         '
         'playerNet
         '
-        Me.playerNet.Location = New System.Drawing.Point(68, 121)
+        Me.playerNet.Location = New System.Drawing.Point(12, 282)
         Me.playerNet.Name = "playerNet"
         Me.playerNet.Size = New System.Drawing.Size(50, 100)
         Me.playerNet.TabIndex = 2
@@ -70,7 +82,7 @@ Partial Class MainGame
         '
         'compNet
         '
-        Me.compNet.Location = New System.Drawing.Point(544, 121)
+        Me.compNet.Location = New System.Drawing.Point(707, 249)
         Me.compNet.Name = "compNet"
         Me.compNet.Size = New System.Drawing.Size(50, 100)
         Me.compNet.TabIndex = 3
@@ -85,7 +97,7 @@ Partial Class MainGame
         '
         'FrameTimer
         '
-        Me.FrameTimer.Interval = 250
+        Me.FrameTimer.Interval = 333
         '
         'compPlayer
         '
