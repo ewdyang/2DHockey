@@ -46,7 +46,8 @@ Partial Class MainGame
         '
         'userPlayer
         '
-        Me.userPlayer.Location = New System.Drawing.Point(225, 150)
+        Me.userPlayer.BackColor = System.Drawing.Color.Transparent
+        Me.userPlayer.Location = New System.Drawing.Point(227, 171)
         Me.userPlayer.Name = "userPlayer"
         Me.userPlayer.Size = New System.Drawing.Size(50, 50)
         Me.userPlayer.TabIndex = 0
@@ -54,15 +55,17 @@ Partial Class MainGame
         '
         'puck
         '
-        Me.puck.Location = New System.Drawing.Point(375, 150)
+        Me.puck.BackgroundImage = Global._2DHockey.My.Resources.Resources.Puck1
+        Me.puck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.puck.Location = New System.Drawing.Point(379, 190)
         Me.puck.Name = "puck"
-        Me.puck.Size = New System.Drawing.Size(50, 50)
+        Me.puck.Size = New System.Drawing.Size(21, 10)
         Me.puck.TabIndex = 1
         Me.puck.TabStop = False
         '
         'playerNet
         '
-        Me.playerNet.Location = New System.Drawing.Point(50, 121)
+        Me.playerNet.Location = New System.Drawing.Point(65, 136)
         Me.playerNet.Name = "playerNet"
         Me.playerNet.Size = New System.Drawing.Size(50, 100)
         Me.playerNet.TabIndex = 2
@@ -99,6 +102,8 @@ Partial Class MainGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.Hockeyrink
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(784, 361)
         Me.Controls.Add(Me.compPlayer)
         Me.Controls.Add(Me.compNet)
