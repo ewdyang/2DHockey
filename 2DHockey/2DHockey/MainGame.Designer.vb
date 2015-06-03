@@ -25,7 +25,7 @@ Partial Class MainGame
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainGame))
         Me.tick = New System.Windows.Forms.Timer(Me.components)
-        Me.player = New System.Windows.Forms.PictureBox()
+        Me.userPlayer = New System.Windows.Forms.PictureBox()
         Me.puck = New System.Windows.Forms.PictureBox()
         Me.playerNet = New System.Windows.Forms.PictureBox()
         Me.compNet = New System.Windows.Forms.PictureBox()
@@ -44,9 +44,6 @@ Partial Class MainGame
         '
         'player
         '
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         Me.userPlayer.Location = New System.Drawing.Point(200, 150)
         Me.userPlayer.Name = "userPlayer"
         Me.userPlayer.Size = New System.Drawing.Size(50, 50)
@@ -56,35 +53,7 @@ Partial Class MainGame
         'puck
         '
         Me.puck.Location = New System.Drawing.Point(350, 150)
-=======
-        Me.player.Location = New System.Drawing.Point(139, 199)
-=======
-        Me.player.Location = New System.Drawing.Point(141, 156)
->>>>>>> parent of 6928e46... i made changes to the arrow key movements
-        Me.player.Name = "player"
-        Me.player.Size = New System.Drawing.Size(50, 50)
-        Me.player.TabIndex = 0
-        Me.player.TabStop = False
-        '
-        'puck
-        '
-<<<<<<< HEAD
-        Me.puck.Location = New System.Drawing.Point(651, 316)
->>>>>>> origin/master
-=======
-        Me.player.Location = New System.Drawing.Point(141, 156)
-        Me.player.Name = "player"
-        Me.player.Size = New System.Drawing.Size(50, 50)
-        Me.player.TabIndex = 0
-        Me.player.TabStop = False
-        '
-        'puck
-        '
-        Me.puck.Location = New System.Drawing.Point(296, 156)
->>>>>>> parent of f63bd2e... Reset Mechanism + CompPlayer
-=======
-        Me.puck.Location = New System.Drawing.Point(296, 156)
->>>>>>> parent of 6928e46... i made changes to the arrow key movements
+		
         Me.puck.Name = "puck"
         Me.puck.Size = New System.Drawing.Size(50, 50)
         Me.puck.TabIndex = 1
@@ -131,7 +100,7 @@ Partial Class MainGame
         Me.MinimizeBox = False
         Me.Name = "MainGame"
         Me.Text = "2D Hockey"
-        CType(Me.player, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.userPlayer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.playerNet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.compNet, System.ComponentModel.ISupportInitialize).EndInit()
