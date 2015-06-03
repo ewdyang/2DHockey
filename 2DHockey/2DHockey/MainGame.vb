@@ -6,9 +6,10 @@
     Dim playerScore, compScore As Integer 'the scores of the respective teams
     Dim Framenum As Integer = 0
 
-    Dim maxPlayerSpeed As Integer = 15 'max speed a player can accelerate to
-    Dim playerAccelerationSpeed As Integer = 5 'increments the player accelerates by
-
+    Dim maxPlayerSpeed As Integer = 7 'max speed a player can accelerate to
+    Dim playerAccelerationSpeed As Integer = 3 'increments the player accelerates by
+	Dim Direction as Integer
+	
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
         If objectCollisionDetect(puck, playerNet) Then
@@ -36,27 +37,41 @@
                 End If
                 playerAccelerating = True 'player is accelerating
                 e.Handled = True 'control has been handled
-                'player.Image = PlayerAnimationList.Images(Framenum)
+                player.Image = PlayerAnimationList.Images(Framenum)
+                Direction = 0
             Case Keys.Right 'right arrow key
                 If playerXV < maxPlayerSpeed Then
                     playerXV = playerXV + playerAccelerationSpeed
                 End If
                 playerAccelerating = True
                 e.Handled = True
-                'player.Image = PlayerAnimationList.Images(Framenum)
-                'player.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
+                player.Image = PlayerAnimationList.Images(Framenum)
+                player.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
+				Direction = 1
             Case Keys.Up 'up arrow key
                 If playerYV > -maxPlayerSpeed Then
                     playerYV = playerYV - playerAccelerationSpeed
                 End If
                 playerAccelerating = True
                 e.Handled = True
+				If Direction = 0 Then
+                    player.Image = PlayerAnimationList.Images(Framenum)
+                ElseIf Direction = 1 Then
+                    player.Image = PlayerAnimationList.Images(Framenum)
+                    player.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
+                End If
             Case Keys.Down 'down arrow key
                 If playerYV < maxPlayerSpeed Then
                     playerYV = playerYV + playerAccelerationSpeed
                 End If
                 playerAccelerating = True
                 e.Handled = True
+				If Direction = 0 Then
+                    player.Image = PlayerAnimationList.Images(Framenum)
+                ElseIf Direction = 1 Then
+                    player.Image = PlayerAnimationList.Images(Framenum)
+                    player.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
+                End If
             Case Keys.Space
                 shoot()
         End Select
@@ -182,7 +197,7 @@
 
     Private Sub FrameTimer_Tick(sender As Object, e As EventArgs) Handles FrameTimer.Tick 'used for animating players
         Framenum = Framenum + 1
-        If Framenum = 1 Then
+        If Framenum = 2 Then
             Framenum = 0
         End If
     End Sub

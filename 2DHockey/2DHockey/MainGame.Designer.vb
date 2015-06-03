@@ -40,7 +40,7 @@ Partial Class MainGame
         'tick
         '
         Me.tick.Enabled = True
-        Me.tick.Interval = 10
+        Me.tick.Interval = 40
         '
         'player
         '
@@ -84,7 +84,7 @@ Partial Class MainGame
         '
         'FrameTimer
         '
-        Me.FrameTimer.Interval = 250
+        Me.FrameTimer.Interval = 333
         '
         'MainGame
         '
