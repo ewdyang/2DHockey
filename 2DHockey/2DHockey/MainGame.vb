@@ -205,4 +205,8 @@
             Framenum = 0
         End If
     End Sub
+
+    Private Sub MainGame_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        TeamSelection.Close()
+    End Sub
 End Class
