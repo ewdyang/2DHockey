@@ -46,7 +46,8 @@ Partial Class MainGame
         '
         'userPlayer
         '
-        Me.userPlayer.Location = New System.Drawing.Point(225, 150)
+        Me.userPlayer.BackColor = System.Drawing.Color.Transparent
+        Me.userPlayer.Location = New System.Drawing.Point(188, 165)
         Me.userPlayer.Name = "userPlayer"
         Me.userPlayer.Size = New System.Drawing.Size(50, 50)
         Me.userPlayer.TabIndex = 0
@@ -54,25 +55,31 @@ Partial Class MainGame
         '
         'puck
         '
-        Me.puck.Location = New System.Drawing.Point(375, 150)
+        Me.puck.BackgroundImage = Global._2DHockey.My.Resources.Resources.Puck1
+        Me.puck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.puck.Location = New System.Drawing.Point(381, 185)
         Me.puck.Name = "puck"
-        Me.puck.Size = New System.Drawing.Size(50, 50)
+        Me.puck.Size = New System.Drawing.Size(21, 10)
         Me.puck.TabIndex = 1
         Me.puck.TabStop = False
         '
         'playerNet
         '
-        Me.playerNet.Location = New System.Drawing.Point(50, 121)
+        Me.playerNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
+        Me.playerNet.Location = New System.Drawing.Point(105, 148)
         Me.playerNet.Name = "playerNet"
-        Me.playerNet.Size = New System.Drawing.Size(50, 100)
+        Me.playerNet.Size = New System.Drawing.Size(30, 80)
+        Me.playerNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.playerNet.TabIndex = 2
         Me.playerNet.TabStop = False
         '
         'compNet
         '
-        Me.compNet.Location = New System.Drawing.Point(700, 121)
+        Me.compNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
+        Me.compNet.Location = New System.Drawing.Point(650, 148)
         Me.compNet.Name = "compNet"
-        Me.compNet.Size = New System.Drawing.Size(50, 100)
+        Me.compNet.Size = New System.Drawing.Size(30, 80)
+        Me.compNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.compNet.TabIndex = 3
         Me.compNet.TabStop = False
         '
@@ -89,7 +96,7 @@ Partial Class MainGame
         '
         'compPlayer
         '
-        Me.compPlayer.Location = New System.Drawing.Point(525, 150)
+        Me.compPlayer.Location = New System.Drawing.Point(544, 165)
         Me.compPlayer.Name = "compPlayer"
         Me.compPlayer.Size = New System.Drawing.Size(50, 50)
         Me.compPlayer.TabIndex = 4
@@ -99,6 +106,8 @@ Partial Class MainGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.Hockeyrink
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(784, 361)
         Me.Controls.Add(Me.compPlayer)
         Me.Controls.Add(Me.compNet)

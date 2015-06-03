@@ -10,9 +10,9 @@
     Dim playerAccelerationSpeed As Integer = 3 'increments the player accelerates by
 	Dim Direction as Integer
 
-    Dim puckResetPosition As New Point(350, 150)
-    Dim userPlayerResetPosition As New Point(200, 150)
-    Dim compPlayerResetPosition As New Point(500, 150)
+    Dim puckResetPosition As New Point(381, 185)
+    Dim userPlayerResetPosition As New Point(188, 165)
+    Dim compPlayerResetPosition As New Point(544, 165)
 
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
@@ -93,6 +93,7 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Randomize()
+        compNet.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
     End Sub
 
     Sub moveObject(ByVal bouncingObject As PictureBox, ByRef objectXV As Integer, ByRef objectYV As Integer, Optional ByRef objectAccelerating As Boolean = False) 'Moves an object according to it's X and Y velocity
