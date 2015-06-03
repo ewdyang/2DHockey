@@ -47,7 +47,7 @@ Partial Class MainGame
         'userPlayer
         '
         Me.userPlayer.BackColor = System.Drawing.Color.Transparent
-        Me.userPlayer.Location = New System.Drawing.Point(227, 171)
+        Me.userPlayer.Location = New System.Drawing.Point(188, 165)
         Me.userPlayer.Name = "userPlayer"
         Me.userPlayer.Size = New System.Drawing.Size(50, 50)
         Me.userPlayer.TabIndex = 0
@@ -57,7 +57,7 @@ Partial Class MainGame
         '
         Me.puck.BackgroundImage = Global._2DHockey.My.Resources.Resources.Puck1
         Me.puck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.puck.Location = New System.Drawing.Point(379, 190)
+        Me.puck.Location = New System.Drawing.Point(381, 185)
         Me.puck.Name = "puck"
         Me.puck.Size = New System.Drawing.Size(21, 10)
         Me.puck.TabIndex = 1
@@ -92,7 +92,7 @@ Partial Class MainGame
         '
         'compPlayer
         '
-        Me.compPlayer.Location = New System.Drawing.Point(525, 150)
+        Me.compPlayer.Location = New System.Drawing.Point(544, 165)
         Me.compPlayer.Name = "compPlayer"
         Me.compPlayer.Size = New System.Drawing.Size(50, 50)
         Me.compPlayer.TabIndex = 4
