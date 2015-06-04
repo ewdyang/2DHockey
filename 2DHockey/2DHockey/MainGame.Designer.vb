@@ -65,17 +65,21 @@ Partial Class MainGame
         '
         'playerNet
         '
-        Me.playerNet.Location = New System.Drawing.Point(65, 136)
+        Me.playerNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
+        Me.playerNet.Location = New System.Drawing.Point(105, 148)
         Me.playerNet.Name = "playerNet"
-        Me.playerNet.Size = New System.Drawing.Size(50, 100)
+        Me.playerNet.Size = New System.Drawing.Size(30, 80)
+        Me.playerNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.playerNet.TabIndex = 2
         Me.playerNet.TabStop = False
         '
         'compNet
         '
-        Me.compNet.Location = New System.Drawing.Point(700, 121)
+        Me.compNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
+        Me.compNet.Location = New System.Drawing.Point(650, 148)
         Me.compNet.Name = "compNet"
-        Me.compNet.Size = New System.Drawing.Size(50, 100)
+        Me.compNet.Size = New System.Drawing.Size(30, 80)
+        Me.compNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.compNet.TabIndex = 3
         Me.compNet.TabStop = False
         '

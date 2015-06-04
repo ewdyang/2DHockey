@@ -3,12 +3,13 @@
     Dim playerXV, playerYV As Integer 'Player's X and Y Velocity
     Dim playerAccelerating As Boolean 'Whether the player is in the process of accelerating
     Dim heldByPlayer As Boolean 'Whether the puck is held by the player
+    Dim heldByWhichTeam As String 'which team has possession of the puck
     Dim playerScore, compScore As Integer 'the scores of the respective teams
     Dim Framenum As Integer = 0
 
     Dim maxPlayerSpeed As Integer = 7 'max speed a player can accelerate to
     Dim playerAccelerationSpeed As Integer = 3 'increments the player accelerates by
-	Dim Direction as Integer
+    Dim Direction As Integer
 
     Dim puckResetPosition As New Point(381, 185)
     Dim userPlayerResetPosition As New Point(188, 165)
@@ -24,9 +25,17 @@
         moveObject(userPlayer, playerXV, playerYV, playerAccelerating) 'calculates movement of player
         If objectCollisionDetect(puck, userPlayer) Then 'checks if player is touching puck
             heldByPlayer = True
+            heldByWhichTeam = "user"
+        ElseIf objectCollisionDetect(puck, compPlayer) Then
+            heldByPlayer = True
+            heldByWhichTeam = "comp"
         End If
         If heldByPlayer = True Then
-            followPlayer(puck, userPlayer) 'makes the puck follow the player
+            If heldByWhichTeam = "user" Then
+                followPlayer(puck, userPlayer) 'makes the puck follow the user player
+            ElseIf heldByWhichTeam = "comp" Then
+                followPlayer(puck, compPlayer) 'makes the puck follow the comp player
+            End If
         Else
             moveObject(puck, puckXV, puckYV) 'puck moves normally
         End If
@@ -93,6 +102,7 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Randomize()
+        compNet.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
     End Sub
 
     Sub moveObject(ByVal bouncingObject As PictureBox, ByRef objectXV As Integer, ByRef objectYV As Integer, Optional ByRef objectAccelerating As Boolean = False) 'Moves an object according to it's X and Y velocity
@@ -193,6 +203,7 @@
         puckYV = 0
         playerXV = 0
         playerYV = 0
+        heldByPlayer = False
         puck.Location = puckResetPosition
         userPlayer.Location = userPlayerResetPosition
         compPlayer.Location = compPlayerResetPosition
