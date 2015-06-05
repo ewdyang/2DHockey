@@ -32,6 +32,10 @@ Partial Class MainGame
         Me.PlayerAnimationList = New System.Windows.Forms.ImageList(Me.components)
         Me.FrameTimer = New System.Windows.Forms.Timer(Me.components)
         Me.compPlayer = New System.Windows.Forms.PictureBox()
+        Me.RedAnimation = New System.Windows.Forms.ImageList(Me.components)
+        Me.GreenAnimation = New System.Windows.Forms.ImageList(Me.components)
+        Me.OrangeAnimation = New System.Windows.Forms.ImageList(Me.components)
+        Me.WhiteAnimation = New System.Windows.Forms.ImageList(Me.components)
         CType(Me.userPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.playerNet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,6 +108,34 @@ Partial Class MainGame
         Me.compPlayer.TabIndex = 4
         Me.compPlayer.TabStop = False
         '
+        'RedAnimation
+        '
+        Me.RedAnimation.ImageStream = CType(resources.GetObject("RedAnimation.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.RedAnimation.TransparentColor = System.Drawing.Color.Transparent
+        Me.RedAnimation.Images.SetKeyName(0, "RedPlayer1.png")
+        Me.RedAnimation.Images.SetKeyName(1, "RedPlayer2.png")
+        '
+        'GreenAnimation
+        '
+        Me.GreenAnimation.ImageStream = CType(resources.GetObject("GreenAnimation.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.GreenAnimation.TransparentColor = System.Drawing.Color.Transparent
+        Me.GreenAnimation.Images.SetKeyName(0, "GreenPlayer1.png")
+        Me.GreenAnimation.Images.SetKeyName(1, "GreenPlayer2.png")
+        '
+        'OrangeAnimation
+        '
+        Me.OrangeAnimation.ImageStream = CType(resources.GetObject("OrangeAnimation.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.OrangeAnimation.TransparentColor = System.Drawing.Color.Transparent
+        Me.OrangeAnimation.Images.SetKeyName(0, "OrangePlayer1.png")
+        Me.OrangeAnimation.Images.SetKeyName(1, "OrangePlayer2.png")
+        '
+        'WhiteAnimation
+        '
+        Me.WhiteAnimation.ImageStream = CType(resources.GetObject("WhiteAnimation.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.WhiteAnimation.TransparentColor = System.Drawing.Color.Transparent
+        Me.WhiteAnimation.Images.SetKeyName(0, "WhitePlayer1.png")
+        Me.WhiteAnimation.Images.SetKeyName(1, "WhitePlayer2.png")
+        '
         'MainGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -137,5 +169,9 @@ Partial Class MainGame
     Friend WithEvents PlayerAnimationList As System.Windows.Forms.ImageList
     Friend WithEvents FrameTimer As System.Windows.Forms.Timer
     Friend WithEvents compPlayer As System.Windows.Forms.PictureBox
+    Friend WithEvents RedAnimation As System.Windows.Forms.ImageList
+    Friend WithEvents GreenAnimation As System.Windows.Forms.ImageList
+    Friend WithEvents OrangeAnimation As System.Windows.Forms.ImageList
+    Friend WithEvents WhiteAnimation As System.Windows.Forms.ImageList
 
 End Class

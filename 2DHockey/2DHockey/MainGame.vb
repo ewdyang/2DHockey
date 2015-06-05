@@ -15,6 +15,8 @@
     Dim userPlayerResetPosition As New Point(188, 165)
     Dim compPlayerResetPosition As New Point(544, 165)
 
+    Dim teamcolour As String
+
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
         If objectCollisionDetect(puck, playerNet) Then
@@ -103,6 +105,18 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Randomize()
         compNet.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
+
+        If TeamSelection.team1 = 0 Then
+            teamcolour = "PlayerAnimationList"
+        ElseIf TeamSelection.team1 = 0 Then
+            teamcolour = "GreenAnimation"
+        ElseIf TeamSelection.team1 = 2 Then
+            teamcolour = "OrangeAnimation"
+        ElseIf TeamSelection.team1 = 3 Then
+            teamcolour = "RedAnimation"
+        Else
+            teamcolour = "WhiteAnimation
+        End If
     End Sub
 
     Sub moveObject(ByVal bouncingObject As PictureBox, ByRef objectXV As Integer, ByRef objectYV As Integer, Optional ByRef objectAccelerating As Boolean = False) 'Moves an object according to it's X and Y velocity
