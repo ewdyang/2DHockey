@@ -12,8 +12,8 @@
     Dim Direction As Integer
 
     Dim puckResetPosition As New Point(381, 185)
-    Dim userPlayerResetPosition As New Point(188, 165)
-    Dim compPlayerResetPosition As New Point(544, 165)
+    Dim userPlayerResetPosition As New Point(544, 165)
+    Dim compPlayerResetPosition As New Point(188, 165)
 
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
@@ -50,41 +50,28 @@
                 End If
                 playerAccelerating = True 'player is accelerating
                 e.Handled = True 'control has been handled
-                userPlayer.Image = PlayerAnimationList.Images(Framenum)
-                Direction = 0
+                animatePlayer(userPlayer, "left")
             Case Keys.Right 'right arrow key
                 If playerXV < maxPlayerSpeed Then
                     playerXV = playerXV + playerAccelerationSpeed
                 End If
                 playerAccelerating = True
                 e.Handled = True
-                userPlayer.Image = PlayerAnimationList.Images(Framenum)
-                userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
-				Direction = 1
+                animatePlayer(userPlayer, "right")
             Case Keys.Up 'up arrow key
                 If playerYV > -maxPlayerSpeed Then
                     playerYV = playerYV - playerAccelerationSpeed
                 End If
                 playerAccelerating = True
                 e.Handled = True
-				If Direction = 0 Then
-                    userPlayer.Image = PlayerAnimationList.Images(Framenum)
-                ElseIf Direction = 1 Then
-                    userPlayer.Image = PlayerAnimationList.Images(Framenum)
-                    userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
-                End If
+                animatePlayer(userPlayer, "up")
             Case Keys.Down 'down arrow key
                 If playerYV < maxPlayerSpeed Then
                     playerYV = playerYV + playerAccelerationSpeed
                 End If
                 playerAccelerating = True
                 e.Handled = True
-				If Direction = 0 Then
-                    userPlayer.Image = PlayerAnimationList.Images(Framenum)
-                ElseIf Direction = 1 Then
-                    userPlayer.Image = PlayerAnimationList.Images(Framenum)
-                    userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
-                End If
+                animatePlayer(userPlayer, "down")
             Case Keys.Space
                 shoot()
         End Select
@@ -208,6 +195,32 @@
         userPlayer.Location = userPlayerResetPosition
         compPlayer.Location = compPlayerResetPosition
         tick.Start()
+    End Sub
+
+    Sub animatePlayer(ByVal player As PictureBox, ByVal directionHeading As String)
+        Select Case directionHeading
+            Case "left"
+                userPlayer.Image = PlayerAnimationList.Images(Framenum)
+                Direction = 0
+            Case "right"
+                userPlayer.Image = PlayerAnimationList.Images(Framenum)
+                userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
+                Direction = 1
+            Case "up"
+                If Direction = 0 Then
+                    userPlayer.Image = PlayerAnimationList.Images(Framenum)
+                ElseIf Direction = 1 Then
+                    userPlayer.Image = PlayerAnimationList.Images(Framenum)
+                    userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
+                End If
+            Case "down"
+                If Direction = 0 Then
+                    userPlayer.Image = PlayerAnimationList.Images(Framenum)
+                ElseIf Direction = 1 Then
+                    userPlayer.Image = PlayerAnimationList.Images(Framenum)
+                    userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
+                End If
+        End Select
     End Sub
 
     Private Sub FrameTimer_Tick(sender As Object, e As EventArgs) Handles FrameTimer.Tick 'used for animating players
