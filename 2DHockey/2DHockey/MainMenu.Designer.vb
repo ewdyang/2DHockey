@@ -24,6 +24,7 @@ Partial Class MainMenu
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainMenu))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.playbutton = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -38,6 +39,19 @@ Partial Class MainMenu
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'playbutton
+        '
+        Me.playbutton.BackColor = System.Drawing.Color.DarkBlue
+        Me.playbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.playbutton.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.playbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.playbutton.Location = New System.Drawing.Point(92, 168)
+        Me.playbutton.Name = "playbutton"
+        Me.playbutton.Size = New System.Drawing.Size(263, 31)
+        Me.playbutton.TabIndex = 1
+        Me.playbutton.Text = "Play"
+        Me.playbutton.UseVisualStyleBackColor = False
+        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -45,7 +59,9 @@ Partial Class MainMenu
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(885, 557)
+        Me.Controls.Add(Me.playbutton)
         Me.Controls.Add(Me.PictureBox1)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "MainMenu"
         Me.Text = "MainMenu"
@@ -54,4 +70,5 @@ Partial Class MainMenu
 
     End Sub
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents playbutton As System.Windows.Forms.Button
 End Class
