@@ -9,7 +9,8 @@
 
     Dim maxPlayerSpeed As Integer = 7 'max speed a player can accelerate to
     Dim playerAccelerationSpeed As Integer = 3 'increments the player accelerates by
-    Dim Direction As Integer '0: left, 1: right
+    Dim userPlayerDirection As Integer '0: left, 1: right
+    Dim compPlayerDirection As Integer '0: left, 1: right
 
     Dim puckResetPosition As New Point(381, 185)
     Dim userPlayerResetPosition As New Point(188, 165)
@@ -102,7 +103,7 @@
         ElseIf TeamSelection.team1 = 3 Then
             teamcolour = "RedAnimation"
         Else
-            teamcolour = "WhiteAnimation
+            teamcolour = "WhiteAnimation"
         End If
     End Sub
 
@@ -220,16 +221,16 @@
         userPlayer.Image = PlayerAnimationList.Images(Framenum)
         Select Case directionHeading
             Case "left"
-                Direction = 0
+                userPlayerDirection = 0
             Case "right"
                 userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
-                Direction = 1
+                userPlayerDirection = 1
             Case "up"
-                If Direction = 1 Then
+                If userPlayerDirection = 1 Then
                     userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
                 End If
             Case "down"
-                If Direction = 1 Then
+                If userPlayerDirection = 1 Then
                     userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
                 End If
         End Select
