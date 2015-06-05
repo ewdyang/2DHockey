@@ -12,8 +12,8 @@
     Dim Direction As Integer
 
     Dim puckResetPosition As New Point(381, 185)
-    Dim userPlayerResetPosition As New Point(544, 165)
-    Dim compPlayerResetPosition As New Point(188, 165)
+    Dim userPlayerResetPosition As New Point(188, 165)
+    Dim compPlayerResetPosition As New Point(544, 165)
 
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
@@ -198,26 +198,19 @@
     End Sub
 
     Sub animatePlayer(ByVal player As PictureBox, ByVal directionHeading As String)
+        userPlayer.Image = PlayerAnimationList.Images(Framenum)
         Select Case directionHeading
             Case "left"
-                userPlayer.Image = PlayerAnimationList.Images(Framenum)
                 Direction = 0
             Case "right"
-                userPlayer.Image = PlayerAnimationList.Images(Framenum)
                 userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
                 Direction = 1
             Case "up"
-                If Direction = 0 Then
-                    userPlayer.Image = PlayerAnimationList.Images(Framenum)
-                ElseIf Direction = 1 Then
-                    userPlayer.Image = PlayerAnimationList.Images(Framenum)
+                If Direction = 1 Then
                     userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
                 End If
             Case "down"
-                If Direction = 0 Then
-                    userPlayer.Image = PlayerAnimationList.Images(Framenum)
-                ElseIf Direction = 1 Then
-                    userPlayer.Image = PlayerAnimationList.Images(Framenum)
+                If Direction = 1 Then
                     userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
                 End If
         End Select
