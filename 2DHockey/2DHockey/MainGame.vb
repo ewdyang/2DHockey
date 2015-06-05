@@ -9,7 +9,7 @@
 
     Dim maxPlayerSpeed As Integer = 7 'max speed a player can accelerate to
     Dim playerAccelerationSpeed As Integer = 3 'increments the player accelerates by
-    Dim Direction As Integer
+    Dim Direction As Integer '0: left, 1: right
 
     Dim puckResetPosition As New Point(381, 185)
     Dim userPlayerResetPosition As New Point(188, 165)
@@ -127,14 +127,14 @@
     End Sub
 
     Sub edgeCollisionDetect(ByVal bouncingObject, ByRef objectXV, ByRef objectYV) 'checks if an object is bouncing into the walls of the form, then changes its velocity to make it bounce
-        If bouncingObject.Location.X < 0 Then
+        If bouncingObject.Location.X < 50 Then
             objectXV = Math.Abs(objectXV)
-        ElseIf bouncingObject.Location.X + bouncingObject.Width + 15 > Me.Width Then
+        ElseIf bouncingObject.Location.X + bouncingObject.Width + 15 + 60 > Me.Width Then
             objectXV = -Math.Abs(objectXV)
         End If
-        If bouncingObject.Location.Y < 0 Then
+        If bouncingObject.Location.Y < 50 Then
             objectYV = Math.Abs(objectYV)
-        ElseIf bouncingObject.Location.Y + bouncingObject.Height + 42 > Me.Height Then
+        ElseIf bouncingObject.Location.Y + bouncingObject.Height + 42 + 25 > Me.Height Then
             objectYV = -Math.Abs(objectYV)
         End If
     End Sub
@@ -154,10 +154,15 @@
         followingObject.location = PointToClient(newLocation)
     End Sub
 
-    Sub followPlayer(ByVal followingPuck, ByVal followedPlayer) 'makes an object follow the player (used by the puck)
+    Sub followPlayer(ByVal followingPuck, ByVal followedPlayer, Optional ByVal side = "left") 'makes an object follow the player (used by the puck)
         Dim newlocation As Point
-        newlocation.X = followedPlayer.location.x - 10
-        newlocation.Y = followedPlayer.location.y + followedPlayer.height + 4
+        Select Case side
+            Case "left"
+                newlocation.X = followedPlayer.location.x - 15
+                newlocation.Y = followedPlayer.location.y + followedPlayer.height + 4
+            Case "right"
+
+        End Select
         followingPuck.location = newlocation
     End Sub
 
