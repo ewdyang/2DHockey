@@ -47,7 +47,7 @@ Partial Class MainGame
         'userPlayer
         '
         Me.userPlayer.BackColor = System.Drawing.Color.Transparent
-        Me.userPlayer.Location = New System.Drawing.Point(188, 165)
+        Me.userPlayer.Location = New System.Drawing.Point(531, 161)
         Me.userPlayer.Name = "userPlayer"
         Me.userPlayer.Size = New System.Drawing.Size(50, 50)
         Me.userPlayer.TabIndex = 0
@@ -96,7 +96,9 @@ Partial Class MainGame
         '
         'compPlayer
         '
-        Me.compPlayer.Location = New System.Drawing.Point(544, 165)
+        Me.compPlayer.BackColor = System.Drawing.Color.Transparent
+        Me.compPlayer.Image = Global._2DHockey.My.Resources.Resources.Green_Goalie1
+        Me.compPlayer.Location = New System.Drawing.Point(188, 161)
         Me.compPlayer.Name = "compPlayer"
         Me.compPlayer.Size = New System.Drawing.Size(50, 50)
         Me.compPlayer.TabIndex = 4
