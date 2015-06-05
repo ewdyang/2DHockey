@@ -35,13 +35,13 @@
         End If
         If heldByPlayer = True Then
             If heldByWhichTeam = "user" Then
-                followPlayer(puck, userPlayer) 'makes the puck follow the user player
-            ElseIf heldByWhichTeam = "comp" Then
-                followPlayer(puck, compPlayer) 'makes the puck follow the comp player
+                followPlayer(puck, userPlayer, userPlayerDirection) 'makes the puck follow the user player
+                ElseIf heldByWhichTeam = "comp" Then
+                followPlayer(puck, compPlayer, compPlayerDirection) 'makes the puck follow the comp player
+                End If
+            Else
+                moveObject(puck, puckXV, puckYV) 'puck moves normally
             End If
-        Else
-            moveObject(puck, puckXV, puckYV) 'puck moves normally
-        End If
     End Sub
 
     Private Sub arrowControls(sender As Object, e As KeyEventArgs) Handles Me.KeyDown 'Allows for control of player using arrow keys
@@ -155,14 +155,15 @@
         followingObject.location = PointToClient(newLocation)
     End Sub
 
-    Sub followPlayer(ByVal followingPuck, ByVal followedPlayer, Optional ByVal side = "left") 'makes an object follow the player (used by the puck)
+    Sub followPlayer(ByVal followingPuck, ByVal followedPlayer, Optional ByVal side = 0) 'makes an object follow the player (used by the puck)
         Dim newlocation As Point
         Select Case side
-            Case "left"
-                newlocation.X = followedPlayer.location.x - 15
+            Case 0
+                newlocation.X = followedPlayer.location.x - followingPuck.width + 10
                 newlocation.Y = followedPlayer.location.y + followedPlayer.height + 4
-            Case "right"
-
+            Case 1
+                newlocation.X = followedPlayer.location.x + followedPlayer.width - 10
+                newlocation.Y = followedPlayer.location.y + followedPlayer.height + 4
         End Select
         followingPuck.location = newlocation
     End Sub
