@@ -16,7 +16,6 @@
     Dim userPlayerResetPosition As New Point(188, 165)
     Dim compPlayerResetPosition As New Point(544, 165)
 
-    Dim teamcolour As String
 
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
@@ -94,17 +93,18 @@
         Randomize()
         compNet.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
 
-        If TeamSelection.team1 = 0 Then
-            teamcolour = "PlayerAnimationList"
-        ElseIf TeamSelection.team1 = 0 Then
-            teamcolour = "GreenAnimation"
-        ElseIf TeamSelection.team1 = 2 Then
-            teamcolour = "OrangeAnimation"
-        ElseIf TeamSelection.team1 = 3 Then
-            teamcolour = "RedAnimation"
-        Else
-            teamcolour = "WhiteAnimation"
-        End If
+        Select Case TeamSelection.team1
+            Case 0
+                userPlayer.Image = PlayerAnimationList.Images(0)
+            Case 1
+                userPlayer.Image = GreenAnimation.Images(0)
+            Case 2
+                userPlayer.Image = OrangeAnimation.Images(0)
+            Case 3
+                userPlayer.Image = RedAnimation.Images(0)
+            Case 4
+                userPlayer.Image = WhiteAnimation.Images(0)
+        End Select
     End Sub
 
     Sub moveObject(ByVal bouncingObject As PictureBox, ByRef objectXV As Integer, ByRef objectYV As Integer, Optional ByRef objectAccelerating As Boolean = False) 'Moves an object according to it's X and Y velocity
@@ -219,7 +219,20 @@
     End Sub
 
     Sub animatePlayer(ByVal player As PictureBox, ByVal directionHeading As String)
-        userPlayer.Image = PlayerAnimationList.Images(Framenum)
+
+        Select Case TeamSelection.team1
+            Case 0
+                userPlayer.Image = PlayerAnimationList.Images(Framenum)
+            Case 1
+                userPlayer.Image = GreenAnimation.Images(Framenum)
+            Case 2
+                userPlayer.Image = OrangeAnimation.Images(Framenum)
+            Case 3
+                userPlayer.Image = RedAnimation.Images(Framenum)
+            Case 4
+                userPlayer.Image = WhiteAnimation.Images(Framenum)
+        End Select
+
         Select Case directionHeading
             Case "left"
                 userPlayerDirection = 0

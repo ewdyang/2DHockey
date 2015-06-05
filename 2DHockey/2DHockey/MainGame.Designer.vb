@@ -51,7 +51,6 @@ Partial Class MainGame
         'userPlayer
         '
         Me.userPlayer.BackColor = System.Drawing.Color.Transparent
-        Me.userPlayer.Image = Global._2DHockey.My.Resources.Resources.BluePlayer1
         Me.userPlayer.Location = New System.Drawing.Point(188, 161)
         Me.userPlayer.Name = "userPlayer"
         Me.userPlayer.Size = New System.Drawing.Size(50, 50)
