@@ -7,14 +7,14 @@
     Dim playerScore, compScore As Integer 'the scores of the respective teams
     Dim Framenum As Integer = 0
 
-    Dim maxPlayerSpeed As Integer = 7 'max speed a player can accelerate to
-    Dim playerAccelerationSpeed As Integer = 3 'increments the player accelerates by
+    Dim maxPlayerSpeed As Integer = 8 'max speed a player can accelerate to
+    Dim playerAccelerationSpeed As Integer = 2 'increments the player accelerates by
     Dim userPlayerDirection As Integer '0: left, 1: right
     Dim compPlayerDirection As Integer '0: left, 1: right
 
     Dim puckResetPosition As New Point(381, 185)
-    Dim userPlayerResetPosition As New Point(188, 165)
-    Dim compPlayerResetPosition As New Point(544, 165)
+    Dim userPlayerResetPosition As New Point(255, 165)
+    Dim compPlayerResetPosition As New Point(478, 165)
 
 
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
@@ -75,7 +75,7 @@
                 e.Handled = True
                 animatePlayer(userPlayer, "down")
             Case Keys.Space
-                shoot()
+                shoot(userPlayerDirection)
         End Select
     End Sub
 
@@ -168,11 +168,16 @@
         followingPuck.location = newlocation
     End Sub
 
-    Private Sub shoot() 'makes the player shoot the puck, giving it a set forward velocity and random vertical velocity
+    Private Sub shoot(ByVal playerDirection) 'makes the player shoot the puck, giving it a set forward velocity and random vertical velocity
         If heldByPlayer = True Then
             heldByPlayer = False
-            puckXV = -20
             puckYV = 10 - Rnd() * 20
+            Select Case playerDirection
+                Case 0
+                    puckXV = -30
+                Case 1
+                    puckXV = 30
+            End Select
         End If
     End Sub
 
