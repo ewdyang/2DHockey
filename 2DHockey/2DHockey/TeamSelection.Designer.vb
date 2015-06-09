@@ -141,6 +141,7 @@ Partial Class TeamSelection
         Me.Controls.Add(Me.Player1)
         Me.DoubleBuffered = True
         Me.Name = "TeamSelection"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "TeamSelection"
         CType(Me.Player1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Player2, System.ComponentModel.ISupportInitialize).EndInit()

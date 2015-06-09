@@ -153,6 +153,7 @@ Partial Class MainGame
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "MainGame"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "2D Hockey"
         CType(Me.userPlayer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).EndInit()
