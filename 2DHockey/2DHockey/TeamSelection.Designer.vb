@@ -72,57 +72,75 @@ Partial Class TeamSelection
         '
         'P1Left
         '
-        Me.P1Left.Location = New System.Drawing.Point(107, 335)
+        Me.P1Left.BackColor = System.Drawing.Color.DarkBlue
+        Me.P1Left.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.P1Left.ForeColor = System.Drawing.Color.White
+        Me.P1Left.Location = New System.Drawing.Point(77, 324)
         Me.P1Left.Name = "P1Left"
-        Me.P1Left.Size = New System.Drawing.Size(59, 23)
+        Me.P1Left.Size = New System.Drawing.Size(90, 30)
         Me.P1Left.TabIndex = 2
         Me.P1Left.Text = "Left"
-        Me.P1Left.UseVisualStyleBackColor = True
+        Me.P1Left.UseVisualStyleBackColor = False
         '
         'P1Right
         '
-        Me.P1Right.Location = New System.Drawing.Point(198, 335)
+        Me.P1Right.BackColor = System.Drawing.Color.DarkBlue
+        Me.P1Right.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.P1Right.ForeColor = System.Drawing.Color.White
+        Me.P1Right.Location = New System.Drawing.Point(198, 324)
         Me.P1Right.Name = "P1Right"
-        Me.P1Right.Size = New System.Drawing.Size(59, 23)
+        Me.P1Right.Size = New System.Drawing.Size(90, 30)
         Me.P1Right.TabIndex = 3
         Me.P1Right.Text = "Right"
-        Me.P1Right.UseVisualStyleBackColor = True
+        Me.P1Right.UseVisualStyleBackColor = False
         '
         'P2Left
         '
-        Me.P2Left.Location = New System.Drawing.Point(361, 335)
+        Me.P2Left.BackColor = System.Drawing.Color.DarkBlue
+        Me.P2Left.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.P2Left.ForeColor = System.Drawing.Color.Transparent
+        Me.P2Left.Location = New System.Drawing.Point(339, 324)
         Me.P2Left.Name = "P2Left"
-        Me.P2Left.Size = New System.Drawing.Size(59, 23)
+        Me.P2Left.Size = New System.Drawing.Size(90, 30)
         Me.P2Left.TabIndex = 4
         Me.P2Left.Text = "Left"
-        Me.P2Left.UseVisualStyleBackColor = True
+        Me.P2Left.UseVisualStyleBackColor = False
         '
         'P2Right
         '
-        Me.P2Right.Location = New System.Drawing.Point(452, 335)
+        Me.P2Right.BackColor = System.Drawing.Color.DarkBlue
+        Me.P2Right.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.P2Right.ForeColor = System.Drawing.Color.White
+        Me.P2Right.Location = New System.Drawing.Point(452, 324)
         Me.P2Right.Name = "P2Right"
-        Me.P2Right.Size = New System.Drawing.Size(59, 23)
+        Me.P2Right.Size = New System.Drawing.Size(90, 30)
         Me.P2Right.TabIndex = 5
         Me.P2Right.Text = "Right"
-        Me.P2Right.UseVisualStyleBackColor = True
+        Me.P2Right.UseVisualStyleBackColor = False
         '
         'P2Confirm
         '
-        Me.P2Confirm.Location = New System.Drawing.Point(403, 388)
+        Me.P2Confirm.BackColor = System.Drawing.Color.DarkBlue
+        Me.P2Confirm.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.P2Confirm.ForeColor = System.Drawing.Color.White
+        Me.P2Confirm.Location = New System.Drawing.Point(379, 378)
         Me.P2Confirm.Name = "P2Confirm"
-        Me.P2Confirm.Size = New System.Drawing.Size(75, 23)
+        Me.P2Confirm.Size = New System.Drawing.Size(120, 30)
         Me.P2Confirm.TabIndex = 6
         Me.P2Confirm.Text = "Confirm"
-        Me.P2Confirm.UseVisualStyleBackColor = True
+        Me.P2Confirm.UseVisualStyleBackColor = False
         '
         'P1Confirm
         '
-        Me.P1Confirm.Location = New System.Drawing.Point(142, 388)
+        Me.P1Confirm.BackColor = System.Drawing.Color.DarkBlue
+        Me.P1Confirm.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.P1Confirm.ForeColor = System.Drawing.Color.White
+        Me.P1Confirm.Location = New System.Drawing.Point(122, 378)
         Me.P1Confirm.Name = "P1Confirm"
-        Me.P1Confirm.Size = New System.Drawing.Size(75, 23)
+        Me.P1Confirm.Size = New System.Drawing.Size(120, 30)
         Me.P1Confirm.TabIndex = 7
         Me.P1Confirm.Text = "Confirm"
-        Me.P1Confirm.UseVisualStyleBackColor = True
+        Me.P1Confirm.UseVisualStyleBackColor = False
         '
         'TeamSelection
         '
