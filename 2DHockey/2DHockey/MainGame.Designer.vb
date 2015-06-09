@@ -150,6 +150,7 @@ Partial Class MainGame
         Me.Controls.Add(Me.puck)
         Me.Controls.Add(Me.userPlayer)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "MainGame"
