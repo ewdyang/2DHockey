@@ -146,8 +146,8 @@ Partial Class TeamSelection
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.Background
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.ice_skating_background
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(606, 455)
         Me.Controls.Add(Me.P1Confirm)
         Me.Controls.Add(Me.P2Confirm)

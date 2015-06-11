@@ -64,7 +64,7 @@ Partial Class MainGame
         Me.puck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.puck.Location = New System.Drawing.Point(381, 185)
         Me.puck.Name = "puck"
-        Me.puck.Size = New System.Drawing.Size(21, 10)
+        Me.puck.Size = New System.Drawing.Size(18, 10)
         Me.puck.TabIndex = 1
         Me.puck.TabStop = False
         '
