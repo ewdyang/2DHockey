@@ -152,7 +152,7 @@ Partial Class TeamSelection
         Me.optionlbl.BackColor = System.Drawing.Color.Transparent
         Me.optionlbl.Font = New System.Drawing.Font("Aircruiser", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.optionlbl.ForeColor = System.Drawing.Color.DarkRed
-        Me.optionlbl.Location = New System.Drawing.Point(104, 51)
+        Me.optionlbl.Location = New System.Drawing.Point(115, 52)
         Me.optionlbl.Name = "optionlbl"
         Me.optionlbl.Size = New System.Drawing.Size(641, 64)
         Me.optionlbl.TabIndex = 8
