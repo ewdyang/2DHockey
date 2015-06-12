@@ -6,6 +6,17 @@
         ElseIf Musicon.Checked = True Then
             Musicoff.Checked = False
         End If
+        points7.Checked = True
+        If points7.Checked = True Then
+            points5.Checked = False
+            points9.Checked = False
+        ElseIf points5.Checked = True Then
+            points7.Checked = False
+            points9.Checked = False
+        Else
+            points5.Checked = False
+            points7.Checked = False
+        End If
     End Sub
 
     Private Sub Musicoff_CheckedChanged(sender As Object, e As EventArgs) Handles Musicoff.CheckedChanged
