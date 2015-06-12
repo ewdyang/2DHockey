@@ -23,24 +23,12 @@ Partial Class MainMenu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainMenu))
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.playbutton = New System.Windows.Forms.Button()
         Me.Optionbutton = New System.Windows.Forms.Button()
         Me.Aboutbutton = New System.Windows.Forms.Button()
         Me.exitButton = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gamename = New System.Windows.Forms.Label()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(59, 34)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(355, 102)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'playbutton
         '
@@ -94,6 +82,18 @@ Partial Class MainMenu
         Me.exitButton.Text = "Exit"
         Me.exitButton.UseVisualStyleBackColor = False
         '
+        'gamename
+        '
+        Me.gamename.AutoSize = True
+        Me.gamename.BackColor = System.Drawing.Color.Transparent
+        Me.gamename.Font = New System.Drawing.Font("Aircruiser", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gamename.ForeColor = System.Drawing.Color.DarkRed
+        Me.gamename.Location = New System.Drawing.Point(21, 39)
+        Me.gamename.Name = "gamename"
+        Me.gamename.Size = New System.Drawing.Size(439, 64)
+        Me.gamename.TabIndex = 5
+        Me.gamename.Text = "2D Hockey"
+        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -101,24 +101,24 @@ Partial Class MainMenu
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(885, 557)
+        Me.Controls.Add(Me.gamename)
         Me.Controls.Add(Me.exitButton)
         Me.Controls.Add(Me.Aboutbutton)
         Me.Controls.Add(Me.Optionbutton)
         Me.Controls.Add(Me.playbutton)
-        Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "MainMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MainMenu"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents playbutton As System.Windows.Forms.Button
     Friend WithEvents Optionbutton As System.Windows.Forms.Button
     Friend WithEvents Aboutbutton As System.Windows.Forms.Button
     Friend WithEvents exitButton As System.Windows.Forms.Button
+    Friend WithEvents gamename As System.Windows.Forms.Label
 End Class

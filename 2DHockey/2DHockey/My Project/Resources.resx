@@ -124,8 +124,8 @@
   <data name="BluePlayer2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\BluePlayer\BluePlayer2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\graphics\Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Main_Screen_Music_wav_file" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Main_Screen_Music wav file.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="button for main menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button for main menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,6 +139,9 @@
   <data name="OrangePlayer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\OrangePlayer\OrangePlayer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ice-skating-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ice-skating-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="GreenPlayer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\GreenPlayer\GreenPlayer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -150,6 +153,9 @@
   </data>
   <data name="HockeyNet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\HockeyNet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="White_Goalie1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\graphics\White Goalie\White Goalie1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GreenPlayer2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\GreenPlayer\GreenPlayer2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +175,8 @@
   <data name="Red_Goalie1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\Red Goalie\Red Goalie1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="White_Goalie1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\graphics\White Goalie\White Goalie1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\graphics\Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button for main menu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button for main menu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,7 +187,7 @@
   <data name="Hockeyrink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\Hockeyrink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ice-skating-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ice-skating-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="main menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\main menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
