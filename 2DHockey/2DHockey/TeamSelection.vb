@@ -76,4 +76,9 @@
             Me.Hide()
         End If
     End Sub
+
+    Private Sub backbutton_Click(sender As Object, e As EventArgs) Handles backbutton.Click
+        Me.Hide()
+        MainMenu.Show()
+    End Sub
 End Class

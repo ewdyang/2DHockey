@@ -33,6 +33,10 @@ Partial Class TeamSelection
         Me.P2Right = New System.Windows.Forms.Button()
         Me.P2Confirm = New System.Windows.Forms.Button()
         Me.P1Confirm = New System.Windows.Forms.Button()
+        Me.optionlbl = New System.Windows.Forms.Label()
+        Me.backbutton = New System.Windows.Forms.Button()
+        Me.team1lbl = New System.Windows.Forms.Label()
+        Me.Team2lbl = New System.Windows.Forms.Label()
         CType(Me.Player1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Player2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -51,7 +55,7 @@ Partial Class TeamSelection
         '
         Me.Player1.BackColor = System.Drawing.Color.Transparent
         Me.Player1.Image = Global._2DHockey.My.Resources.Resources.BluePlayer2
-        Me.Player1.Location = New System.Drawing.Point(107, 120)
+        Me.Player1.Location = New System.Drawing.Point(175, 203)
         Me.Player1.Name = "Player1"
         Me.Player1.Size = New System.Drawing.Size(150, 150)
         Me.Player1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -63,7 +67,7 @@ Partial Class TeamSelection
         Me.Player2.BackColor = System.Drawing.Color.Transparent
         Me.Player2.Image = Global._2DHockey.My.Resources.Resources.BluePlayer2
         Me.Player2.InitialImage = Nothing
-        Me.Player2.Location = New System.Drawing.Point(361, 120)
+        Me.Player2.Location = New System.Drawing.Point(560, 203)
         Me.Player2.Name = "Player2"
         Me.Player2.Size = New System.Drawing.Size(150, 150)
         Me.Player2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -75,7 +79,7 @@ Partial Class TeamSelection
         Me.P1Left.BackColor = System.Drawing.Color.DarkBlue
         Me.P1Left.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.P1Left.ForeColor = System.Drawing.Color.White
-        Me.P1Left.Location = New System.Drawing.Point(77, 324)
+        Me.P1Left.Location = New System.Drawing.Point(137, 381)
         Me.P1Left.Name = "P1Left"
         Me.P1Left.Size = New System.Drawing.Size(90, 30)
         Me.P1Left.TabIndex = 2
@@ -87,7 +91,7 @@ Partial Class TeamSelection
         Me.P1Right.BackColor = System.Drawing.Color.DarkBlue
         Me.P1Right.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.P1Right.ForeColor = System.Drawing.Color.White
-        Me.P1Right.Location = New System.Drawing.Point(198, 324)
+        Me.P1Right.Location = New System.Drawing.Point(282, 381)
         Me.P1Right.Name = "P1Right"
         Me.P1Right.Size = New System.Drawing.Size(90, 30)
         Me.P1Right.TabIndex = 3
@@ -99,7 +103,7 @@ Partial Class TeamSelection
         Me.P2Left.BackColor = System.Drawing.Color.DarkBlue
         Me.P2Left.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.P2Left.ForeColor = System.Drawing.Color.Transparent
-        Me.P2Left.Location = New System.Drawing.Point(339, 324)
+        Me.P2Left.Location = New System.Drawing.Point(507, 381)
         Me.P2Left.Name = "P2Left"
         Me.P2Left.Size = New System.Drawing.Size(90, 30)
         Me.P2Left.TabIndex = 4
@@ -111,7 +115,7 @@ Partial Class TeamSelection
         Me.P2Right.BackColor = System.Drawing.Color.DarkBlue
         Me.P2Right.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.P2Right.ForeColor = System.Drawing.Color.White
-        Me.P2Right.Location = New System.Drawing.Point(452, 324)
+        Me.P2Right.Location = New System.Drawing.Point(655, 381)
         Me.P2Right.Name = "P2Right"
         Me.P2Right.Size = New System.Drawing.Size(90, 30)
         Me.P2Right.TabIndex = 5
@@ -123,7 +127,7 @@ Partial Class TeamSelection
         Me.P2Confirm.BackColor = System.Drawing.Color.DarkBlue
         Me.P2Confirm.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.P2Confirm.ForeColor = System.Drawing.Color.White
-        Me.P2Confirm.Location = New System.Drawing.Point(379, 378)
+        Me.P2Confirm.Location = New System.Drawing.Point(578, 437)
         Me.P2Confirm.Name = "P2Confirm"
         Me.P2Confirm.Size = New System.Drawing.Size(120, 30)
         Me.P2Confirm.TabIndex = 6
@@ -135,12 +139,61 @@ Partial Class TeamSelection
         Me.P1Confirm.BackColor = System.Drawing.Color.DarkBlue
         Me.P1Confirm.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.P1Confirm.ForeColor = System.Drawing.Color.White
-        Me.P1Confirm.Location = New System.Drawing.Point(122, 378)
+        Me.P1Confirm.Location = New System.Drawing.Point(193, 437)
         Me.P1Confirm.Name = "P1Confirm"
         Me.P1Confirm.Size = New System.Drawing.Size(120, 30)
         Me.P1Confirm.TabIndex = 7
         Me.P1Confirm.Text = "Confirm"
         Me.P1Confirm.UseVisualStyleBackColor = False
+        '
+        'optionlbl
+        '
+        Me.optionlbl.AutoSize = True
+        Me.optionlbl.BackColor = System.Drawing.Color.Transparent
+        Me.optionlbl.Font = New System.Drawing.Font("Aircruiser", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.optionlbl.ForeColor = System.Drawing.Color.DarkRed
+        Me.optionlbl.Location = New System.Drawing.Point(104, 51)
+        Me.optionlbl.Name = "optionlbl"
+        Me.optionlbl.Size = New System.Drawing.Size(641, 64)
+        Me.optionlbl.TabIndex = 8
+        Me.optionlbl.Text = "Team Selection"
+        '
+        'backbutton
+        '
+        Me.backbutton.BackColor = System.Drawing.Color.DarkBlue
+        Me.backbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.backbutton.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.backbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.backbutton.Location = New System.Drawing.Point(282, 497)
+        Me.backbutton.Name = "backbutton"
+        Me.backbutton.Size = New System.Drawing.Size(293, 39)
+        Me.backbutton.TabIndex = 9
+        Me.backbutton.Text = "Back"
+        Me.backbutton.UseVisualStyleBackColor = False
+        '
+        'team1lbl
+        '
+        Me.team1lbl.AutoSize = True
+        Me.team1lbl.BackColor = System.Drawing.Color.Transparent
+        Me.team1lbl.Font = New System.Drawing.Font("Aircruiser", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.team1lbl.ForeColor = System.Drawing.Color.DarkRed
+        Me.team1lbl.Location = New System.Drawing.Point(188, 153)
+        Me.team1lbl.Name = "team1lbl"
+        Me.team1lbl.Size = New System.Drawing.Size(129, 29)
+        Me.team1lbl.TabIndex = 10
+        Me.team1lbl.Text = "Team 1"
+        '
+        'Team2lbl
+        '
+        Me.Team2lbl.AutoSize = True
+        Me.Team2lbl.BackColor = System.Drawing.Color.Transparent
+        Me.Team2lbl.Font = New System.Drawing.Font("Aircruiser", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Team2lbl.ForeColor = System.Drawing.Color.DarkRed
+        Me.Team2lbl.Location = New System.Drawing.Point(569, 153)
+        Me.Team2lbl.Name = "Team2lbl"
+        Me.Team2lbl.Size = New System.Drawing.Size(135, 29)
+        Me.Team2lbl.TabIndex = 11
+        Me.Team2lbl.Text = "Team 2"
         '
         'TeamSelection
         '
@@ -148,7 +201,11 @@ Partial Class TeamSelection
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.ice_skating_background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(606, 455)
+        Me.ClientSize = New System.Drawing.Size(885, 557)
+        Me.Controls.Add(Me.Team2lbl)
+        Me.Controls.Add(Me.team1lbl)
+        Me.Controls.Add(Me.backbutton)
+        Me.Controls.Add(Me.optionlbl)
         Me.Controls.Add(Me.P1Confirm)
         Me.Controls.Add(Me.P2Confirm)
         Me.Controls.Add(Me.P2Right)
@@ -166,6 +223,7 @@ Partial Class TeamSelection
         CType(Me.Player1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Player2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
@@ -177,4 +235,8 @@ Partial Class TeamSelection
     Friend WithEvents P2Right As System.Windows.Forms.Button
     Friend WithEvents P2Confirm As System.Windows.Forms.Button
     Friend WithEvents P1Confirm As System.Windows.Forms.Button
+    Friend WithEvents optionlbl As System.Windows.Forms.Label
+    Friend WithEvents backbutton As System.Windows.Forms.Button
+    Friend WithEvents team1lbl As System.Windows.Forms.Label
+    Friend WithEvents Team2lbl As System.Windows.Forms.Label
 End Class
