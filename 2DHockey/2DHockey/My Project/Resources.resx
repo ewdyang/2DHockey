@@ -130,6 +130,9 @@
   <data name="button for main menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button for main menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pause button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\graphics\pause button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BluePlayer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\BluePlayer\BluePlayer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,17 +148,17 @@
   <data name="GreenPlayer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\GreenPlayer\GreenPlayer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="main menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\main menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Puck1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\Puck\Puck1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WhitePlayer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\WhitePlayer\WhitePlayer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HockeyNet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\graphics\HockeyNet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="White_Goalie1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\graphics\White Goalie\White Goalie1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\graphics\Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GreenPlayer2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\GreenPlayer\GreenPlayer2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,11 +178,17 @@
   <data name="Red_Goalie1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\Red Goalie\Red Goalie1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\graphics\Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="White_Goalie1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\graphics\White Goalie\White Goalie1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button for main menu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button for main menu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HockeyNet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\graphics\HockeyNet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pause button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\graphics\pause button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RedPlayer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\RedPlayer\RedPlayer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,7 +196,7 @@
   <data name="Hockeyrink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\Hockeyrink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="main menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pause button white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\graphics\pause button white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

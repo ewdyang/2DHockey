@@ -36,11 +36,15 @@ Partial Class MainGame
         Me.GreenAnimation = New System.Windows.Forms.ImageList(Me.components)
         Me.OrangeAnimation = New System.Windows.Forms.ImageList(Me.components)
         Me.WhiteAnimation = New System.Windows.Forms.ImageList(Me.components)
+        Me.Pausebutton = New System.Windows.Forms.PictureBox()
+        Me.resumebtn = New System.Windows.Forms.Button()
+        Me.Quitbtn = New System.Windows.Forms.Button()
         CType(Me.userPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.playerNet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.compNet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.compPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Pausebutton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tick
@@ -137,6 +141,43 @@ Partial Class MainGame
         Me.WhiteAnimation.Images.SetKeyName(0, "WhitePlayer1.png")
         Me.WhiteAnimation.Images.SetKeyName(1, "WhitePlayer2.png")
         '
+        'Pausebutton
+        '
+        Me.Pausebutton.BackColor = System.Drawing.Color.Transparent
+        Me.Pausebutton.BackgroundImage = Global._2DHockey.My.Resources.Resources.pause_button_white
+        Me.Pausebutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Pausebutton.Location = New System.Drawing.Point(741, 12)
+        Me.Pausebutton.Name = "Pausebutton"
+        Me.Pausebutton.Size = New System.Drawing.Size(22, 40)
+        Me.Pausebutton.TabIndex = 5
+        Me.Pausebutton.TabStop = False
+        '
+        'resumebtn
+        '
+        Me.resumebtn.BackColor = System.Drawing.Color.DarkBlue
+        Me.resumebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.resumebtn.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.resumebtn.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.resumebtn.Location = New System.Drawing.Point(306, 120)
+        Me.resumebtn.Name = "resumebtn"
+        Me.resumebtn.Size = New System.Drawing.Size(170, 33)
+        Me.resumebtn.TabIndex = 6
+        Me.resumebtn.Text = "Resume"
+        Me.resumebtn.UseVisualStyleBackColor = False
+        '
+        'Quitbtn
+        '
+        Me.Quitbtn.BackColor = System.Drawing.Color.DarkBlue
+        Me.Quitbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Quitbtn.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Quitbtn.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Quitbtn.Location = New System.Drawing.Point(306, 201)
+        Me.Quitbtn.Name = "Quitbtn"
+        Me.Quitbtn.Size = New System.Drawing.Size(170, 33)
+        Me.Quitbtn.TabIndex = 7
+        Me.Quitbtn.Text = "Quit"
+        Me.Quitbtn.UseVisualStyleBackColor = False
+        '
         'MainGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -144,6 +185,9 @@ Partial Class MainGame
         Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.Hockeyrink
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(784, 361)
+        Me.Controls.Add(Me.Quitbtn)
+        Me.Controls.Add(Me.resumebtn)
+        Me.Controls.Add(Me.Pausebutton)
         Me.Controls.Add(Me.compPlayer)
         Me.Controls.Add(Me.compNet)
         Me.Controls.Add(Me.playerNet)
@@ -161,6 +205,7 @@ Partial Class MainGame
         CType(Me.playerNet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.compNet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.compPlayer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Pausebutton, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -176,5 +221,8 @@ Partial Class MainGame
     Friend WithEvents GreenAnimation As System.Windows.Forms.ImageList
     Friend WithEvents OrangeAnimation As System.Windows.Forms.ImageList
     Friend WithEvents WhiteAnimation As System.Windows.Forms.ImageList
+    Friend WithEvents Pausebutton As System.Windows.Forms.PictureBox
+    Friend WithEvents resumebtn As System.Windows.Forms.Button
+    Friend WithEvents Quitbtn As System.Windows.Forms.Button
 
 End Class

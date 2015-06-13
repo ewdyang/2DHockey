@@ -105,6 +105,8 @@
             Case 4
                 userPlayer.Image = WhiteAnimation.Images(0)
         End Select
+        resumebtn.Hide()
+        Quitbtn.Hide()
     End Sub
 
     Sub moveObject(ByVal bouncingObject As PictureBox, ByRef objectXV As Integer, ByRef objectYV As Integer, Optional ByRef objectAccelerating As Boolean = False) 'Moves an object according to it's X and Y velocity
@@ -264,5 +266,25 @@
 
     Private Sub MainGame_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         TeamSelection.Close()
+    End Sub
+    Sub Pausemenu()
+        resumebtn.Show()
+        Quitbtn.Show()
+    End Sub
+
+    Private Sub Pausebutton_Click(sender As Object, e As EventArgs) Handles Pausebutton.Click
+        Pausemenu()
+    End Sub
+
+    Private Sub resumebtn_Click(sender As Object, e As EventArgs) Handles resumebtn.Click
+        resumebtn.Hide()
+        Quitbtn.Hide()
+    End Sub
+
+    Private Sub Quitbtn_Click(sender As Object, e As EventArgs) Handles Quitbtn.Click
+        resumebtn.Hide()
+        Quitbtn.Hide()
+        Me.Visible = False
+        MainMenu.Visible = True
     End Sub
 End Class

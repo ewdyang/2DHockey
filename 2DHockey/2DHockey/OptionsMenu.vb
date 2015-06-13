@@ -28,7 +28,7 @@
     End Sub
 
     Private Sub backbutton_Click(sender As Object, e As EventArgs) Handles backbutton.Click
-        Me.Hide()
-        MainMenu.Show()
+        Me.Visible = False
+        MainMenu.Visible = True
     End Sub
 End Class
