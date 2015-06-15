@@ -61,6 +61,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property aircruiser() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("aircruiser", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Background() As System.Drawing.Bitmap
@@ -165,6 +175,16 @@ Namespace My.Resources
         Friend ReadOnly Property mainGamePauseButtonImage() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("mainGamePauseButtonImage", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property mainGamePauseButtonWhiteImage() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("mainGamePauseButtonWhiteImage", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
