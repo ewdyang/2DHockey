@@ -51,7 +51,6 @@ Partial Class MainGame
         '
         'tick
         '
-        Me.tick.Enabled = True
         Me.tick.Interval = 40
         '
         'userPlayer

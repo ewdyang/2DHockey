@@ -42,7 +42,7 @@ Partial Class OptionsMenu
         '
         Me.optionlbl.AutoSize = True
         Me.optionlbl.BackColor = System.Drawing.Color.Transparent
-        Me.optionlbl.Font = New System.Drawing.Font("Aircruiser", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.optionlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.optionlbl.ForeColor = System.Drawing.Color.DarkBlue
         Me.optionlbl.Location = New System.Drawing.Point(115, 39)
         Me.optionlbl.Name = "optionlbl"
@@ -54,7 +54,7 @@ Partial Class OptionsMenu
         '
         Me.Musicname.AutoSize = True
         Me.Musicname.BackColor = System.Drawing.Color.Transparent
-        Me.Musicname.Font = New System.Drawing.Font("Aircruiser", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Musicname.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Musicname.ForeColor = System.Drawing.Color.White
         Me.Musicname.Location = New System.Drawing.Point(56, 127)
         Me.Musicname.Name = "Musicname"
@@ -107,7 +107,7 @@ Partial Class OptionsMenu
         '
         Me.Pointsetter.AutoSize = True
         Me.Pointsetter.BackColor = System.Drawing.Color.Transparent
-        Me.Pointsetter.Font = New System.Drawing.Font("Aircruiser", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Pointsetter.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Pointsetter.ForeColor = System.Drawing.Color.White
         Me.Pointsetter.Location = New System.Drawing.Point(56, 264)
         Me.Pointsetter.Name = "Pointsetter"
@@ -135,7 +135,7 @@ Partial Class OptionsMenu
         Me.points7.BackColor = System.Drawing.Color.Transparent
         Me.points7.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.points7.ForeColor = System.Drawing.Color.DarkBlue
-        Me.points7.Location = New System.Drawing.Point(116, 43)
+        Me.points7.Location = New System.Drawing.Point(109, 43)
         Me.points7.Name = "points7"
         Me.points7.Size = New System.Drawing.Size(44, 33)
         Me.points7.TabIndex = 10

@@ -4,7 +4,7 @@
     Dim playerAccelerating As Boolean 'Whether the player is in the process of accelerating
     Dim heldByPlayer As Boolean 'Whether the puck is held by the player
     Dim heldByWhichTeam As String 'which team has possession of the puck
-    Dim playerScore, compScore As Integer 'the scores of the respective teams
+    Dim userScore, compScore As Integer 'the scores of the respective teams
     Dim Framenum As Integer = 0
 
     Dim maxPlayerSpeed As Integer = 8 'max speed a player can accelerate to
@@ -27,21 +27,21 @@
         End If
         moveObject(userPlayer, playerXV, playerYV, playerAccelerating) 'calculates movement of player
         If objectCollisionDetect(puck, userPlayer) Then 'checks if player is touching puck
-            heldByPlayer = True
             heldByWhichTeam = "user"
-        ElseIf objectCollisionDetect(puck, compPlayer) Then
             heldByPlayer = True
+        ElseIf objectCollisionDetect(puck, compPlayer) Then
             heldByWhichTeam = "comp"
+            heldByPlayer = True
         End If
         If heldByPlayer = True Then
             If heldByWhichTeam = "user" Then
                 followPlayer(puck, userPlayer, userPlayerDirection) 'makes the puck follow the user player
-                ElseIf heldByWhichTeam = "comp" Then
+            ElseIf heldByWhichTeam = "comp" Then
                 followPlayer(puck, compPlayer, compPlayerDirection) 'makes the puck follow the comp player
-                End If
-            Else
-                moveObject(puck, puckXV, puckYV) 'puck moves normally
             End If
+        Else
+            moveObject(puck, puckXV, puckYV) 'puck moves normally
+        End If
     End Sub
 
     Private Sub arrowControls(sender As Object, e As KeyEventArgs) Handles Me.KeyDown 'Allows for control of player using arrow keys
@@ -93,7 +93,6 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Randomize()
         compNet.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
-
         Select Case TeamSelection.team1
             Case 0
                 userPlayer.Image = PlayerAnimationList.Images(0)
@@ -106,7 +105,6 @@
             Case 4
                 userPlayer.Image = WhiteAnimation.Images(0)
         End Select
-
         Select Case TeamSelection.team2
             Case 0
                 compPlayer.Image = PlayerAnimationList.Images(0)
@@ -200,7 +198,7 @@
 
     Sub goalScored(ByVal team As String) 'adds 1 to the score, then checks if any teams have at least 9 points, then triggers win if it's met
         If team = "user" Then
-            playerScore += 1
+            userScore += 1
             updateScoreBoard()
             resetGoal()
         ElseIf team = "comp" Then
@@ -208,7 +206,7 @@
             updateScoreBoard()
             resetGoal()
         End If
-        If playerScore >= optionPointsNeeded Then
+        If userScore >= optionPointsNeeded Then
             gameWin("user")
         ElseIf compScore >= optionPointsNeeded Then
             gameWin("comp")
@@ -238,6 +236,14 @@
         userPlayer.Location = userPlayerResetPosition
         compPlayer.Location = compPlayerResetPosition
         tick.Start()
+    End Sub
+
+    Sub resetGame() 'resets the game when it ends or is quit
+        resetGoal()
+        tick.Stop()
+        userScore = 0
+        compScore = 0
+        updateScoreBoard()
     End Sub
 
     Sub animatePlayer(ByVal player As PictureBox, ByVal directionHeading As String)
@@ -281,8 +287,11 @@
 
     Private Sub MainGame_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         TeamSelection.Close()
+        tick.Stop()
     End Sub
+
     Sub pauseMenu()
+        tick.Stop()
         pauseMenuPanel.Show()
     End Sub
 
@@ -292,11 +301,17 @@
 
     Private Sub resumebtn_Click(sender As Object, e As EventArgs) Handles resumebtn.Click
         pauseMenuPanel.Hide()
+        tick.Start()
     End Sub
 
     Private Sub Quitbtn_Click(sender As Object, e As EventArgs) Handles Quitbtn.Click
+        resetGame()
         pauseMenuPanel.Hide()
         Me.Visible = False
         MainMenu.Visible = True
+    End Sub
+
+    Private Sub MainGame_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        tick.Start()
     End Sub
 End Class
