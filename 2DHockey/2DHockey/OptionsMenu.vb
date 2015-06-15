@@ -7,16 +7,6 @@
             Musicoff.Checked = False
         End If
         points7.Checked = True
-        If points7.Checked = True Then
-            points5.Checked = False
-            points9.Checked = False
-        ElseIf points5.Checked = True Then
-            points7.Checked = False
-            points9.Checked = False
-        Else
-            points5.Checked = False
-            points7.Checked = False
-        End If
     End Sub
 
     Private Sub Musicoff_CheckedChanged(sender As Object, e As EventArgs) Handles Musicoff.CheckedChanged
@@ -28,7 +18,19 @@
     End Sub
 
     Private Sub backbutton_Click(sender As Object, e As EventArgs) Handles backbutton.Click
-        Me.Visible = False
-        MainMenu.Visible = True
+        Me.Hide()
+        MainMenu.Show()
+    End Sub
+
+    Private Sub points5_CheckedChanged(sender As Object, e As EventArgs) Handles points5.CheckedChanged
+        MainGame.optionPointsNeeded = 5
+    End Sub
+
+    Private Sub points7_CheckedChanged(sender As Object, e As EventArgs) Handles points7.CheckedChanged
+        MainGame.optionPointsNeeded = 7
+    End Sub
+
+    Private Sub points9_CheckedChanged(sender As Object, e As EventArgs) Handles points9.CheckedChanged
+        MainGame.optionPointsNeeded = 9
     End Sub
 End Class

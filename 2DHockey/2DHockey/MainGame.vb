@@ -16,6 +16,7 @@
     Dim userPlayerResetPosition As New Point(255, 165)
     Dim compPlayerResetPosition As New Point(478, 165)
 
+    Public optionPointsNeeded As Integer = 7
 
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
@@ -105,8 +106,18 @@
             Case 4
                 userPlayer.Image = WhiteAnimation.Images(0)
         End Select
-        resumebtn.Hide()
-        Quitbtn.Hide()
+        Select Case TeamSelection.team2
+            Case 0
+                compPlayer.Image = PlayerAnimationList.Images(0)
+            Case 1
+                compPlayer.Image = GreenAnimation.Images(0)
+            Case 2
+                compPlayer.Image = OrangeAnimation.Images(0)
+            Case 3
+                compPlayer.Image = RedAnimation.Images(0)
+            Case 4
+                compPlayer.Image = WhiteAnimation.Images(0)
+        End Select
     End Sub
 
     Sub moveObject(ByVal bouncingObject As PictureBox, ByRef objectXV As Integer, ByRef objectYV As Integer, Optional ByRef objectAccelerating As Boolean = False) 'Moves an object according to it's X and Y velocity
@@ -193,9 +204,9 @@
             updateScoreBoard()
             resetGoal()
         End If
-        If playerScore >= 7 Then
+        If playerScore >= optionPointsNeeded Then
             gameWin("user")
-        ElseIf compScore >= 7 Then
+        ElseIf compScore >= optionPointsNeeded Then
             gameWin("comp")
         End If
     End Sub
@@ -267,23 +278,20 @@
     Private Sub MainGame_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         TeamSelection.Close()
     End Sub
-    Sub Pausemenu()
-        resumebtn.Show()
-        Quitbtn.Show()
+    Sub pauseMenu()
+        pauseMenuPanel.Show()
     End Sub
 
     Private Sub Pausebutton_Click(sender As Object, e As EventArgs) Handles Pausebutton.Click
-        Pausemenu()
+        pauseMenu()
     End Sub
 
     Private Sub resumebtn_Click(sender As Object, e As EventArgs) Handles resumebtn.Click
-        resumebtn.Hide()
-        Quitbtn.Hide()
+        pauseMenuPanel.Hide()
     End Sub
 
     Private Sub Quitbtn_Click(sender As Object, e As EventArgs) Handles Quitbtn.Click
-        resumebtn.Hide()
-        Quitbtn.Hide()
+        pauseMenuPanel.Hide()
         Me.Visible = False
         MainMenu.Visible = True
     End Sub

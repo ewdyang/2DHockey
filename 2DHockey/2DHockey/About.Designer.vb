@@ -81,7 +81,7 @@ Partial Class About
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.ice_skating_background
+        Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.teamSelectionBackground
         Me.ClientSize = New System.Drawing.Size(869, 519)
         Me.Controls.Add(Me.backbutton)
         Me.Controls.Add(Me.Label1)

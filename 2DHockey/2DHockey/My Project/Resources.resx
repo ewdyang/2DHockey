@@ -130,9 +130,6 @@
   <data name="button for main menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button for main menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pause button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\graphics\pause button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="BluePlayer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\BluePlayer\BluePlayer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,13 +139,13 @@
   <data name="OrangePlayer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\OrangePlayer\OrangePlayer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ice-skating-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="teamSelectionBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ice-skating-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GreenPlayer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\GreenPlayer\GreenPlayer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="main menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="mainMenuBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\main menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Puck1" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -187,7 +184,7 @@
   <data name="HockeyNet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\HockeyNet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pause button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="mainGamePauseButtonImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\pause button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RedPlayer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -196,7 +193,7 @@
   <data name="Hockeyrink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\Hockeyrink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pause button white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="mainGamePauseButtonWhiteImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\pause button white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
