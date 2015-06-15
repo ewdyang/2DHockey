@@ -24,7 +24,7 @@ Partial Class TeamSelection
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TeamSelection))
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.playerSprites = New System.Windows.Forms.ImageList(Me.components)
         Me.Player1 = New System.Windows.Forms.PictureBox()
         Me.Player2 = New System.Windows.Forms.PictureBox()
         Me.P1Left = New System.Windows.Forms.Button()
@@ -41,15 +41,15 @@ Partial Class TeamSelection
         CType(Me.Player2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ImageList1
+        'playerSprites
         '
-        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "BluePlayer2.png")
-        Me.ImageList1.Images.SetKeyName(1, "GreenPlayer2.png")
-        Me.ImageList1.Images.SetKeyName(2, "OrangePlayer2.png")
-        Me.ImageList1.Images.SetKeyName(3, "RedPlayer2.png")
-        Me.ImageList1.Images.SetKeyName(4, "WhitePlayer2.png")
+        Me.playerSprites.ImageStream = CType(resources.GetObject("playerSprites.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.playerSprites.TransparentColor = System.Drawing.Color.Transparent
+        Me.playerSprites.Images.SetKeyName(0, "BluePlayer2.png")
+        Me.playerSprites.Images.SetKeyName(1, "GreenPlayer2.png")
+        Me.playerSprites.Images.SetKeyName(2, "OrangePlayer2.png")
+        Me.playerSprites.Images.SetKeyName(3, "RedPlayer2.png")
+        Me.playerSprites.Images.SetKeyName(4, "WhitePlayer2.png")
         '
         'Player1
         '
@@ -226,7 +226,7 @@ Partial Class TeamSelection
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
+    Friend WithEvents playerSprites As System.Windows.Forms.ImageList
     Friend WithEvents Player1 As System.Windows.Forms.PictureBox
     Friend WithEvents Player2 As System.Windows.Forms.PictureBox
     Friend WithEvents P1Left As System.Windows.Forms.Button

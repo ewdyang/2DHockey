@@ -1,4 +1,6 @@
 ﻿Public Class OptionsMenu
+    Public optionPointsNeeded As Integer = 7
+
     Private Sub OptionsMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Musicon.Checked = True
         If Musicoff.Checked = True Then  'makes sure that always one radio button is checked and turns on or off the music
@@ -26,14 +28,14 @@
     End Sub
 
     Private Sub points5_CheckedChanged(sender As Object, e As EventArgs) Handles points5.CheckedChanged
-        MainGame.optionPointsNeeded = 5
+        optionPointsNeeded = 5
     End Sub
 
     Private Sub points7_CheckedChanged(sender As Object, e As EventArgs) Handles points7.CheckedChanged
-        MainGame.optionPointsNeeded = 7
+        optionPointsNeeded = 7
     End Sub
 
     Private Sub points9_CheckedChanged(sender As Object, e As EventArgs) Handles points9.CheckedChanged
-        MainGame.optionPointsNeeded = 9
+        optionPointsNeeded = 9
     End Sub
 End Class

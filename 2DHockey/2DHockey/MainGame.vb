@@ -16,8 +16,6 @@
     Dim userPlayerResetPosition As New Point(255, 165)
     Dim compPlayerResetPosition As New Point(478, 165)
 
-    Public optionPointsNeeded As Integer = 7
-
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
         If objectCollisionDetect(puck, playerNet) Then
@@ -90,7 +88,7 @@
         End Select
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub MainGame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Randomize()
         compNet.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
         Select Case TeamSelection.team1
@@ -119,7 +117,6 @@
         End Select
         resumebtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
         Quitbtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
-
     End Sub
 
     Sub moveObject(ByVal bouncingObject As PictureBox, ByRef objectXV As Integer, ByRef objectYV As Integer, Optional ByRef objectAccelerating As Boolean = False) 'Moves an object according to it's X and Y velocity
@@ -206,9 +203,9 @@
             updateScoreBoard()
             resetGoal()
         End If
-        If userScore >= optionPointsNeeded Then
+        If userScore >= OptionsMenu.optionPointsNeeded Then
             gameWin("user")
-        ElseIf compScore >= optionPointsNeeded Then
+        ElseIf compScore >= OptionsMenu.optionPointsNeeded Then
             gameWin("comp")
         End If
     End Sub
@@ -307,7 +304,8 @@
     Private Sub Quitbtn_Click(sender As Object, e As EventArgs) Handles Quitbtn.Click
         resetGame()
         pauseMenuPanel.Hide()
-        Me.Visible = False
+        TeamSelection.resetTeamSelectionForm()
+        Me.Close()
         MainMenu.Visible = True
     End Sub
 
