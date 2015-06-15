@@ -33,7 +33,7 @@ Partial Class About
         Me.Title.AutoSize = True
         Me.Title.BackColor = System.Drawing.Color.Transparent
         Me.Title.Font = New System.Drawing.Font("Aircruiser", 60.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Title.ForeColor = System.Drawing.Color.Black
+        Me.Title.ForeColor = System.Drawing.Color.DarkBlue
         Me.Title.Location = New System.Drawing.Point(269, 46)
         Me.Title.Name = "Title"
         Me.Title.Size = New System.Drawing.Size(346, 80)

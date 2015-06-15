@@ -10,7 +10,7 @@ Public Class MainMenu
 AudioPlayMode.BackgroundLoop)
         End If
 
-        gamename.Font = CustomFont.GetInstance(42, FontStyle.Regular)                   'Uses the custom font in the resources
+        gamename.Font = CustomFont.GetInstance(50, FontStyle.Regular)                   'Uses the custom font in the resources
 
     End Sub
 
