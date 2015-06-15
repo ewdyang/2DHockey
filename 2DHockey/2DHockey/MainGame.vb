@@ -115,6 +115,7 @@
             Case 4
                 compPlayer.Image = WhiteAnimation.Images(0)
         End Select
+        userPlayer.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
         resumebtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
         Quitbtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
     End Sub

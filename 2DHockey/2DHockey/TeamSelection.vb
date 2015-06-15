@@ -83,7 +83,7 @@
         MainMenu.Show()
     End Sub
 
-    Sub resetTeamSelectionForm()
+    Public Sub resetTeamSelectionForm()
         team1 = 0
         team2 = 0
         Player1.Image = playerSprites.Images(team1)
