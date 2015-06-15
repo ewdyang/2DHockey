@@ -5,6 +5,8 @@
     Private Sub TeamSelection_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Player1.Image = ImageList1.Images(0)
         Player2.Image = ImageList1.Images(0)
+
+        optionlbl.Font = CustomFont.GetInstance(50, FontStyle.Regular)
     End Sub
 
     Private Sub P1Left_Click(sender As Object, e As EventArgs) Handles P1Left.Click

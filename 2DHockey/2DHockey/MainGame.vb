@@ -106,6 +106,7 @@
             Case 4
                 userPlayer.Image = WhiteAnimation.Images(0)
         End Select
+
         Select Case TeamSelection.team2
             Case 0
                 compPlayer.Image = PlayerAnimationList.Images(0)
@@ -118,6 +119,9 @@
             Case 4
                 compPlayer.Image = WhiteAnimation.Images(0)
         End Select
+        resumebtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
+        Quitbtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
+
     End Sub
 
     Sub moveObject(ByVal bouncingObject As PictureBox, ByRef objectXV As Integer, ByRef objectYV As Integer, Optional ByRef objectAccelerating As Boolean = False) 'Moves an object according to it's X and Y velocity

@@ -42,8 +42,8 @@ Partial Class OptionsMenu
         '
         Me.optionlbl.AutoSize = True
         Me.optionlbl.BackColor = System.Drawing.Color.Transparent
-        Me.optionlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.optionlbl.ForeColor = System.Drawing.Color.DarkRed
+        Me.optionlbl.Font = New System.Drawing.Font("Aircruiser", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.optionlbl.ForeColor = System.Drawing.Color.DarkBlue
         Me.optionlbl.Location = New System.Drawing.Point(115, 39)
         Me.optionlbl.Name = "optionlbl"
         Me.optionlbl.Size = New System.Drawing.Size(321, 73)
@@ -54,8 +54,8 @@ Partial Class OptionsMenu
         '
         Me.Musicname.AutoSize = True
         Me.Musicname.BackColor = System.Drawing.Color.Transparent
-        Me.Musicname.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Musicname.ForeColor = System.Drawing.Color.DarkRed
+        Me.Musicname.Font = New System.Drawing.Font("Aircruiser", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Musicname.ForeColor = System.Drawing.Color.White
         Me.Musicname.Location = New System.Drawing.Point(56, 127)
         Me.Musicname.Name = "Musicname"
         Me.Musicname.Size = New System.Drawing.Size(116, 42)
@@ -107,8 +107,8 @@ Partial Class OptionsMenu
         '
         Me.Pointsetter.AutoSize = True
         Me.Pointsetter.BackColor = System.Drawing.Color.Transparent
-        Me.Pointsetter.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Pointsetter.ForeColor = System.Drawing.Color.DarkRed
+        Me.Pointsetter.Font = New System.Drawing.Font("Aircruiser", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Pointsetter.ForeColor = System.Drawing.Color.White
         Me.Pointsetter.Location = New System.Drawing.Point(56, 264)
         Me.Pointsetter.Name = "Pointsetter"
         Me.Pointsetter.Size = New System.Drawing.Size(237, 42)

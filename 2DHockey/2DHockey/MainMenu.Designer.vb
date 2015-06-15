@@ -36,7 +36,7 @@ Partial Class MainMenu
         Me.playbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.playbutton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.playbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.playbutton.Location = New System.Drawing.Point(92, 165)
+        Me.playbutton.Location = New System.Drawing.Point(97, 168)
         Me.playbutton.Name = "playbutton"
         Me.playbutton.Size = New System.Drawing.Size(263, 38)
         Me.playbutton.TabIndex = 1
@@ -49,7 +49,7 @@ Partial Class MainMenu
         Me.Optionbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Optionbutton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Optionbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Optionbutton.Location = New System.Drawing.Point(92, 248)
+        Me.Optionbutton.Location = New System.Drawing.Point(97, 243)
         Me.Optionbutton.Name = "Optionbutton"
         Me.Optionbutton.Size = New System.Drawing.Size(263, 38)
         Me.Optionbutton.TabIndex = 2
@@ -62,7 +62,7 @@ Partial Class MainMenu
         Me.Aboutbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Aboutbutton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Aboutbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Aboutbutton.Location = New System.Drawing.Point(92, 331)
+        Me.Aboutbutton.Location = New System.Drawing.Point(97, 330)
         Me.Aboutbutton.Name = "Aboutbutton"
         Me.Aboutbutton.Size = New System.Drawing.Size(263, 38)
         Me.Aboutbutton.TabIndex = 3
@@ -75,7 +75,7 @@ Partial Class MainMenu
         Me.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.exitButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.exitButton.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.exitButton.Location = New System.Drawing.Point(92, 414)
+        Me.exitButton.Location = New System.Drawing.Point(97, 418)
         Me.exitButton.Name = "exitButton"
         Me.exitButton.Size = New System.Drawing.Size(263, 38)
         Me.exitButton.TabIndex = 4
@@ -86,11 +86,11 @@ Partial Class MainMenu
         '
         Me.gamename.AutoSize = True
         Me.gamename.BackColor = System.Drawing.Color.Transparent
-        Me.gamename.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gamename.ForeColor = System.Drawing.Color.DarkRed
-        Me.gamename.Location = New System.Drawing.Point(19, 41)
+        Me.gamename.Font = New System.Drawing.Font("Aircruiser", 50.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gamename.ForeColor = System.Drawing.Color.DarkBlue
+        Me.gamename.Location = New System.Drawing.Point(25, 48)
         Me.gamename.Name = "gamename"
-        Me.gamename.Size = New System.Drawing.Size(345, 73)
+        Me.gamename.Size = New System.Drawing.Size(462, 68)
         Me.gamename.TabIndex = 5
         Me.gamename.Text = "2D Hockey"
         '
