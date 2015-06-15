@@ -32,11 +32,11 @@ Partial Class About
         '
         Me.Title.AutoSize = True
         Me.Title.BackColor = System.Drawing.Color.Transparent
-        Me.Title.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Title.Font = New System.Drawing.Font("Aircruiser", 60.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Title.ForeColor = System.Drawing.Color.Black
-        Me.Title.Location = New System.Drawing.Point(328, 39)
+        Me.Title.Location = New System.Drawing.Point(269, 46)
         Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(201, 73)
+        Me.Title.Size = New System.Drawing.Size(346, 80)
         Me.Title.TabIndex = 9
         Me.Title.Text = "About"
         '

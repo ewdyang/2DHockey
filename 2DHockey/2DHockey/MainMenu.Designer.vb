@@ -34,7 +34,7 @@ Partial Class MainMenu
         '
         Me.playbutton.BackColor = System.Drawing.Color.DarkBlue
         Me.playbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.playbutton.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.playbutton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.playbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.playbutton.Location = New System.Drawing.Point(92, 168)
         Me.playbutton.Name = "playbutton"
@@ -47,7 +47,7 @@ Partial Class MainMenu
         '
         Me.Optionbutton.BackColor = System.Drawing.Color.DarkBlue
         Me.Optionbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Optionbutton.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Optionbutton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Optionbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Optionbutton.Location = New System.Drawing.Point(92, 243)
         Me.Optionbutton.Name = "Optionbutton"
@@ -60,7 +60,7 @@ Partial Class MainMenu
         '
         Me.Aboutbutton.BackColor = System.Drawing.Color.DarkBlue
         Me.Aboutbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Aboutbutton.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Aboutbutton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Aboutbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Aboutbutton.Location = New System.Drawing.Point(92, 330)
         Me.Aboutbutton.Name = "Aboutbutton"
@@ -73,7 +73,7 @@ Partial Class MainMenu
         '
         Me.exitButton.BackColor = System.Drawing.Color.DarkBlue
         Me.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.exitButton.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exitButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.exitButton.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.exitButton.Location = New System.Drawing.Point(92, 418)
         Me.exitButton.Name = "exitButton"
@@ -86,11 +86,11 @@ Partial Class MainMenu
         '
         Me.gamename.AutoSize = True
         Me.gamename.BackColor = System.Drawing.Color.Transparent
-        Me.gamename.Font = New System.Drawing.Font("Aircruiser", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gamename.ForeColor = System.Drawing.Color.DarkRed
-        Me.gamename.Location = New System.Drawing.Point(21, 39)
+        Me.gamename.Font = New System.Drawing.Font("Aircruiser", 42.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gamename.ForeColor = System.Drawing.Color.Red
+        Me.gamename.Location = New System.Drawing.Point(38, 49)
         Me.gamename.Name = "gamename"
-        Me.gamename.Size = New System.Drawing.Size(439, 64)
+        Me.gamename.Size = New System.Drawing.Size(385, 57)
         Me.gamename.TabIndex = 5
         Me.gamename.Text = "2D Hockey"
         '

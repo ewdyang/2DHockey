@@ -240,6 +240,7 @@
     <None Include="assets\graphics\HockeyNet.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\aircruiser.ttf" />
     <None Include="Resources\button for main menu.png" />
   </ItemGroup>
   <ItemGroup>
@@ -262,6 +263,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\graphics\pause button white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aircruiser.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

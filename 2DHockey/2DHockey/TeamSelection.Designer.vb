@@ -150,11 +150,11 @@ Partial Class TeamSelection
         '
         Me.optionlbl.AutoSize = True
         Me.optionlbl.BackColor = System.Drawing.Color.Transparent
-        Me.optionlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.optionlbl.Font = New System.Drawing.Font("Aircruiser", 50.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.optionlbl.ForeColor = System.Drawing.Color.Black
-        Me.optionlbl.Location = New System.Drawing.Point(115, 52)
+        Me.optionlbl.Location = New System.Drawing.Point(104, 52)
         Me.optionlbl.Name = "optionlbl"
-        Me.optionlbl.Size = New System.Drawing.Size(478, 73)
+        Me.optionlbl.Size = New System.Drawing.Size(674, 68)
         Me.optionlbl.TabIndex = 8
         Me.optionlbl.Text = "Team Selection"
         '
