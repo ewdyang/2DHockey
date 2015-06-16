@@ -235,64 +235,10 @@
     End Sub
 
     Sub checkForGoal()
-        If objectCollisionDetect(puck, userNet) And puck.Location.X > userNet.Location.X + userNet.Width - 10 Then 'checks if puck is touching net and is past net
+        If objectCollisionDetect(puck, compNet) And puck.Location.X > userNet.Location.X + userNet.Width - 10 Then 'checks if puck is touching net and is past net
             goalScored("user")
-            team2goalcount = team2goalcount + 1
-            team2score.Text = team2goalcount
-            If OptionsMenu.points5.Checked = True Then
-                If team1goalcount = 5 Then
-                    MsgBox("TEAM 1 WINS")
-                    resetGoal()
-                ElseIf team2goalcount = 5 Then
-                    MsgBox("TEAM 2 WINS")
-                    resetGoal()
-                End If
-            ElseIf OptionsMenu.points7.Checked = True Then
-                If team1goalcount = 7 Then
-                    MsgBox("TEAM 1 WINS")
-                    resetGoal()
-                ElseIf team2goalcount = 7 Then
-                    MsgBox("TEAM 2 WINS")
-                    resetGoal()
-                End If
-            ElseIf OptionsMenu.points9.Checked = True Then
-                If team1goalcount = 9 Then
-                    MsgBox("TEAM 1 WINS")
-                    resetGoal()
-                ElseIf team2goalcount = 9 Then
-                    MsgBox("TEAM 2 WINS")
-                    resetGoal()
-                End If
-            End If
-        ElseIf objectCollisionDetect(puck, compNet) And puck.Location.X + puck.Width < compNet.Location.X + 10 Then
+        ElseIf objectCollisionDetect(puck, userNet) And puck.Location.X + puck.Width < compNet.Location.X + 10 Then
             goalScored("comp")
-            team1goalcount = team1goalcount + 1
-            team1score.Text = team1goalcount
-            If OptionsMenu.points5.Checked = True Then
-                If team1goalcount = 5 Then
-                    MsgBox("TEAM 1 WINS")
-                    resetGoal()
-                ElseIf team2goalcount = 5 Then
-                    MsgBox("TEAM 2 WINS")
-                    resetGoal()
-                End If
-            ElseIf OptionsMenu.points7.Checked = True Then
-                If team1goalcount = 7 Then
-                    MsgBox("TEAM 1 WINS")
-                    resetGoal()
-                ElseIf team2goalcount = 7  Then
-                    MsgBox("TEAM 2 WINS")
-                    resetGoal()
-                End If
-            ElseIf OptionsMenu.points9.Checked = True Then
-                If team1goalcount = 9 Then
-                    MsgBox("TEAM 1 WINS")
-                    resetGoal()
-                ElseIf team2goalcount = 9  Then
-                    MsgBox("TEAM 2 WINS")
-                    resetGoal()
-                End If
-            End If
         End If
     End Sub
 
