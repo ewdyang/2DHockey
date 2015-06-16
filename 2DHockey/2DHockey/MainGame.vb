@@ -21,7 +21,7 @@
     Dim compPlayerResetPosition As New Point(478, 165)
     Dim userGoalieResetPosition As New Point(136, 167)
     Dim compGoalieResetPosition As New Point(599, 167)
-    Dim edward As String = "swag"
+    Dim buzzertimer As Integer
     
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
@@ -236,8 +236,16 @@
     Sub checkForGoal()
         If objectCollisionDetect(puck, compNet) And puck.Location.X > userNet.Location.X + userNet.Width - 10 Then 'checks if puck is touching net and is past net
             goalScored("user")
+            Buzzertime.Start()
+
+            My.Computer.Audio.Play(My.Resources.buzzer, _
+        AudioPlayMode.Background)
         ElseIf objectCollisionDetect(puck, userNet) And puck.Location.X + puck.Width < compNet.Location.X + 10 Then
             goalScored("comp")
+            Buzzertime.Start()
+            My.Computer.Audio.Play(My.Resources.buzzer, _
+        AudioPlayMode.Background)
+
         End If
     End Sub
 
@@ -246,6 +254,7 @@
             userScore += 1
             updateScoreBoard()
             resetGoal()
+
         ElseIf scoringTeam = "comp" Then
             compScore += 1
             updateScoreBoard()
@@ -387,4 +396,13 @@
     End Sub
 
 
+    Private Sub Buzzertime_Tick(sender As Object, e As EventArgs) Handles Buzzertime.Tick
+        buzzertimer = buzzertimer + 1
+        If buzzertimer = 3 Then
+            Buzzertime.Stop()
+            My.Computer.Audio.Play(My.Resources.Main_Screen_Music_wav_file, _
+AudioPlayMode.BackgroundLoop)
+            buzzertimer = 0
+        End If
+    End Sub
 End Class
