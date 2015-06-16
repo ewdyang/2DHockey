@@ -29,19 +29,20 @@ Partial Class MainGame
         Me.puck = New System.Windows.Forms.PictureBox()
         Me.playerNet = New System.Windows.Forms.PictureBox()
         Me.compNet = New System.Windows.Forms.PictureBox()
-        Me.PlayerAnimationList = New System.Windows.Forms.ImageList(Me.components)
+        Me.blueAnimation = New System.Windows.Forms.ImageList(Me.components)
         Me.FrameTimer = New System.Windows.Forms.Timer(Me.components)
         Me.compPlayer = New System.Windows.Forms.PictureBox()
-        Me.RedAnimation = New System.Windows.Forms.ImageList(Me.components)
-        Me.GreenAnimation = New System.Windows.Forms.ImageList(Me.components)
-        Me.OrangeAnimation = New System.Windows.Forms.ImageList(Me.components)
-        Me.WhiteAnimation = New System.Windows.Forms.ImageList(Me.components)
+        Me.redAnimation = New System.Windows.Forms.ImageList(Me.components)
+        Me.greenAnimation = New System.Windows.Forms.ImageList(Me.components)
+        Me.orangeAnimation = New System.Windows.Forms.ImageList(Me.components)
+        Me.whiteAnimation = New System.Windows.Forms.ImageList(Me.components)
         Me.Pausebutton = New System.Windows.Forms.PictureBox()
         Me.resumebtn = New System.Windows.Forms.Button()
         Me.Quitbtn = New System.Windows.Forms.Button()
         Me.pauseMenuPanel = New System.Windows.Forms.Panel()
         Me.userGoalie = New System.Windows.Forms.PictureBox()
         Me.compGoalie = New System.Windows.Forms.PictureBox()
+        Me.goalieColours = New System.Windows.Forms.ImageList(Me.components)
         CType(Me.userPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.playerNet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,7 +72,7 @@ Partial Class MainGame
         '
         Me.puck.BackgroundImage = Global._2DHockey.My.Resources.Resources.Puck1
         Me.puck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.puck.Location = New System.Drawing.Point(381, 185)
+        Me.puck.Location = New System.Drawing.Point(382, 185)
         Me.puck.Name = "puck"
         Me.puck.Size = New System.Drawing.Size(18, 10)
         Me.puck.TabIndex = 1
@@ -97,12 +98,12 @@ Partial Class MainGame
         Me.compNet.TabIndex = 3
         Me.compNet.TabStop = False
         '
-        'PlayerAnimationList
+        'blueAnimation
         '
-        Me.PlayerAnimationList.ImageStream = CType(resources.GetObject("PlayerAnimationList.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.PlayerAnimationList.TransparentColor = System.Drawing.Color.Transparent
-        Me.PlayerAnimationList.Images.SetKeyName(0, "BluePlayer1.png")
-        Me.PlayerAnimationList.Images.SetKeyName(1, "BluePlayer2.png")
+        Me.blueAnimation.ImageStream = CType(resources.GetObject("blueAnimation.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.blueAnimation.TransparentColor = System.Drawing.Color.Transparent
+        Me.blueAnimation.Images.SetKeyName(0, "BluePlayer1.png")
+        Me.blueAnimation.Images.SetKeyName(1, "BluePlayer2.png")
         '
         'FrameTimer
         '
@@ -118,33 +119,33 @@ Partial Class MainGame
         Me.compPlayer.TabIndex = 4
         Me.compPlayer.TabStop = False
         '
-        'RedAnimation
+        'redAnimation
         '
-        Me.RedAnimation.ImageStream = CType(resources.GetObject("RedAnimation.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.RedAnimation.TransparentColor = System.Drawing.Color.Transparent
-        Me.RedAnimation.Images.SetKeyName(0, "RedPlayer1.png")
-        Me.RedAnimation.Images.SetKeyName(1, "RedPlayer2.png")
+        Me.redAnimation.ImageStream = CType(resources.GetObject("redAnimation.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.redAnimation.TransparentColor = System.Drawing.Color.Transparent
+        Me.redAnimation.Images.SetKeyName(0, "RedPlayer1.png")
+        Me.redAnimation.Images.SetKeyName(1, "RedPlayer2.png")
         '
-        'GreenAnimation
+        'greenAnimation
         '
-        Me.GreenAnimation.ImageStream = CType(resources.GetObject("GreenAnimation.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.GreenAnimation.TransparentColor = System.Drawing.Color.Transparent
-        Me.GreenAnimation.Images.SetKeyName(0, "GreenPlayer1.png")
-        Me.GreenAnimation.Images.SetKeyName(1, "GreenPlayer2.png")
+        Me.greenAnimation.ImageStream = CType(resources.GetObject("greenAnimation.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.greenAnimation.TransparentColor = System.Drawing.Color.Transparent
+        Me.greenAnimation.Images.SetKeyName(0, "GreenPlayer1.png")
+        Me.greenAnimation.Images.SetKeyName(1, "GreenPlayer2.png")
         '
-        'OrangeAnimation
+        'orangeAnimation
         '
-        Me.OrangeAnimation.ImageStream = CType(resources.GetObject("OrangeAnimation.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.OrangeAnimation.TransparentColor = System.Drawing.Color.Transparent
-        Me.OrangeAnimation.Images.SetKeyName(0, "OrangePlayer1.png")
-        Me.OrangeAnimation.Images.SetKeyName(1, "OrangePlayer2.png")
+        Me.orangeAnimation.ImageStream = CType(resources.GetObject("orangeAnimation.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.orangeAnimation.TransparentColor = System.Drawing.Color.Transparent
+        Me.orangeAnimation.Images.SetKeyName(0, "OrangePlayer1.png")
+        Me.orangeAnimation.Images.SetKeyName(1, "OrangePlayer2.png")
         '
-        'WhiteAnimation
+        'whiteAnimation
         '
-        Me.WhiteAnimation.ImageStream = CType(resources.GetObject("WhiteAnimation.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.WhiteAnimation.TransparentColor = System.Drawing.Color.Transparent
-        Me.WhiteAnimation.Images.SetKeyName(0, "WhitePlayer1.png")
-        Me.WhiteAnimation.Images.SetKeyName(1, "WhitePlayer2.png")
+        Me.whiteAnimation.ImageStream = CType(resources.GetObject("whiteAnimation.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.whiteAnimation.TransparentColor = System.Drawing.Color.Transparent
+        Me.whiteAnimation.Images.SetKeyName(0, "WhitePlayer1.png")
+        Me.whiteAnimation.Images.SetKeyName(1, "WhitePlayer2.png")
         '
         'Pausebutton
         '
@@ -211,6 +212,16 @@ Partial Class MainGame
         Me.compGoalie.TabIndex = 10
         Me.compGoalie.TabStop = False
         '
+        'goalieColours
+        '
+        Me.goalieColours.ImageStream = CType(resources.GetObject("goalieColours.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.goalieColours.TransparentColor = System.Drawing.Color.Transparent
+        Me.goalieColours.Images.SetKeyName(0, "Blue Goalie1.png")
+        Me.goalieColours.Images.SetKeyName(1, "Green Goalie1.png")
+        Me.goalieColours.Images.SetKeyName(2, "Orange Goalie1.png")
+        Me.goalieColours.Images.SetKeyName(3, "Red Goalie1.png")
+        Me.goalieColours.Images.SetKeyName(4, "White Goalie1.png")
+        '
         'MainGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -228,7 +239,7 @@ Partial Class MainGame
         Me.Controls.Add(Me.playerNet)
         Me.Controls.Add(Me.puck)
         Me.Controls.Add(Me.userPlayer)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -252,18 +263,19 @@ Partial Class MainGame
     Friend WithEvents puck As System.Windows.Forms.PictureBox
     Friend WithEvents playerNet As System.Windows.Forms.PictureBox
     Friend WithEvents compNet As System.Windows.Forms.PictureBox
-    Friend WithEvents PlayerAnimationList As System.Windows.Forms.ImageList
+    Friend WithEvents blueAnimation As System.Windows.Forms.ImageList
     Friend WithEvents FrameTimer As System.Windows.Forms.Timer
     Friend WithEvents compPlayer As System.Windows.Forms.PictureBox
-    Friend WithEvents RedAnimation As System.Windows.Forms.ImageList
-    Friend WithEvents GreenAnimation As System.Windows.Forms.ImageList
-    Friend WithEvents OrangeAnimation As System.Windows.Forms.ImageList
-    Friend WithEvents WhiteAnimation As System.Windows.Forms.ImageList
+    Friend WithEvents redAnimation As System.Windows.Forms.ImageList
+    Friend WithEvents greenAnimation As System.Windows.Forms.ImageList
+    Friend WithEvents orangeAnimation As System.Windows.Forms.ImageList
+    Friend WithEvents whiteAnimation As System.Windows.Forms.ImageList
     Friend WithEvents Pausebutton As System.Windows.Forms.PictureBox
     Friend WithEvents resumebtn As System.Windows.Forms.Button
     Friend WithEvents Quitbtn As System.Windows.Forms.Button
     Friend WithEvents pauseMenuPanel As System.Windows.Forms.Panel
     Friend WithEvents userGoalie As System.Windows.Forms.PictureBox
     Friend WithEvents compGoalie As System.Windows.Forms.PictureBox
+    Friend WithEvents goalieColours As System.Windows.Forms.ImageList
 
 End Class

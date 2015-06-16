@@ -12,7 +12,7 @@
     Dim userPlayerDirection As Integer '0: left, 1: right
     Dim compPlayerDirection As Integer '0: left, 1: right
 
-    Dim puckResetPosition As New Point(381, 185)
+    Dim puckResetPosition As New Point(382, 185)
     Dim userPlayerResetPosition As New Point(255, 165)
     Dim compPlayerResetPosition As New Point(478, 165)
     Dim userGoalieResetPosition As New Point(136, 167)
@@ -95,28 +95,30 @@
         compNet.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
         Select Case TeamSelection.team1
             Case 0
-                userPlayer.Image = PlayerAnimationList.Images(0)
+                userPlayer.Image = blueAnimation.Images(0)
             Case 1
-                userPlayer.Image = GreenAnimation.Images(0)
+                userPlayer.Image = greenAnimation.Images(0)
             Case 2
-                userPlayer.Image = OrangeAnimation.Images(0)
+                userPlayer.Image = orangeAnimation.Images(0)
             Case 3
-                userPlayer.Image = RedAnimation.Images(0)
+                userPlayer.Image = redAnimation.Images(0)
             Case 4
-                userPlayer.Image = WhiteAnimation.Images(0)
+                userPlayer.Image = whiteAnimation.Images(0)
         End Select
         Select Case TeamSelection.team2
             Case 0
-                compPlayer.Image = PlayerAnimationList.Images(0)
+                compPlayer.Image = blueAnimation.Images(0)
             Case 1
-                compPlayer.Image = GreenAnimation.Images(0)
+                compPlayer.Image = greenAnimation.Images(0)
             Case 2
-                compPlayer.Image = OrangeAnimation.Images(0)
+                compPlayer.Image = orangeAnimation.Images(0)
             Case 3
-                compPlayer.Image = RedAnimation.Images(0)
+                compPlayer.Image = redAnimation.Images(0)
             Case 4
-                compPlayer.Image = WhiteAnimation.Images(0)
+                compPlayer.Image = whiteAnimation.Images(0)
         End Select
+        userGoalie.Image = goalieColours.Images(TeamSelection.team1)
+        compGoalie.Image = goalieColours.Images(TeamSelection.team2)
         userPlayer.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
         resumebtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
         Quitbtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
@@ -252,15 +254,15 @@
 
         Select Case TeamSelection.team1
             Case 0
-                userPlayer.Image = PlayerAnimationList.Images(Framenum)
+                userPlayer.Image = blueAnimation.Images(Framenum)
             Case 1
-                userPlayer.Image = GreenAnimation.Images(Framenum)
+                userPlayer.Image = greenAnimation.Images(Framenum)
             Case 2
-                userPlayer.Image = OrangeAnimation.Images(Framenum)
+                userPlayer.Image = orangeAnimation.Images(Framenum)
             Case 3
-                userPlayer.Image = RedAnimation.Images(Framenum)
+                userPlayer.Image = redAnimation.Images(Framenum)
             Case 4
-                userPlayer.Image = WhiteAnimation.Images(Framenum)
+                userPlayer.Image = whiteAnimation.Images(Framenum)
         End Select
 
         Select Case directionHeading
