@@ -65,7 +65,7 @@ Partial Class MainGame
         '
         'tick
         '
-        Me.tick.Interval = 40
+        Me.tick.Interval = 20
         '
         'blueAnimation
         '
@@ -110,7 +110,7 @@ Partial Class MainGame
         '
         Me.resumebtn.BackColor = System.Drawing.Color.DarkBlue
         Me.resumebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.resumebtn.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.resumebtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.resumebtn.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.resumebtn.Location = New System.Drawing.Point(15, 19)
         Me.resumebtn.Name = "resumebtn"
@@ -123,7 +123,7 @@ Partial Class MainGame
         '
         Me.Quitbtn.BackColor = System.Drawing.Color.DarkBlue
         Me.Quitbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Quitbtn.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Quitbtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Quitbtn.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Quitbtn.Location = New System.Drawing.Point(15, 92)
         Me.Quitbtn.Name = "Quitbtn"
@@ -146,11 +146,11 @@ Partial Class MainGame
         '
         Me.countdownlbl.AutoSize = True
         Me.countdownlbl.BackColor = System.Drawing.Color.Transparent
-        Me.countdownlbl.Font = New System.Drawing.Font("Score Board", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.countdownlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.countdownlbl.ForeColor = System.Drawing.SystemColors.ControlText
         Me.countdownlbl.Location = New System.Drawing.Point(361, 156)
         Me.countdownlbl.Name = "countdownlbl"
-        Me.countdownlbl.Size = New System.Drawing.Size(64, 72)
+        Me.countdownlbl.Size = New System.Drawing.Size(68, 73)
         Me.countdownlbl.TabIndex = 15
         Me.countdownlbl.Text = "3"
         '
@@ -260,11 +260,11 @@ Partial Class MainGame
         '
         Me.team2score.AutoSize = True
         Me.team2score.BackColor = System.Drawing.Color.Black
-        Me.team2score.Font = New System.Drawing.Font("Score Board", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.team2score.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.team2score.ForeColor = System.Drawing.Color.Gold
         Me.team2score.Location = New System.Drawing.Point(446, 436)
         Me.team2score.Name = "team2score"
-        Me.team2score.Size = New System.Drawing.Size(46, 51)
+        Me.team2score.Size = New System.Drawing.Size(48, 52)
         Me.team2score.TabIndex = 12
         Me.team2score.Text = "0"
         '
@@ -272,11 +272,11 @@ Partial Class MainGame
         '
         Me.team1score.AutoSize = True
         Me.team1score.BackColor = System.Drawing.Color.Black
-        Me.team1score.Font = New System.Drawing.Font("Score Board", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.team1score.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.team1score.ForeColor = System.Drawing.Color.Gold
         Me.team1score.Location = New System.Drawing.Point(298, 436)
         Me.team1score.Name = "team1score"
-        Me.team1score.Size = New System.Drawing.Size(46, 51)
+        Me.team1score.Size = New System.Drawing.Size(48, 52)
         Me.team1score.TabIndex = 11
         Me.team1score.Text = "0"
         '
@@ -289,8 +289,8 @@ Partial Class MainGame
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BackgroundImage = Global._2DHockey.My.Resources.Resources.Hockeyrink
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Controls.Add(Me.Golbl)
         Me.Panel1.Controls.Add(Me.pauseMenuPanel)
+        Me.Panel1.Controls.Add(Me.Golbl)
         Me.Panel1.Controls.Add(Me.countdownlbl)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -301,11 +301,11 @@ Partial Class MainGame
         '
         Me.Golbl.AutoSize = True
         Me.Golbl.BackColor = System.Drawing.Color.Transparent
-        Me.Golbl.Font = New System.Drawing.Font("Score Board", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Golbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Golbl.ForeColor = System.Drawing.Color.DarkBlue
         Me.Golbl.Location = New System.Drawing.Point(348, 156)
         Me.Golbl.Name = "Golbl"
-        Me.Golbl.Size = New System.Drawing.Size(98, 72)
+        Me.Golbl.Size = New System.Drawing.Size(118, 73)
         Me.Golbl.TabIndex = 16
         Me.Golbl.Text = "Go"
         '
