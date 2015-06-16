@@ -233,9 +233,13 @@
     End Sub
 
     Sub checkForGoal()
-        If objectCollisionDetect(puck, userNet) And puck.Location.X > userNet.Location.X + userNet.Width - 10 Then 'checks if puck is touching net and is past net
+        If objectCollisionDetect(puck, compNet) And puck.Location.X > userNet.Location.X + userNet.Width - 10 Then 'checks if puck is touching net and is past net
             goalScored("user")
+<<<<<<< HEAD
         ElseIf objectCollisionDetect(puck, compNet) And puck.Location.X + puck.Width < compNet.Location.X + 10 Then
+=======
+        ElseIf objectCollisionDetect(puck, userNet) And puck.Location.X + puck.Width < compNet.Location.X + 10 Then
+>>>>>>> origin/master
             goalScored("comp")
         End If
     End Sub
