@@ -240,33 +240,33 @@
         End If
     End Sub
 
-    Sub goalScored(ByVal team As String) 'adds 1 to the score, then checks if any teams have at least 9 points, then triggers win if it's met
-        If team = "user" Then
-            compScore += 1
+    Sub goalScored(ByVal scoringTeam As String) 'adds 1 to the score, then checks if any teams have at least 9 points, then triggers win if it's met
+        If scoringTeam = "user" Then
+            userScore += 1
             updateScoreBoard()
             resetGoal()
-        ElseIf team = "comp" Then
-            userScore += 1
+        ElseIf scoringTeam = "comp" Then
+            compScore += 1
             updateScoreBoard()
             resetGoal()
         End If
         If OptionsMenu.points5.Checked = True Then
             If userScore = 5 Then
-                gameWin(team)
+                gameWin(scoringTeam)
             ElseIf compScore = 5 Then
-                gameWin(team)
+                gameWin(scoringTeam)
             End If
         ElseIf OptionsMenu.points7.Checked = True Then
             If userScore = 7 Then
-                gameWin(team)
+                gameWin(scoringTeam)
             ElseIf compScore = 7 Then
-                gameWin(team)
+                gameWin(scoringTeam)
             End If
         ElseIf OptionsMenu.points9.Checked = True Then
             If userScore = 9 Then
-                gameWin(team)
+                gameWin(scoringTeam)
             ElseIf compScore = 9 Then
-                gameWin(team)
+                gameWin(scoringTeam)
             End If
         End If
 
