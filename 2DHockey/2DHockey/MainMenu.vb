@@ -11,7 +11,7 @@ AudioPlayMode.BackgroundLoop)
         End If
 
         gamename.Font = CustomFont.GetInstance(50, FontStyle.Regular)                   'Uses the custom font in the resources
-
+        OptionsMenu.points7.Checked = True
     End Sub
 
     Private Sub playbutton_Click(sender As Object, e As EventArgs) Handles playbutton.Click

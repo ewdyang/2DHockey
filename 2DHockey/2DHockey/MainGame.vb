@@ -242,26 +242,26 @@
             If OptionsMenu.points5.Checked = True Then
                 If team1goalcount = 5 Then
                     MsgBox("TEAM 1 WINS")
-                    resetGame()
+                    resetGoal()
                 ElseIf team2goalcount = 5 Then
                     MsgBox("TEAM 2 WINS")
-                    resetGame()
+                    resetGoal()
                 End If
             ElseIf OptionsMenu.points7.Checked = True Then
                 If team1goalcount = 7 Then
                     MsgBox("TEAM 1 WINS")
-                    resetGame()
+                    resetGoal()
                 ElseIf team2goalcount = 7 Then
                     MsgBox("TEAM 2 WINS")
-                    resetGame()
+                    resetGoal()
                 End If
             ElseIf OptionsMenu.points9.Checked = True Then
                 If team1goalcount = 9 Then
                     MsgBox("TEAM 1 WINS")
-                    resetGame()
+                    resetGoal()
                 ElseIf team2goalcount = 9 Then
                     MsgBox("TEAM 2 WINS")
-                    resetGame()
+                    resetGoal()
                 End If
             End If
         ElseIf objectCollisionDetect(puck, compNet) And puck.Location.X + puck.Width < compNet.Location.X + 10 Then
@@ -271,26 +271,26 @@
             If OptionsMenu.points5.Checked = True Then
                 If team1goalcount = 5 Then
                     MsgBox("TEAM 1 WINS")
-                    resetGame()
+                    resetGoal()
                 ElseIf team2goalcount = 5 Then
                     MsgBox("TEAM 2 WINS")
-                    resetGame()
+                    resetGoal()
                 End If
             ElseIf OptionsMenu.points7.Checked = True Then
                 If team1goalcount = 7 Then
                     MsgBox("TEAM 1 WINS")
-                    resetGame()
-                ElseIf team2goalcount = 7 Then
+                    resetGoal()
+                ElseIf team2goalcount = 7  Then
                     MsgBox("TEAM 2 WINS")
-                    resetGame()
+                    resetGoal()
                 End If
             ElseIf OptionsMenu.points9.Checked = True Then
                 If team1goalcount = 9 Then
                     MsgBox("TEAM 1 WINS")
-                    resetGame()
-                ElseIf team2goalcount = 9 Then
+                    resetGoal()
+                ElseIf team2goalcount = 9  Then
                     MsgBox("TEAM 2 WINS")
-                    resetGame()
+                    resetGoal()
                 End If
             End If
         End If
@@ -338,6 +338,10 @@
         userGoalie.Location = userGoalieResetPosition
         compGoalie.Location = compGoalieResetPosition
         tick.Start()
+        team1goalcount = 0
+        team2goalcount = 0
+        team1score.Text = team1goalcount
+        team2score.Text = team2goalcount
     End Sub
 
     Sub resetGame() 'resets the game when it ends or is quit

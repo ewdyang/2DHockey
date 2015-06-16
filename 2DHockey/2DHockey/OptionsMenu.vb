@@ -8,7 +8,7 @@
         ElseIf Musicon.Checked = True Then
             Musicoff.Checked = False
         End If
-        points7.Checked = True
+
         optionlbl.Font = CustomFont.GetInstance(48, FontStyle.Regular)              'Changes the font to the custom font in resources
         Musicname.Font = CustomFont.GetInstance(27.25, FontStyle.Regular)
         Pointsetter.Font = CustomFont.GetInstance(27.25, FontStyle.Regular)
