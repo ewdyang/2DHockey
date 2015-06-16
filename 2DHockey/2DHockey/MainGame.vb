@@ -22,6 +22,7 @@
     Dim userGoalieResetPosition As New Point(136, 167)
     Dim compGoalieResetPosition As New Point(599, 167)
     Dim countdown As Integer = 4
+    Dim winshowtime As Integer = 2
     
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
@@ -138,6 +139,7 @@
         count.Start()
         puck.Visible = False
         Golbl.Visible = False
+        Winlbl.Visible = False
     End Sub
 
     Sub moveObject(ByVal movingObject As PictureBox, ByRef objectXV As Integer, ByRef objectYV As Integer, Optional ByRef objectAccelerating As Boolean = False) 'Moves an object according to it's X and Y velocity
@@ -276,17 +278,29 @@
 
     Sub gameWin(ByRef team As String) 'announces winner of the game and allows player to replay or return to main menu
         If team = "user" Then
-            MsgBox("Team 1 Wins")
+            wintimer.Start()
+            Winlbl.Text = "Team 1 wins!"
+            Winlbl.Visible = True
             userScore = 0
             compScore = 0
             updateScoreBoard()
             resetGoal()
+            tick.Stop()
+            countdownlbl.Visible = True
+            countdown = 4
+            countdownlbl.Text = 3
         Else
-            MsgBox("Team 2 Wins")
+            wintimer.Start()
+            Winlbl.Text = "Team 2 wins!"
+            Winlbl.Visible = True
             userScore = 0
             compScore = 0
             updateScoreBoard()
             resetGoal()
+            tick.Stop()
+            countdownlbl.Visible = True
+            countdown = 4
+            countdownlbl.Text = 3
         End If
     End Sub
 
@@ -316,6 +330,7 @@
         userScore = 0
         compScore = 0
         updateScoreBoard()
+        countdownlbl.Text = 3
     End Sub
 
     Sub animatePlayer(ByVal player As PictureBox, ByVal directionHeading As String)
@@ -402,6 +417,7 @@
             Golbl.Visible = True
         ElseIf countdown = 0 Then
             Golbl.Visible = False
+            countdownpanel.Visible = False
             puck.Visible = True
             tick.Start()
             count.Stop()
@@ -410,4 +426,34 @@
     End Sub
 
   
+    Private Sub wintimer_Tick(sender As Object, e As EventArgs) Handles wintimer.Tick
+        winshowtime = winshowtime - 1
+        If winshowtime = 0 Then
+            wintimer.Stop()
+            Winlbl.Visible = False
+            countdownpanel.Visible = True
+            countdown = countdown - 1
+            count.Start()
+            If countdown = 4 Then
+                countdownlbl.Text = 3
+            ElseIf countdown = 3 Then
+                countdownlbl.Text = 2
+            ElseIf countdown = 2 Then
+                countdownlbl.Text = 1
+            ElseIf countdown = 1 Then
+                countdownlbl.Visible = False
+                Golbl.Visible = True
+            ElseIf countdown = 0 Then
+                Golbl.Visible = False
+                countdownpanel.Visible = False
+                puck.Visible = True
+                tick.Start()
+                count.Stop()
+            End If
+        End If
+
+    End Sub
+
+   
+
 End Class
