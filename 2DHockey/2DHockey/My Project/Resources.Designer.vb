@@ -182,6 +182,15 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
+        Friend ReadOnly Property IHaveWonned() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("IHaveWonned", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
         Friend ReadOnly Property Main_Screen_Music_wav_file() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("Main_Screen_Music_wav_file", resourceCulture)

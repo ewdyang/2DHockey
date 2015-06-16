@@ -235,17 +235,15 @@
 
     Sub checkForGoal()
         If objectCollisionDetect(puck, compNet) And puck.Location.X > userNet.Location.X + userNet.Width - 10 Then 'checks if puck is touching net and is past net
+            My.Computer.Audio.Play(My.Resources.buzzer, _
+        AudioPlayMode.Background)
             goalScored("user")
             Buzzertime.Start()
-
-            My.Computer.Audio.Play(My.Resources.buzzer, _
-        AudioPlayMode.Background)
         ElseIf objectCollisionDetect(puck, userNet) And puck.Location.X + puck.Width < compNet.Location.X + 10 Then
+            My.Computer.Audio.Play(My.Resources.buzzer, _
+       AudioPlayMode.Background)
             goalScored("comp")
             Buzzertime.Start()
-            My.Computer.Audio.Play(My.Resources.buzzer, _
-        AudioPlayMode.Background)
-
         End If
     End Sub
 
@@ -283,12 +281,16 @@
 
     Sub gameWin(ByRef team As String) 'announces winner of the game and allows player to replay or return to main menu
         If team = "user" Then
+            My.Computer.Audio.Play(My.Resources.IHaveWonned, _
+        AudioPlayMode.BackgroundLoop)
             MsgBox("Team 1 Wins")
             userScore = 0
             compScore = 0
             updateScoreBoard()
             resetGoal()
         Else
+            My.Computer.Audio.Play(My.Resources.IHaveWonned, _
+       AudioPlayMode.BackgroundLoop)
             MsgBox("Team 2 Wins")
             userScore = 0
             compScore = 0
