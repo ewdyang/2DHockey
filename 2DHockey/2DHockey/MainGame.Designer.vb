@@ -27,7 +27,7 @@ Partial Class MainGame
         Me.tick = New System.Windows.Forms.Timer(Me.components)
         Me.userPlayer = New System.Windows.Forms.PictureBox()
         Me.puck = New System.Windows.Forms.PictureBox()
-        Me.playerNet = New System.Windows.Forms.PictureBox()
+        Me.userNet = New System.Windows.Forms.PictureBox()
         Me.compNet = New System.Windows.Forms.PictureBox()
         Me.blueAnimation = New System.Windows.Forms.ImageList(Me.components)
         Me.FrameTimer = New System.Windows.Forms.Timer(Me.components)
@@ -45,7 +45,7 @@ Partial Class MainGame
         Me.goalieColours = New System.Windows.Forms.ImageList(Me.components)
         CType(Me.userPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.playerNet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.userNet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.compNet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.compPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pausebutton, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,15 +78,15 @@ Partial Class MainGame
         Me.puck.TabIndex = 1
         Me.puck.TabStop = False
         '
-        'playerNet
+        'userNet
         '
-        Me.playerNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
-        Me.playerNet.Location = New System.Drawing.Point(105, 148)
-        Me.playerNet.Name = "playerNet"
-        Me.playerNet.Size = New System.Drawing.Size(30, 80)
-        Me.playerNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.playerNet.TabIndex = 2
-        Me.playerNet.TabStop = False
+        Me.userNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
+        Me.userNet.Location = New System.Drawing.Point(105, 148)
+        Me.userNet.Name = "userNet"
+        Me.userNet.Size = New System.Drawing.Size(30, 80)
+        Me.userNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.userNet.TabIndex = 2
+        Me.userNet.TabStop = False
         '
         'compNet
         '
@@ -236,7 +236,7 @@ Partial Class MainGame
         Me.Controls.Add(Me.Pausebutton)
         Me.Controls.Add(Me.compPlayer)
         Me.Controls.Add(Me.compNet)
-        Me.Controls.Add(Me.playerNet)
+        Me.Controls.Add(Me.userNet)
         Me.Controls.Add(Me.puck)
         Me.Controls.Add(Me.userPlayer)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -248,7 +248,7 @@ Partial Class MainGame
         Me.Text = "2D Hockey"
         CType(Me.userPlayer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.playerNet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.userNet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.compNet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.compPlayer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Pausebutton, System.ComponentModel.ISupportInitialize).EndInit()
@@ -261,7 +261,7 @@ Partial Class MainGame
     Friend WithEvents tick As System.Windows.Forms.Timer
     Friend WithEvents userPlayer As System.Windows.Forms.PictureBox
     Friend WithEvents puck As System.Windows.Forms.PictureBox
-    Friend WithEvents playerNet As System.Windows.Forms.PictureBox
+    Friend WithEvents userNet As System.Windows.Forms.PictureBox
     Friend WithEvents compNet As System.Windows.Forms.PictureBox
     Friend WithEvents blueAnimation As System.Windows.Forms.ImageList
     Friend WithEvents FrameTimer As System.Windows.Forms.Timer
