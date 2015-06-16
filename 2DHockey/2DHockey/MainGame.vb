@@ -165,7 +165,7 @@
         End If
         If bouncingObject.Location.Y < 50 Then
             objectYV = Math.Abs(objectYV)
-        ElseIf bouncingObject.Location.Y + bouncingObject.Height + 42 + 25 > Me.Height Then
+        ElseIf bouncingObject.Location.Y + bouncingObject.Height + 200 > Me.Height Then
             objectYV = -Math.Abs(objectYV)
         End If
     End Sub
@@ -269,7 +269,6 @@
                 gameWin(scoringTeam)
             End If
         End If
-
     End Sub
 
     Sub gameWin(ByRef team As String) 'announces winner of the game and allows player to replay or return to main menu
@@ -277,15 +276,13 @@
             MsgBox("Team 1 Wins")
             userScore = 0
             compScore = 0
-            team1score.Text = userScore
-            team2score.Text = compScore
+            updateScoreBoard()
             resetGoal()
         Else
             MsgBox("Team 2 Wins")
             userScore = 0
             compScore = 0
-            team1score.Text = userScore
-            team2score.Text = compScore
+            updateScoreBoard()
             resetGoal()
         End If
     End Sub
