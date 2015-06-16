@@ -21,9 +21,7 @@
     Dim compPlayerResetPosition As New Point(478, 165)
     Dim userGoalieResetPosition As New Point(136, 167)
     Dim compGoalieResetPosition As New Point(599, 167)
-    Dim team1goalcount As Integer
-    Dim team2goalcount As Integer
-
+    
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
         checkForGoal() 'checks if a goal has been made
@@ -237,92 +235,64 @@
     Sub checkForGoal()
         If objectCollisionDetect(puck, userNet) And puck.Location.X > userNet.Location.X + userNet.Width - 10 Then 'checks if puck is touching net and is past net
             goalScored("user")
-            team2goalcount = team2goalcount + 1
-            team2score.Text = team2goalcount
-            If OptionsMenu.points5.Checked = True Then
-                If team1goalcount = 5 Then
-                    MsgBox("TEAM 1 WINS")
-                    resetGoal()
-                ElseIf team2goalcount = 5 Then
-                    MsgBox("TEAM 2 WINS")
-                    resetGoal()
-                End If
-            ElseIf OptionsMenu.points7.Checked = True Then
-                If team1goalcount = 7 Then
-                    MsgBox("TEAM 1 WINS")
-                    resetGoal()
-                ElseIf team2goalcount = 7 Then
-                    MsgBox("TEAM 2 WINS")
-                    resetGoal()
-                End If
-            ElseIf OptionsMenu.points9.Checked = True Then
-                If team1goalcount = 9 Then
-                    MsgBox("TEAM 1 WINS")
-                    resetGoal()
-                ElseIf team2goalcount = 9 Then
-                    MsgBox("TEAM 2 WINS")
-                    resetGoal()
-                End If
-            End If
         ElseIf objectCollisionDetect(puck, compNet) And puck.Location.X + puck.Width < compNet.Location.X + 10 Then
             goalScored("comp")
-            team1goalcount = team1goalcount + 1
-            team1score.Text = team1goalcount
-            If OptionsMenu.points5.Checked = True Then
-                If team1goalcount = 5 Then
-                    MsgBox("TEAM 1 WINS")
-                    resetGoal()
-                ElseIf team2goalcount = 5 Then
-                    MsgBox("TEAM 2 WINS")
-                    resetGoal()
-                End If
-            ElseIf OptionsMenu.points7.Checked = True Then
-                If team1goalcount = 7 Then
-                    MsgBox("TEAM 1 WINS")
-                    resetGoal()
-                ElseIf team2goalcount = 7  Then
-                    MsgBox("TEAM 2 WINS")
-                    resetGoal()
-                End If
-            ElseIf OptionsMenu.points9.Checked = True Then
-                If team1goalcount = 9 Then
-                    MsgBox("TEAM 1 WINS")
-                    resetGoal()
-                ElseIf team2goalcount = 9  Then
-                    MsgBox("TEAM 2 WINS")
-                    resetGoal()
-                End If
-            End If
         End If
     End Sub
 
     Sub goalScored(ByVal team As String) 'adds 1 to the score, then checks if any teams have at least 9 points, then triggers win if it's met
         If team = "user" Then
-            userScore += 1
-            updateScoreBoard()
-            resetGoal()
-        ElseIf team = "comp" Then
             compScore += 1
             updateScoreBoard()
             resetGoal()
+        ElseIf team = "comp" Then
+            userScore += 1
+            updateScoreBoard()
+            resetGoal()
         End If
-        If userScore >= OptionsMenu.optionPointsNeeded Then
-            gameWin("user")
-        ElseIf compScore >= OptionsMenu.optionPointsNeeded Then
-            gameWin("comp")
+        If OptionsMenu.points5.Checked = True Then
+            If userScore = 5 Then
+                gameWin(team)
+            ElseIf compScore = 5 Then
+                gameWin(team)
+            End If
+        ElseIf OptionsMenu.points7.Checked = True Then
+            If userScore = 7 Then
+                gameWin(team)
+            ElseIf compScore = 7 Then
+                gameWin(team)
+            End If
+        ElseIf OptionsMenu.points9.Checked = True Then
+            If userScore = 9 Then
+                gameWin(team)
+            ElseIf compScore = 9 Then
+                gameWin(team)
+            End If
         End If
+
     End Sub
 
     Sub gameWin(ByRef team As String) 'announces winner of the game and allows player to replay or return to main menu
         If team = "user" Then
-
+            MsgBox("Team 1 Wins")
+            userScore = 0
+            compScore = 0
+            team1score.Text = userScore
+            team2score.Text = compScore
+            resetGoal()
         Else
-
+            MsgBox("Team 2 Wins")
+            userScore = 0
+            compScore = 0
+            team1score.Text = userScore
+            team2score.Text = compScore
+            resetGoal()
         End If
     End Sub
 
     Sub updateScoreBoard() 'updates the scoreboard graphic to reflect the latest scores
-
+        team1score.Text = userScore
+        team2score.Text = compScore
     End Sub
 
     Sub resetGoal() 'resets the game after each goal
@@ -338,10 +308,6 @@
         userGoalie.Location = userGoalieResetPosition
         compGoalie.Location = compGoalieResetPosition
         tick.Start()
-        team1goalcount = 0
-        team2goalcount = 0
-        team1score.Text = team1goalcount
-        team2score.Text = team2goalcount
     End Sub
 
     Sub resetGame() 'resets the game when it ends or is quit
