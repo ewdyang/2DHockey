@@ -325,7 +325,7 @@
 
     End Sub
 
-    Sub resetGoal() 'resets the game after goals
+    Sub resetGoal() 'resets the game after each goal
         tick.Stop()
         puckXV = 0
         puckYV = 0
