@@ -266,6 +266,15 @@
   <ItemGroup>
     <None Include="Resources\Aircruiser.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scoreboard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scoreboard1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background 2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

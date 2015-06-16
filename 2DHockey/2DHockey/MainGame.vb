@@ -21,6 +21,8 @@
     Dim compPlayerResetPosition As New Point(478, 165)
     Dim userGoalieResetPosition As New Point(136, 167)
     Dim compGoalieResetPosition As New Point(599, 167)
+    Dim team1goalcount As Integer
+    Dim team2goalcount As Integer
 
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
@@ -134,6 +136,7 @@
         userGoalie.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
         resumebtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
         Quitbtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
+       
     End Sub
 
     Sub moveObject(ByVal movingObject As PictureBox, ByRef objectXV As Integer, ByRef objectYV As Integer, Optional ByRef objectAccelerating As Boolean = False) 'Moves an object according to it's X and Y velocity
@@ -234,8 +237,31 @@
     Sub checkForGoal()
         If objectCollisionDetect(puck, userNet) And puck.Location.X > userNet.Location.X + userNet.Width - 10 Then 'checks if puck is touching net and is past net
             goalScored("user")
+            team2goalcount = team2goalcount + 1
+            team2score.Text = team2goalcount
         ElseIf objectCollisionDetect(puck, compNet) And puck.Location.X + puck.Width < compNet.Location.X + 10 Then
             goalScored("comp")
+            team1goalcount = team1goalcount + 1
+            team1score.Text = team1goalcount
+        End If
+        If OptionsMenu.points5.Checked = True Then
+            If team1goalcount = 5 Then
+                MsgBox("TEAM 1 WINS")
+            ElseIf team2goalcount = 5 Then
+                MsgBox("TEAM 2 WINS")
+            End If
+        ElseIf OptionsMenu.points7.Checked = True Then
+            If team1goalcount = 7 Then
+                MsgBox("TEAM 1 WINS")
+            ElseIf team2goalcount = 7 Then
+                MsgBox("TEAM 2 WINS")
+            End If
+        ElseIf OptionsMenu.points9.Checked = True Then
+            If team1goalcount = 9 Then
+                MsgBox("TEAM 1 WINS")
+            ElseIf team2goalcount = 9 Then
+                MsgBox("TEAM 2 WINS")
+            End If
         End If
     End Sub
 
