@@ -34,7 +34,7 @@ Partial Class MainMenu
         '
         Me.playbutton.BackColor = System.Drawing.Color.DarkBlue
         Me.playbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.playbutton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.playbutton.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.playbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.playbutton.Location = New System.Drawing.Point(97, 168)
         Me.playbutton.Name = "playbutton"
@@ -47,7 +47,7 @@ Partial Class MainMenu
         '
         Me.Optionbutton.BackColor = System.Drawing.Color.DarkBlue
         Me.Optionbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Optionbutton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Optionbutton.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Optionbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Optionbutton.Location = New System.Drawing.Point(97, 251)
         Me.Optionbutton.Name = "Optionbutton"
@@ -60,7 +60,7 @@ Partial Class MainMenu
         '
         Me.Aboutbutton.BackColor = System.Drawing.Color.DarkBlue
         Me.Aboutbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Aboutbutton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Aboutbutton.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Aboutbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Aboutbutton.Location = New System.Drawing.Point(97, 334)
         Me.Aboutbutton.Name = "Aboutbutton"
@@ -73,7 +73,7 @@ Partial Class MainMenu
         '
         Me.exitButton.BackColor = System.Drawing.Color.DarkBlue
         Me.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.exitButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exitButton.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.exitButton.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.exitButton.Location = New System.Drawing.Point(97, 417)
         Me.exitButton.Name = "exitButton"

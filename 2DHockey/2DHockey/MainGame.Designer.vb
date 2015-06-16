@@ -34,6 +34,7 @@ Partial Class MainGame
         Me.resumebtn = New System.Windows.Forms.Button()
         Me.Quitbtn = New System.Windows.Forms.Button()
         Me.pauseMenuPanel = New System.Windows.Forms.Panel()
+        Me.countdownlbl = New System.Windows.Forms.Label()
         Me.goalieColours = New System.Windows.Forms.ImageList(Me.components)
         Me.compGoalie = New System.Windows.Forms.PictureBox()
         Me.userGoalie = New System.Windows.Forms.PictureBox()
@@ -43,10 +44,12 @@ Partial Class MainGame
         Me.userNet = New System.Windows.Forms.PictureBox()
         Me.puck = New System.Windows.Forms.PictureBox()
         Me.userPlayer = New System.Windows.Forms.PictureBox()
-        Me.HockeyRink = New System.Windows.Forms.PictureBox()
         Me.scoreboard = New System.Windows.Forms.PictureBox()
         Me.team2score = New System.Windows.Forms.Label()
         Me.team1score = New System.Windows.Forms.Label()
+        Me.count = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Golbl = New System.Windows.Forms.Label()
         Me.pauseMenuPanel.SuspendLayout()
         CType(Me.compGoalie, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.userGoalie, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,8 +59,8 @@ Partial Class MainGame
         CType(Me.userNet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.userPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.HockeyRink, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.scoreboard, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'tick
@@ -107,7 +110,7 @@ Partial Class MainGame
         '
         Me.resumebtn.BackColor = System.Drawing.Color.DarkBlue
         Me.resumebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.resumebtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.resumebtn.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.resumebtn.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.resumebtn.Location = New System.Drawing.Point(15, 19)
         Me.resumebtn.Name = "resumebtn"
@@ -120,7 +123,7 @@ Partial Class MainGame
         '
         Me.Quitbtn.BackColor = System.Drawing.Color.DarkBlue
         Me.Quitbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Quitbtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Quitbtn.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Quitbtn.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Quitbtn.Location = New System.Drawing.Point(15, 92)
         Me.Quitbtn.Name = "Quitbtn"
@@ -133,11 +136,23 @@ Partial Class MainGame
         '
         Me.pauseMenuPanel.Controls.Add(Me.resumebtn)
         Me.pauseMenuPanel.Controls.Add(Me.Quitbtn)
-        Me.pauseMenuPanel.Location = New System.Drawing.Point(292, 134)
+        Me.pauseMenuPanel.Location = New System.Drawing.Point(292, 127)
         Me.pauseMenuPanel.Name = "pauseMenuPanel"
         Me.pauseMenuPanel.Size = New System.Drawing.Size(200, 150)
         Me.pauseMenuPanel.TabIndex = 8
         Me.pauseMenuPanel.Visible = False
+        '
+        'countdownlbl
+        '
+        Me.countdownlbl.AutoSize = True
+        Me.countdownlbl.BackColor = System.Drawing.Color.Transparent
+        Me.countdownlbl.Font = New System.Drawing.Font("Score Board", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.countdownlbl.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.countdownlbl.Location = New System.Drawing.Point(361, 156)
+        Me.countdownlbl.Name = "countdownlbl"
+        Me.countdownlbl.Size = New System.Drawing.Size(64, 72)
+        Me.countdownlbl.TabIndex = 15
+        Me.countdownlbl.Text = "3"
         '
         'goalieColours
         '
@@ -151,7 +166,7 @@ Partial Class MainGame
         '
         'compGoalie
         '
-        Me.compGoalie.BackColor = System.Drawing.Color.White
+        Me.compGoalie.BackColor = System.Drawing.Color.WhiteSmoke
         Me.compGoalie.Image = Global._2DHockey.My.Resources.Resources.Green_Goalie1
         Me.compGoalie.Location = New System.Drawing.Point(599, 167)
         Me.compGoalie.Name = "compGoalie"
@@ -161,6 +176,7 @@ Partial Class MainGame
         '
         'userGoalie
         '
+        Me.userGoalie.BackColor = System.Drawing.Color.WhiteSmoke
         Me.userGoalie.Image = Global._2DHockey.My.Resources.Resources.Blue_Goalie1
         Me.userGoalie.Location = New System.Drawing.Point(136, 167)
         Me.userGoalie.Name = "userGoalie"
@@ -181,7 +197,7 @@ Partial Class MainGame
         '
         'compPlayer
         '
-        Me.compPlayer.BackColor = System.Drawing.Color.White
+        Me.compPlayer.BackColor = System.Drawing.Color.WhiteSmoke
         Me.compPlayer.Image = Global._2DHockey.My.Resources.Resources.GreenPlayer1
         Me.compPlayer.Location = New System.Drawing.Point(498, 164)
         Me.compPlayer.Name = "compPlayer"
@@ -221,25 +237,13 @@ Partial Class MainGame
         '
         'userPlayer
         '
-        Me.userPlayer.BackColor = System.Drawing.Color.White
+        Me.userPlayer.BackColor = System.Drawing.Color.WhiteSmoke
         Me.userPlayer.Image = Global._2DHockey.My.Resources.Resources.BluePlayer1
         Me.userPlayer.Location = New System.Drawing.Point(255, 165)
         Me.userPlayer.Name = "userPlayer"
         Me.userPlayer.Size = New System.Drawing.Size(50, 50)
         Me.userPlayer.TabIndex = 0
         Me.userPlayer.TabStop = False
-        '
-        'HockeyRink
-        '
-        Me.HockeyRink.BackColor = System.Drawing.Color.Transparent
-        Me.HockeyRink.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.HockeyRink.Image = Global._2DHockey.My.Resources.Resources.Hockeyrink
-        Me.HockeyRink.Location = New System.Drawing.Point(1, 2)
-        Me.HockeyRink.Name = "HockeyRink"
-        Me.HockeyRink.Size = New System.Drawing.Size(784, 361)
-        Me.HockeyRink.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.HockeyRink.TabIndex = 13
-        Me.HockeyRink.TabStop = False
         '
         'scoreboard
         '
@@ -276,6 +280,35 @@ Partial Class MainGame
         Me.team1score.TabIndex = 11
         Me.team1score.Text = "0"
         '
+        'count
+        '
+        Me.count.Interval = 1000
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.BackgroundImage = Global._2DHockey.My.Resources.Resources.Hockeyrink
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.Golbl)
+        Me.Panel1.Controls.Add(Me.pauseMenuPanel)
+        Me.Panel1.Controls.Add(Me.countdownlbl)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(784, 361)
+        Me.Panel1.TabIndex = 16
+        '
+        'Golbl
+        '
+        Me.Golbl.AutoSize = True
+        Me.Golbl.BackColor = System.Drawing.Color.Transparent
+        Me.Golbl.Font = New System.Drawing.Font("Score Board", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Golbl.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Golbl.Location = New System.Drawing.Point(348, 156)
+        Me.Golbl.Name = "Golbl"
+        Me.Golbl.Size = New System.Drawing.Size(98, 72)
+        Me.Golbl.TabIndex = 16
+        Me.Golbl.Text = "Go"
+        '
         'MainGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -289,7 +322,6 @@ Partial Class MainGame
         Me.Controls.Add(Me.team1score)
         Me.Controls.Add(Me.compGoalie)
         Me.Controls.Add(Me.userGoalie)
-        Me.Controls.Add(Me.pauseMenuPanel)
         Me.Controls.Add(Me.Pausebutton)
         Me.Controls.Add(Me.compPlayer)
         Me.Controls.Add(Me.compNet)
@@ -297,7 +329,7 @@ Partial Class MainGame
         Me.Controls.Add(Me.puck)
         Me.Controls.Add(Me.userPlayer)
         Me.Controls.Add(Me.scoreboard)
-        Me.Controls.Add(Me.HockeyRink)
+        Me.Controls.Add(Me.Panel1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -315,8 +347,9 @@ Partial Class MainGame
         CType(Me.userNet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.userPlayer, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.HockeyRink, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.scoreboard, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -340,9 +373,12 @@ Partial Class MainGame
     Friend WithEvents userGoalie As System.Windows.Forms.PictureBox
     Friend WithEvents compGoalie As System.Windows.Forms.PictureBox
     Friend WithEvents goalieColours As System.Windows.Forms.ImageList
-    Friend WithEvents HockeyRink As System.Windows.Forms.PictureBox
     Friend WithEvents scoreboard As System.Windows.Forms.PictureBox
     Friend WithEvents team2score As System.Windows.Forms.Label
     Friend WithEvents team1score As System.Windows.Forms.Label
+    Friend WithEvents count As System.Windows.Forms.Timer
+    Friend WithEvents countdownlbl As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Golbl As System.Windows.Forms.Label
 
 End Class

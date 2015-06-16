@@ -21,6 +21,7 @@
     Dim compPlayerResetPosition As New Point(478, 165)
     Dim userGoalieResetPosition As New Point(136, 167)
     Dim compGoalieResetPosition As New Point(599, 167)
+    Dim countdown As Integer = 4
     
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
@@ -134,7 +135,9 @@
         userGoalie.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
         resumebtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
         Quitbtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
-       
+        count.Start()
+        puck.Visible = False
+        Golbl.Visible = False
     End Sub
 
     Sub moveObject(ByVal movingObject As PictureBox, ByRef objectXV As Integer, ByRef objectYV As Integer, Optional ByRef objectAccelerating As Boolean = False) 'Moves an object according to it's X and Y velocity
@@ -382,8 +385,29 @@
     End Sub
 
     Private Sub MainGame_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        tick.Start()
+
     End Sub
 
+    
+    Private Sub count_Tick(sender As Object, e As EventArgs) Handles count.Tick
+        countdown = countdown - 1
+        If countdown = 4 Then
+            countdownlbl.Text = 3
+        ElseIf countdown = 3 Then
+            countdownlbl.Text = 2
+        ElseIf countdown = 2 Then
+            countdownlbl.Text = 1
+        ElseIf countdown = 1 Then
+            countdownlbl.Visible = False
+            Golbl.Visible = True
+        ElseIf countdown = 0 Then
+            Golbl.Visible = False
+            puck.Visible = True
+            tick.Start()
+            count.Stop()
+        End If
 
+    End Sub
+
+  
 End Class

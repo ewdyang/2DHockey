@@ -43,7 +43,7 @@ Partial Class About
         'team1lbl
         '
         Me.team1lbl.BackColor = System.Drawing.Color.Transparent
-        Me.team1lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.team1lbl.Font = New System.Drawing.Font("Aircruiser", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.team1lbl.ForeColor = System.Drawing.Color.White
         Me.team1lbl.Location = New System.Drawing.Point(85, 170)
         Me.team1lbl.Name = "team1lbl"
@@ -56,7 +56,7 @@ Partial Class About
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Aircruiser", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(524, 170)
         Me.Label1.Name = "Label1"
@@ -68,7 +68,7 @@ Partial Class About
         '
         Me.backbutton.BackColor = System.Drawing.Color.DarkBlue
         Me.backbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.backbutton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.backbutton.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.backbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.backbutton.Location = New System.Drawing.Point(282, 453)
         Me.backbutton.Name = "backbutton"
@@ -89,6 +89,7 @@ Partial Class About
         Me.Controls.Add(Me.Title)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "About"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "About"
         Me.ResumeLayout(False)
         Me.PerformLayout()
