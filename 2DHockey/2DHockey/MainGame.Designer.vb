@@ -204,7 +204,7 @@ Partial Class MainGame
         '
         'compGoalie
         '
-        Me.compGoalie.Image = Global._2DHockey.My.Resources.Resources.Blue_Goalie1
+        Me.compGoalie.Image = Global._2DHockey.My.Resources.Resources.Green_Goalie1
         Me.compGoalie.Location = New System.Drawing.Point(599, 167)
         Me.compGoalie.Name = "compGoalie"
         Me.compGoalie.Size = New System.Drawing.Size(50, 47)

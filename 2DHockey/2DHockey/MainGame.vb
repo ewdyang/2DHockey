@@ -15,6 +15,8 @@
     Dim puckResetPosition As New Point(381, 185)
     Dim userPlayerResetPosition As New Point(255, 165)
     Dim compPlayerResetPosition As New Point(478, 165)
+    Dim userGoalieResetPosition As New Point(136, 167)
+    Dim compGoalieResetPosition As New Point(599, 167)
 
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
@@ -233,6 +235,8 @@
         puck.Location = puckResetPosition
         userPlayer.Location = userPlayerResetPosition
         compPlayer.Location = compPlayerResetPosition
+        userGoalie.Location = userGoalieResetPosition
+        compGoalie.Location = compGoalieResetPosition
         tick.Start()
     End Sub
 
