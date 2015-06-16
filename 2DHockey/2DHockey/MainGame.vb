@@ -313,4 +313,6 @@
     Private Sub MainGame_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         tick.Start()
     End Sub
+
+
 End Class

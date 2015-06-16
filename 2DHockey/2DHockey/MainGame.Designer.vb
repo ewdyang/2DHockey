@@ -40,6 +40,8 @@ Partial Class MainGame
         Me.resumebtn = New System.Windows.Forms.Button()
         Me.Quitbtn = New System.Windows.Forms.Button()
         Me.pauseMenuPanel = New System.Windows.Forms.Panel()
+        Me.userGoalie = New System.Windows.Forms.PictureBox()
+        Me.compGoalie = New System.Windows.Forms.PictureBox()
         CType(Me.userPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.playerNet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,6 +49,8 @@ Partial Class MainGame
         CType(Me.compPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pausebutton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pauseMenuPanel.SuspendLayout()
+        CType(Me.userGoalie, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.compGoalie, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tick
@@ -189,6 +193,24 @@ Partial Class MainGame
         Me.pauseMenuPanel.TabIndex = 8
         Me.pauseMenuPanel.Visible = False
         '
+        'userGoalie
+        '
+        Me.userGoalie.Image = Global._2DHockey.My.Resources.Resources.Blue_Goalie1
+        Me.userGoalie.Location = New System.Drawing.Point(136, 167)
+        Me.userGoalie.Name = "userGoalie"
+        Me.userGoalie.Size = New System.Drawing.Size(50, 47)
+        Me.userGoalie.TabIndex = 9
+        Me.userGoalie.TabStop = False
+        '
+        'compGoalie
+        '
+        Me.compGoalie.Image = Global._2DHockey.My.Resources.Resources.Blue_Goalie1
+        Me.compGoalie.Location = New System.Drawing.Point(599, 167)
+        Me.compGoalie.Name = "compGoalie"
+        Me.compGoalie.Size = New System.Drawing.Size(50, 47)
+        Me.compGoalie.TabIndex = 10
+        Me.compGoalie.TabStop = False
+        '
         'MainGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -197,6 +219,8 @@ Partial Class MainGame
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(784, 361)
         Me.ControlBox = False
+        Me.Controls.Add(Me.compGoalie)
+        Me.Controls.Add(Me.userGoalie)
         Me.Controls.Add(Me.pauseMenuPanel)
         Me.Controls.Add(Me.Pausebutton)
         Me.Controls.Add(Me.compPlayer)
@@ -218,6 +242,8 @@ Partial Class MainGame
         CType(Me.compPlayer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Pausebutton, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pauseMenuPanel.ResumeLayout(False)
+        CType(Me.userGoalie, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.compGoalie, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -237,5 +263,7 @@ Partial Class MainGame
     Friend WithEvents resumebtn As System.Windows.Forms.Button
     Friend WithEvents Quitbtn As System.Windows.Forms.Button
     Friend WithEvents pauseMenuPanel As System.Windows.Forms.Panel
+    Friend WithEvents userGoalie As System.Windows.Forms.PictureBox
+    Friend WithEvents compGoalie As System.Windows.Forms.PictureBox
 
 End Class
