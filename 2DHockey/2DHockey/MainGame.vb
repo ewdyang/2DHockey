@@ -179,14 +179,9 @@
         rUserGoalie.Image = goalieColours.Images(TeamSelection.rUser)
         lUserPlayer.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
         lUserGoalie.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
-<<<<<<< HEAD
-        resumebtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
-        Quitbtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
-        'code that checks if sound is on
-=======
         resumebtn.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
         Quitbtn.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
->>>>>>> origin/master
+		'code that checks if sound is on
         If GlobalVariables.sounds = True Then
             My.Computer.Audio.Play(My.Resources.LETSAGO, _
     AudioPlayMode.Background)
@@ -296,22 +291,6 @@
     End Sub
 
     Sub checkForGoal() 'checks if the puck has collided with a goalnet and if so, plays sound then runs goalScored for the team that scored
-<<<<<<< HEAD
-        If objectCollisionDetect(puck, rUserNet) And puck.Location.X > lUserNet.Location.X + lUserNet.Width - 10 Then 'checks if puck is touching net and is past net
-            'code that checks if a goal is scored
-            If GlobalVariables.sounds = True Then
-                My.Computer.Audio.Play(My.Resources.buzzer, _
-            AudioPlayMode.Background)
-            End If
-            Buzzertime.Start()
-            goalScored("lUser")
-
-        ElseIf objectCollisionDetect(puck, lUserNet) And puck.Location.X + puck.Width < rUserNet.Location.X + 10 Then
-            'code that if a goal is scored
-            If GlobalVariables.sounds = True Then
-                My.Computer.Audio.Play(My.Resources.buzzer, _
-           AudioPlayMode.Background)
-=======
         If objectCollisionDetect(puck, lUserNet) Then 'checks if puck is touching net and is past net
             If puck.Location.X > lUserNet.Location.X + lUserNet.Width - 10 And puck.Location.Y > lUserNet.Location.Y And puck.Location.Y + puck.Height < lUserNet.Location.Y + lUserNet.Height Then
                 goalScored("rUser")
@@ -319,8 +298,6 @@
                 heldByPlayer = False
                 puckXV = -10
                 puckYV = 5
-
->>>>>>> origin/master
             End If
         ElseIf objectCollisionDetect(puck, rUserNet) Then
             If puck.Location.X + puck.Width < rUserNet.Location.X + 10 And puck.Location.Y > rUserGoalie.Location.Y And puck.Location.Y + puck.Height < lUserNet.Location.Y + lUserNet.Height Then
