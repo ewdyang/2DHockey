@@ -493,19 +493,16 @@
 
     Private Sub again_Click(sender As Object, e As EventArgs) Handles again.Click
         resetGame()
-
         retire.Visible = False
         again.Visible = False
         Winlbl.Visible = False
         countdownpanel.Visible = True
-
         count.Start()
         If GlobalVariables.sounds = True Then
             My.Computer.Audio.Play(My.Resources.LETSAGO, _
     AudioPlayMode.Background)
         End If
         Start.Start()
-
-
+        lUserPlayer.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
     End Sub
 End Class
