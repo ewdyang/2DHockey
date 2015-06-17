@@ -156,11 +156,11 @@ Partial Class MainGame
         '
         Me.rUserScoreboard.AutoSize = True
         Me.rUserScoreboard.BackColor = System.Drawing.Color.Black
-        Me.rUserScoreboard.Font = New System.Drawing.Font("Score Board", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rUserScoreboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rUserScoreboard.ForeColor = System.Drawing.Color.Gold
         Me.rUserScoreboard.Location = New System.Drawing.Point(446, 435)
         Me.rUserScoreboard.Name = "rUserScoreboard"
-        Me.rUserScoreboard.Size = New System.Drawing.Size(46, 51)
+        Me.rUserScoreboard.Size = New System.Drawing.Size(48, 52)
         Me.rUserScoreboard.TabIndex = 12
         Me.rUserScoreboard.Text = "0"
         '
@@ -168,11 +168,9 @@ Partial Class MainGame
         '
         Me.lUserScoreboard.AutoSize = True
         Me.lUserScoreboard.BackColor = System.Drawing.Color.Black
-        Me.lUserScoreboard.Font = New System.Drawing.Font("Score Board", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lUserScoreboard.ForeColor = System.Drawing.Color.Gold
         Me.lUserScoreboard.Location = New System.Drawing.Point(293, 435)
         Me.lUserScoreboard.Name = "lUserScoreboard"
-        Me.lUserScoreboard.Size = New System.Drawing.Size(46, 51)
         Me.lUserScoreboard.TabIndex = 11
         Me.lUserScoreboard.Text = "0"
         '
@@ -238,11 +236,10 @@ Partial Class MainGame
         '
         Me.countdownlbl.AutoSize = True
         Me.countdownlbl.BackColor = System.Drawing.Color.Transparent
-        Me.countdownlbl.Font = New System.Drawing.Font("Score Board", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.countdownlbl.ForeColor = System.Drawing.SystemColors.ControlText
         Me.countdownlbl.Location = New System.Drawing.Point(24, 11)
         Me.countdownlbl.Name = "countdownlbl"
-        Me.countdownlbl.Size = New System.Drawing.Size(64, 72)
+        Me.countdownlbl.Size = New System.Drawing.Size(68, 73)
         Me.countdownlbl.TabIndex = 15
         Me.countdownlbl.Text = "3"
         '
@@ -306,11 +303,10 @@ Partial Class MainGame
         '
         Me.Golbl.AutoSize = True
         Me.Golbl.BackColor = System.Drawing.Color.Transparent
-        Me.Golbl.Font = New System.Drawing.Font("Score Board", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Golbl.ForeColor = System.Drawing.Color.DarkBlue
         Me.Golbl.Location = New System.Drawing.Point(3, 11)
         Me.Golbl.Name = "Golbl"
-        Me.Golbl.Size = New System.Drawing.Size(98, 72)
+        Me.Golbl.Size = New System.Drawing.Size(118, 73)
         Me.Golbl.TabIndex = 16
         Me.Golbl.Text = "Go"
         '
@@ -384,7 +380,7 @@ Partial Class MainGame
         '
         'WinPlayer
         '
-        Me.WinPlayer.Location = New System.Drawing.Point(65, 233)
+        Me.WinPlayer.Location = New System.Drawing.Point(65, 325)
         Me.WinPlayer.Margin = New System.Windows.Forms.Padding(2)
         Me.WinPlayer.Name = "WinPlayer"
         Me.WinPlayer.Size = New System.Drawing.Size(150, 162)
@@ -404,7 +400,7 @@ Partial Class MainGame
         '
         'WinGoalie
         '
-        Me.WinGoalie.Location = New System.Drawing.Point(374, 237)
+        Me.WinGoalie.Location = New System.Drawing.Point(568, 325)
         Me.WinGoalie.Margin = New System.Windows.Forms.Padding(2)
         Me.WinGoalie.Name = "WinGoalie"
         Me.WinGoalie.Size = New System.Drawing.Size(150, 153)
