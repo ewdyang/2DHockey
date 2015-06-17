@@ -24,11 +24,7 @@
     Dim countdown As Integer = 4
     Dim winshowtime As Integer = 2
     Dim buzzertimer As Integer
-<<<<<<< HEAD
-    
-=======
-	
->>>>>>> origin/master
+
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
         checkForGoal() 'checks if a goal has been made
@@ -290,21 +286,10 @@
 
     Sub gameWin(ByRef team As String) 'announces winner of the game and allows player to replay or return to main menu
         If team = "user" Then
-<<<<<<< HEAD
-=======
-            wintimer.Start()
-            Winlbl.Text = "Team 1 wins!"
-            Winlbl.Visible = True
-            My.Computer.Audio.Play(My.Resources.IHaveWonned, _
-        AudioPlayMode.BackgroundLoop)
-            MsgBox("Team 1 Wins")
-        Else
->>>>>>> origin/master
             wintimer.Start()
             Winlbl.Text = "Team 2 wins!"
             Winlbl.Visible = True
             My.Computer.Audio.Play(My.Resources.IHaveWonned, _
-<<<<<<< HEAD
         AudioPlayMode.BackgroundLoop)
             MsgBox("Team 1 Wins")
             userScore = 0
@@ -323,12 +308,6 @@
        AudioPlayMode.BackgroundLoop)
             MsgBox("Team 2 Wins")
             userScore = 0
-=======
-       AudioPlayMode.BackgroundLoop)
-            MsgBox("Team 2 Wins")
-        End If
-		userScore = 0
->>>>>>> origin/master
             compScore = 0
             updateScoreBoard()
             resetGoal()
@@ -437,10 +416,6 @@
 
     End Sub
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
     Private Sub count_Tick(sender As Object, e As EventArgs) Handles count.Tick
         countdown = countdown - 1
         If countdown = 4 Then
@@ -489,11 +464,7 @@
         End If
 
     End Sub
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> origin/master
     Private Sub Buzzertime_Tick(sender As Object, e As EventArgs) Handles Buzzertime.Tick
         buzzertimer = buzzertimer + 1
         If buzzertimer = 3 Then
@@ -503,9 +474,5 @@ AudioPlayMode.BackgroundLoop)
             buzzertimer = 0
         End If
     End Sub
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> origin/master
 End Class

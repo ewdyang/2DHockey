@@ -113,7 +113,6 @@ Partial Class MainGame
         Me.whiteAnimation.Images.SetKeyName(0, "WhitePlayer1.png")
         Me.whiteAnimation.Images.SetKeyName(1, "WhitePlayer2.png")
         '
-<<<<<<< HEAD
         'resumebtn
         '
         Me.resumebtn.BackColor = System.Drawing.Color.DarkBlue
@@ -153,8 +152,6 @@ Partial Class MainGame
         Me.pauseMenuPanel.TabIndex = 8
         Me.pauseMenuPanel.Visible = False
         '
-=======
->>>>>>> origin/master
         'goalieColours
         '
         Me.goalieColours.ImageStream = CType(resources.GetObject("goalieColours.ImageStream"), System.Windows.Forms.ImageListStreamer)
@@ -165,7 +162,6 @@ Partial Class MainGame
         Me.goalieColours.Images.SetKeyName(3, "Red Goalie1.png")
         Me.goalieColours.Images.SetKeyName(4, "White Goalie1.png")
         '
-<<<<<<< HEAD
         'compGoalie
         '
         Me.compGoalie.BackColor = System.Drawing.Color.White
@@ -187,8 +183,6 @@ Partial Class MainGame
         Me.userGoalie.TabIndex = 9
         Me.userGoalie.TabStop = False
         '
-=======
->>>>>>> origin/master
         'Pausebutton
         '
         Me.Pausebutton.BackColor = System.Drawing.Color.DarkBlue
@@ -255,16 +249,6 @@ Partial Class MainGame
         '
         'userPlayer
         '
-<<<<<<< HEAD
-        Me.compNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
-        Me.compNet.Location = New System.Drawing.Point(867, 182)
-        Me.compNet.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.compNet.Name = "compNet"
-        Me.compNet.Size = New System.Drawing.Size(40, 98)
-        Me.compNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.compNet.TabIndex = 3
-        Me.compNet.TabStop = False
-=======
         Me.userPlayer.BackColor = System.Drawing.Color.WhiteSmoke
         Me.userPlayer.Image = Global._2DHockey.My.Resources.Resources.BluePlayer1
         Me.userPlayer.Location = New System.Drawing.Point(285, 164)
@@ -292,21 +276,13 @@ Partial Class MainGame
         Me.compGoalie.Size = New System.Drawing.Size(50, 47)
         Me.compGoalie.TabIndex = 10
         Me.compGoalie.TabStop = False
->>>>>>> origin/master
+
         '
         'userNet
         '
         Me.userNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
-<<<<<<< HEAD
-        Me.userNet.Location = New System.Drawing.Point(101, 149)
-=======
-<<<<<<< HEAD
-        Me.userNet.Location = New System.Drawing.Point(101, 149)
-=======
         Me.userNet.Location = New System.Drawing.Point(140, 182)
         Me.userNet.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
->>>>>>> howToCommit
->>>>>>> origin/master
         Me.userNet.Name = "userNet"
         Me.userNet.Size = New System.Drawing.Size(40, 98)
         Me.userNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -345,20 +321,7 @@ Partial Class MainGame
         Me.puck.TabIndex = 1
         Me.puck.TabStop = False
         '
-<<<<<<< HEAD
-        'userPlayer
-        '
-        Me.userPlayer.BackColor = System.Drawing.Color.White
-        Me.userPlayer.Image = Global._2DHockey.My.Resources.Resources.BluePlayer1
-        Me.userPlayer.Location = New System.Drawing.Point(340, 203)
-        Me.userPlayer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.userPlayer.Name = "userPlayer"
-        Me.userPlayer.Size = New System.Drawing.Size(67, 62)
-        Me.userPlayer.TabIndex = 0
-        Me.userPlayer.TabStop = False
-		'
-=======
->>>>>>> origin/master
+
         'pauseMenuPanel
         '
         Me.pauseMenuPanel.Controls.Add(Me.resumebtn)
@@ -368,11 +331,7 @@ Partial Class MainGame
         Me.pauseMenuPanel.Size = New System.Drawing.Size(200, 150)
         Me.pauseMenuPanel.TabIndex = 8
         Me.pauseMenuPanel.Visible = False
-<<<<<<< HEAD
 		'
-=======
-        '
->>>>>>> origin/master
         'resumebtn
         '
         Me.resumebtn.BackColor = System.Drawing.Color.DarkBlue
@@ -516,10 +475,6 @@ Partial Class MainGame
     Friend WithEvents Golbl As System.Windows.Forms.Label
     Friend WithEvents Winlbl As System.Windows.Forms.Label
     Friend WithEvents countdownpanel As System.Windows.Forms.Panel
-<<<<<<< HEAD
     Friend WithEvents Buzzertime As System.Windows.Forms.Timer
 
-=======
-	
->>>>>>> origin/master
 End Class
