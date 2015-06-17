@@ -139,6 +139,7 @@
         lUserGoalie.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
         resumebtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
         Quitbtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
+        'code that checks if sound is on
         If GlobalVariables.sounds = True Then
             My.Computer.Audio.Play(My.Resources.LETSAGO, _
     AudioPlayMode.Background)
@@ -248,6 +249,7 @@
 
     Sub checkForGoal()
         If objectCollisionDetect(puck, rUserNet) And puck.Location.X > lUserNet.Location.X + lUserNet.Width - 10 Then 'checks if puck is touching net and is past net
+            'code that checks if a goal is scored
             If GlobalVariables.sounds = True Then
                 My.Computer.Audio.Play(My.Resources.buzzer, _
             AudioPlayMode.Background)
@@ -256,6 +258,7 @@
             goalScored("lUser")
 
         ElseIf objectCollisionDetect(puck, lUserNet) And puck.Location.X + puck.Width < rUserNet.Location.X + 10 Then
+            'code that if a goal is scored
             If GlobalVariables.sounds = True Then
                 My.Computer.Audio.Play(My.Resources.buzzer, _
            AudioPlayMode.Background)
@@ -267,6 +270,7 @@
     End Sub
 
     Private Sub Buzzertime_Tick(sender As Object, e As EventArgs) Handles Buzzertime.Tick
+        'code that plays background music afterwards
         buzzertimer = buzzertimer + 1
         If buzzertimer = 3 Then
             Buzzertime.Stop()
@@ -436,7 +440,7 @@
         tick.Start()
     End Sub
 
-    Private Sub Quitbtn_Click(sender As Object, e As EventArgs) Handles Quitbtn.Click
+    Private Sub Quitbtn_Click(sender As Object, e As EventArgs) Handles Quitbtn.Click 'reset game and clses game
         resetGame()
         pauseMenuPanel.Hide()
         TeamSelection.resetTeamSelectionForm()
@@ -491,7 +495,7 @@
         MainMenu.Visible = True
     End Sub
 
-    Private Sub again_Click(sender As Object, e As EventArgs) Handles again.Click
+    Private Sub again_Click(sender As Object, e As EventArgs) Handles again.Click 'restarts entire game
         resetGame()
         retire.Visible = False
         again.Visible = False

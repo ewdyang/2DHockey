@@ -14,6 +14,7 @@
     End Sub
 
     Private Sub Musicoff_CheckedChanged(sender As Object, e As EventArgs) Handles Musicoff.CheckedChanged
+        'code that toggles the sounds on/off
         My.Computer.Audio.Stop()
         GlobalVariables.sounds = False
         If Musicoff.Checked = False Then
