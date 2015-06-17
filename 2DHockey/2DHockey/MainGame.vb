@@ -438,6 +438,8 @@
         rUserScore = 0
         updateScoreBoard()
         countdownlbl.Text = 3
+        WinGoalie.Visible = False
+        WinPlayer.Visible = False
     End Sub
 
     Sub animatePlayer(ByVal player As PictureBox, ByVal team As String, ByVal directionHeading As String, ByRef playerDirection As Integer) 'animates the player skating, facing the correct direction
