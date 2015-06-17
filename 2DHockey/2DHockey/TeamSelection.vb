@@ -109,6 +109,4 @@
         rUserConfirm.Font = Aircruiser.GetInstance(14.25, FontStyle.Regular)
         backbutton.Font = Aircruiser.GetInstance(14.25, FontStyle.Regular)
     End Sub
-
-
 End Class
