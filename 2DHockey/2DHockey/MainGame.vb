@@ -585,7 +585,7 @@
 
     Private Sub ChangeFonts()
         'Changing the fonts to the custom embedded ones
-
+        Golbl.Font = ScoreboardFont.GetInstance(72, FontStyle.Regular)
         countdownlbl.Font = ScoreboardFont.GetInstance(72, FontStyle.Regular)
         lUserScoreboard.Font = ScoreboardFont.GetInstance(34, FontStyle.Regular)
         rUserScoreboard.Font = ScoreboardFont.GetInstance(34, FontStyle.Regular)
