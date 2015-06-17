@@ -262,9 +262,9 @@
             puckYV = 10 - Rnd() * 20
             Select Case playerDirection
                 Case 0
-                    puckXV = -20
+                    puckXV = -14
                 Case 1
-                    puckXV = 20
+                    puckXV = 14
             End Select
         End If
     End Sub
@@ -292,7 +292,7 @@
 
     Sub checkForGoal() 'checks if the puck has collided with a goalnet and if so, plays sound then runs goalScored for the team that scored
         If objectCollisionDetect(puck, lUserNet) Then 'checks if puck is touching net and is past net
-            If puck.Location.X > lUserNet.Location.X + lUserNet.Width - 10 And puck.Location.Y > lUserNet.Location.Y And puck.Location.Y + puck.Height < lUserNet.Location.Y + lUserNet.Height Then
+            If puck.Location.X > lUserNet.Location.X + lUserNet.Width - 15 Then
                 goalScored("rUser")
             Else
                 heldByPlayer = False
@@ -300,7 +300,7 @@
                 puckYV = 5
             End If
         ElseIf objectCollisionDetect(puck, rUserNet) Then
-            If puck.Location.X + puck.Width < rUserNet.Location.X + 10 And puck.Location.Y > rUserGoalie.Location.Y And puck.Location.Y + puck.Height < rUserNet.Location.Y + rUserNet.Height Then
+            If puck.Location.X + puck.Width < rUserNet.Location.X + 15 Then
                 goalScored("lUser")
             Else
                 heldByPlayer = False
@@ -399,11 +399,6 @@
             End If
 
         End If
-        lUserScore = 0
-        rUserScore = 0
-        updateScoreBoard()
-        resetGoal()
-        tick.Stop()
         countdownlbl.Visible = True
         countdown = 4
         countdownlbl.Text = 3
@@ -483,7 +478,7 @@
                 End If
             Case "down"
                 If playerDirection = 1 Then
-                    lUserPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
+                    player.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
                 End If
         End Select
     End Sub
@@ -583,7 +578,9 @@
     AudioPlayMode.Background)
         End If
         Start.Start()
-        lUserPlayer.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
+        lUserPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipNone)
+        rUserPlayer.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
+        Me.Focus()
     End Sub
 
     Private Sub ChangeFonts()
