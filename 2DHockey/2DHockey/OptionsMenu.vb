@@ -8,9 +8,7 @@
             Musicoff.Checked = False
         End If
 
-        optionlbl.Font = CustomFont.GetInstance(48, FontStyle.Regular)              'Changes the font to the custom font in resources
-        Musicname.Font = CustomFont.GetInstance(27.25, FontStyle.Regular)
-        Pointsetter.Font = CustomFont.GetInstance(27.25, FontStyle.Regular)
+        ChangeFonts()
     End Sub
 
     Private Sub Musicoff_CheckedChanged(sender As Object, e As EventArgs) Handles Musicoff.CheckedChanged
@@ -28,6 +26,18 @@
         MainMenu.Show()
     End Sub
 
+    Private Sub ChangeFonts()
+        'Changes the fonts to the custom fonts in the resources
+
+        optionlbl.Font = Aircruiser.GetInstance(48, FontStyle.Regular)
+        Musicname.Font = Aircruiser.GetInstance(27.25, FontStyle.Regular)
+        Pointsetter.Font = Aircruiser.GetInstance(27.25, FontStyle.Regular)
+        Musicon.Font = Aircruiser.GetInstance(18, FontStyle.Regular)
+        Musicoff.Font = Aircruiser.GetInstance(18, FontStyle.Regular)
+        points5.Font = Aircruiser.GetInstance(18, FontStyle.Regular)
+        points7.Font = Aircruiser.GetInstance(18, FontStyle.Regular)
+        points9.Font = Aircruiser.GetInstance(18, FontStyle.Regular)
+    End Sub
 
 End Class
 

@@ -23,8 +23,8 @@ Partial Class About
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Title = New System.Windows.Forms.Label()
-        Me.team1lbl = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Description = New System.Windows.Forms.Label()
+        Me.Devs = New System.Windows.Forms.Label()
         Me.backbutton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -40,29 +40,29 @@ Partial Class About
         Me.Title.TabIndex = 9
         Me.Title.Text = "About"
         '
-        'team1lbl
+        'Description
         '
-        Me.team1lbl.BackColor = System.Drawing.Color.Transparent
-        Me.team1lbl.Font = New System.Drawing.Font("Aircruiser", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.team1lbl.ForeColor = System.Drawing.Color.White
-        Me.team1lbl.Location = New System.Drawing.Point(68, 168)
-        Me.team1lbl.Name = "team1lbl"
-        Me.team1lbl.Size = New System.Drawing.Size(353, 245)
-        Me.team1lbl.TabIndex = 11
-        Me.team1lbl.Text = "This is a 2 dimensional hockey game made by Grade 10 students for Mrs. Kutschke's" & _
+        Me.Description.BackColor = System.Drawing.Color.Transparent
+        Me.Description.Font = New System.Drawing.Font("Aircruiser", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Description.ForeColor = System.Drawing.Color.White
+        Me.Description.Location = New System.Drawing.Point(68, 168)
+        Me.Description.Name = "Description"
+        Me.Description.Size = New System.Drawing.Size(353, 245)
+        Me.Description.TabIndex = 11
+        Me.Description.Text = "This is a 2 dimensional hockey game made by Grade 10 students for Mrs. Kutschke's" & _
     "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ICS2O summative. The game was designed in collaboration with grade 5 students " & _
     "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ethan and Ayman." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'Label1
+        'Devs
         '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Aircruiser", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(528, 200)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(281, 162)
-        Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Developpers:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Edward Yang" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ryan Shi" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Derek Xu" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kevin Zhu" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Devs.BackColor = System.Drawing.Color.Transparent
+        Me.Devs.Font = New System.Drawing.Font("Aircruiser", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Devs.ForeColor = System.Drawing.Color.White
+        Me.Devs.Location = New System.Drawing.Point(528, 200)
+        Me.Devs.Name = "Devs"
+        Me.Devs.Size = New System.Drawing.Size(281, 162)
+        Me.Devs.TabIndex = 12
+        Me.Devs.Text = "Developpers:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Edward Yang" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ryan Shi" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Derek Xu" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kevin Zhu" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'backbutton
         '
@@ -84,8 +84,8 @@ Partial Class About
         Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.teamSelectionBackground
         Me.ClientSize = New System.Drawing.Size(869, 519)
         Me.Controls.Add(Me.backbutton)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.team1lbl)
+        Me.Controls.Add(Me.Devs)
+        Me.Controls.Add(Me.Description)
         Me.Controls.Add(Me.Title)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "About"
@@ -96,7 +96,7 @@ Partial Class About
 
     End Sub
     Friend WithEvents Title As System.Windows.Forms.Label
-    Friend WithEvents team1lbl As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Description As System.Windows.Forms.Label
+    Friend WithEvents Devs As System.Windows.Forms.Label
     Friend WithEvents backbutton As System.Windows.Forms.Button
 End Class

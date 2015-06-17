@@ -6,6 +6,13 @@
     End Sub
 
     Private Sub About_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Title.Font = CustomFont.GetInstance(60, FontStyle.Regular)          'Changes the title to aircruiser
+        ChangeFonts()
+    End Sub
+
+    Private Sub ChangeFonts()
+        'Changes the fonts to the custom fonts in the resources
+        Title.Font = Aircruiser.GetInstance(60, FontStyle.Regular)          'Changes the title to aircruiser
+        Description.Font = Aircruiser.GetInstance(18, FontStyle.Regular)          'Changes the title to aircruiser
+        Devs.Font = Aircruiser.GetInstance(21.75, FontStyle.Regular)          'Changes the title to aircruiser
     End Sub
 End Class

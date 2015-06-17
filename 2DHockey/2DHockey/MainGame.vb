@@ -179,8 +179,8 @@
         rUserGoalie.Image = goalieColours.Images(TeamSelection.rUser)
         lUserPlayer.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
         lUserGoalie.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
-        resumebtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
-        Quitbtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
+        resumebtn.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
+        Quitbtn.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
         If GlobalVariables.sounds = True Then
             My.Computer.Audio.Play(My.Resources.LETSAGO, _
     AudioPlayMode.Background)
@@ -190,6 +190,8 @@
         puck.Visible = False
         Golbl.Visible = False
         Winlbl.Visible = False
+
+        ChangeFonts()
     End Sub
 
     Sub moveObject(ByVal movingObject As PictureBox, ByRef objectXV As Integer, ByRef objectYV As Integer, Optional ByRef objectAccelerating As Boolean = False) 'Moves an object according to it's X and Y velocity
@@ -574,4 +576,16 @@
         lUserPlayer.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
     End Sub
 
+    Private Sub ChangeFonts()
+        'Changing the fonts to the custom embedded ones
+
+        countdownlbl.Font = ScoreboardFont.GetInstance(72, FontStyle.Regular)
+        lUserScoreboard.Font = ScoreboardFont.GetInstance(34, FontStyle.Regular)
+        rUserScoreboard.Font = ScoreboardFont.GetInstance(34, FontStyle.Regular)
+        resumebtn.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
+        Quitbtn.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
+        retire.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
+        again.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
+        Winlbl.Font = Aircruiser.GetInstance(45, FontStyle.Regular)
+    End Sub
 End Class
