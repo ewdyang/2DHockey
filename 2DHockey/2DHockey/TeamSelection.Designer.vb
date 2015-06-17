@@ -25,20 +25,20 @@ Partial Class TeamSelection
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TeamSelection))
         Me.playerSprites = New System.Windows.Forms.ImageList(Me.components)
-        Me.Player1 = New System.Windows.Forms.PictureBox()
-        Me.Player2 = New System.Windows.Forms.PictureBox()
-        Me.P1Left = New System.Windows.Forms.Button()
-        Me.P1Right = New System.Windows.Forms.Button()
-        Me.P2Left = New System.Windows.Forms.Button()
-        Me.P2Right = New System.Windows.Forms.Button()
-        Me.P2Confirm = New System.Windows.Forms.Button()
-        Me.P1Confirm = New System.Windows.Forms.Button()
+        Me.lUserPlayerTeam = New System.Windows.Forms.PictureBox()
+        Me.rUserPlayerTeam = New System.Windows.Forms.PictureBox()
+        Me.llUsereft = New System.Windows.Forms.Button()
+        Me.lUserRight = New System.Windows.Forms.Button()
+        Me.rlUsereft = New System.Windows.Forms.Button()
+        Me.rUserRight = New System.Windows.Forms.Button()
+        Me.rUserConfirm = New System.Windows.Forms.Button()
+        Me.lUserConfirm = New System.Windows.Forms.Button()
         Me.optionlbl = New System.Windows.Forms.Label()
         Me.backbutton = New System.Windows.Forms.Button()
-        Me.team1lbl = New System.Windows.Forms.Label()
-        Me.Team2lbl = New System.Windows.Forms.Label()
-        CType(Me.Player1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Player2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.llUserbl = New System.Windows.Forms.Label()
+        Me.rlUserbl = New System.Windows.Forms.Label()
+        CType(Me.lUserPlayerTeam, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rUserPlayerTeam, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'playerSprites
@@ -51,100 +51,100 @@ Partial Class TeamSelection
         Me.playerSprites.Images.SetKeyName(3, "RedPlayer2.png")
         Me.playerSprites.Images.SetKeyName(4, "WhitePlayer2.png")
         '
-        'Player1
+        'lUserPlayerTeam
         '
-        Me.Player1.BackColor = System.Drawing.Color.Transparent
-        Me.Player1.Image = Global._2DHockey.My.Resources.Resources.BluePlayer2
-        Me.Player1.Location = New System.Drawing.Point(175, 173)
-        Me.Player1.Name = "Player1"
-        Me.Player1.Size = New System.Drawing.Size(150, 150)
-        Me.Player1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Player1.TabIndex = 0
-        Me.Player1.TabStop = False
+        Me.lUserPlayerTeam.BackColor = System.Drawing.Color.Transparent
+        Me.lUserPlayerTeam.Image = Global._2DHockey.My.Resources.Resources.BluePlayer2
+        Me.lUserPlayerTeam.Location = New System.Drawing.Point(175, 173)
+        Me.lUserPlayerTeam.Name = "lUserPlayerTeam"
+        Me.lUserPlayerTeam.Size = New System.Drawing.Size(150, 150)
+        Me.lUserPlayerTeam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.lUserPlayerTeam.TabIndex = 0
+        Me.lUserPlayerTeam.TabStop = False
         '
-        'Player2
+        'rUserPlayerTeam
         '
-        Me.Player2.BackColor = System.Drawing.Color.Transparent
-        Me.Player2.Image = Global._2DHockey.My.Resources.Resources.BluePlayer2
-        Me.Player2.InitialImage = Nothing
-        Me.Player2.Location = New System.Drawing.Point(560, 173)
-        Me.Player2.Name = "Player2"
-        Me.Player2.Size = New System.Drawing.Size(150, 150)
-        Me.Player2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Player2.TabIndex = 1
-        Me.Player2.TabStop = False
+        Me.rUserPlayerTeam.BackColor = System.Drawing.Color.Transparent
+        Me.rUserPlayerTeam.Image = Global._2DHockey.My.Resources.Resources.BluePlayer2
+        Me.rUserPlayerTeam.InitialImage = Nothing
+        Me.rUserPlayerTeam.Location = New System.Drawing.Point(560, 173)
+        Me.rUserPlayerTeam.Name = "rUserPlayerTeam"
+        Me.rUserPlayerTeam.Size = New System.Drawing.Size(150, 150)
+        Me.rUserPlayerTeam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.rUserPlayerTeam.TabIndex = 1
+        Me.rUserPlayerTeam.TabStop = False
         '
-        'P1Left
+        'llUsereft
         '
-        Me.P1Left.BackColor = System.Drawing.Color.DarkBlue
-        Me.P1Left.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.P1Left.ForeColor = System.Drawing.Color.White
-        Me.P1Left.Location = New System.Drawing.Point(130, 351)
-        Me.P1Left.Name = "P1Left"
-        Me.P1Left.Size = New System.Drawing.Size(90, 35)
-        Me.P1Left.TabIndex = 2
-        Me.P1Left.Text = "Left"
-        Me.P1Left.UseVisualStyleBackColor = False
+        Me.llUsereft.BackColor = System.Drawing.Color.DarkBlue
+        Me.llUsereft.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llUsereft.ForeColor = System.Drawing.Color.White
+        Me.llUsereft.Location = New System.Drawing.Point(130, 351)
+        Me.llUsereft.Name = "llUsereft"
+        Me.llUsereft.Size = New System.Drawing.Size(90, 35)
+        Me.llUsereft.TabIndex = 2
+        Me.llUsereft.Text = "Left"
+        Me.llUsereft.UseVisualStyleBackColor = False
         '
-        'P1Right
+        'lUserRight
         '
-        Me.P1Right.BackColor = System.Drawing.Color.DarkBlue
-        Me.P1Right.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.P1Right.ForeColor = System.Drawing.Color.White
-        Me.P1Right.Location = New System.Drawing.Point(278, 351)
-        Me.P1Right.Name = "P1Right"
-        Me.P1Right.Size = New System.Drawing.Size(90, 35)
-        Me.P1Right.TabIndex = 3
-        Me.P1Right.Text = "Right"
-        Me.P1Right.UseVisualStyleBackColor = False
+        Me.lUserRight.BackColor = System.Drawing.Color.DarkBlue
+        Me.lUserRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lUserRight.ForeColor = System.Drawing.Color.White
+        Me.lUserRight.Location = New System.Drawing.Point(278, 351)
+        Me.lUserRight.Name = "lUserRight"
+        Me.lUserRight.Size = New System.Drawing.Size(90, 35)
+        Me.lUserRight.TabIndex = 3
+        Me.lUserRight.Text = "Right"
+        Me.lUserRight.UseVisualStyleBackColor = False
         '
-        'P2Left
+        'rlUsereft
         '
-        Me.P2Left.BackColor = System.Drawing.Color.DarkBlue
-        Me.P2Left.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.P2Left.ForeColor = System.Drawing.Color.Transparent
-        Me.P2Left.Location = New System.Drawing.Point(515, 351)
-        Me.P2Left.Name = "P2Left"
-        Me.P2Left.Size = New System.Drawing.Size(90, 35)
-        Me.P2Left.TabIndex = 4
-        Me.P2Left.Text = "Left"
-        Me.P2Left.UseVisualStyleBackColor = False
+        Me.rlUsereft.BackColor = System.Drawing.Color.DarkBlue
+        Me.rlUsereft.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rlUsereft.ForeColor = System.Drawing.Color.Transparent
+        Me.rlUsereft.Location = New System.Drawing.Point(515, 351)
+        Me.rlUsereft.Name = "rlUsereft"
+        Me.rlUsereft.Size = New System.Drawing.Size(90, 35)
+        Me.rlUsereft.TabIndex = 4
+        Me.rlUsereft.Text = "Left"
+        Me.rlUsereft.UseVisualStyleBackColor = False
         '
-        'P2Right
+        'rUserRight
         '
-        Me.P2Right.BackColor = System.Drawing.Color.DarkBlue
-        Me.P2Right.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.P2Right.ForeColor = System.Drawing.Color.White
-        Me.P2Right.Location = New System.Drawing.Point(663, 351)
-        Me.P2Right.Name = "P2Right"
-        Me.P2Right.Size = New System.Drawing.Size(90, 35)
-        Me.P2Right.TabIndex = 5
-        Me.P2Right.Text = "Right"
-        Me.P2Right.UseVisualStyleBackColor = False
+        Me.rUserRight.BackColor = System.Drawing.Color.DarkBlue
+        Me.rUserRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rUserRight.ForeColor = System.Drawing.Color.White
+        Me.rUserRight.Location = New System.Drawing.Point(663, 351)
+        Me.rUserRight.Name = "rUserRight"
+        Me.rUserRight.Size = New System.Drawing.Size(90, 35)
+        Me.rUserRight.TabIndex = 5
+        Me.rUserRight.Text = "Right"
+        Me.rUserRight.UseVisualStyleBackColor = False
         '
-        'P2Confirm
+        'rUserConfirm
         '
-        Me.P2Confirm.BackColor = System.Drawing.Color.DarkBlue
-        Me.P2Confirm.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.P2Confirm.ForeColor = System.Drawing.Color.White
-        Me.P2Confirm.Location = New System.Drawing.Point(575, 407)
-        Me.P2Confirm.Name = "P2Confirm"
-        Me.P2Confirm.Size = New System.Drawing.Size(120, 35)
-        Me.P2Confirm.TabIndex = 6
-        Me.P2Confirm.Text = "Confirm"
-        Me.P2Confirm.UseVisualStyleBackColor = False
+        Me.rUserConfirm.BackColor = System.Drawing.Color.DarkBlue
+        Me.rUserConfirm.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rUserConfirm.ForeColor = System.Drawing.Color.White
+        Me.rUserConfirm.Location = New System.Drawing.Point(575, 407)
+        Me.rUserConfirm.Name = "rUserConfirm"
+        Me.rUserConfirm.Size = New System.Drawing.Size(120, 35)
+        Me.rUserConfirm.TabIndex = 6
+        Me.rUserConfirm.Text = "Confirm"
+        Me.rUserConfirm.UseVisualStyleBackColor = False
         '
-        'P1Confirm
+        'lUserConfirm
         '
-        Me.P1Confirm.BackColor = System.Drawing.Color.DarkBlue
-        Me.P1Confirm.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.P1Confirm.ForeColor = System.Drawing.Color.White
-        Me.P1Confirm.Location = New System.Drawing.Point(190, 407)
-        Me.P1Confirm.Name = "P1Confirm"
-        Me.P1Confirm.Size = New System.Drawing.Size(120, 35)
-        Me.P1Confirm.TabIndex = 7
-        Me.P1Confirm.Text = "Confirm"
-        Me.P1Confirm.UseVisualStyleBackColor = False
+        Me.lUserConfirm.BackColor = System.Drawing.Color.DarkBlue
+        Me.lUserConfirm.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lUserConfirm.ForeColor = System.Drawing.Color.White
+        Me.lUserConfirm.Location = New System.Drawing.Point(190, 407)
+        Me.lUserConfirm.Name = "lUserConfirm"
+        Me.lUserConfirm.Size = New System.Drawing.Size(120, 35)
+        Me.lUserConfirm.TabIndex = 7
+        Me.lUserConfirm.Text = "Confirm"
+        Me.lUserConfirm.UseVisualStyleBackColor = False
         '
         'optionlbl
         '
@@ -162,7 +162,7 @@ Partial Class TeamSelection
         '
         Me.backbutton.BackColor = System.Drawing.Color.DarkBlue
         Me.backbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.backbutton.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.backbutton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.backbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.backbutton.Location = New System.Drawing.Point(296, 467)
         Me.backbutton.Name = "backbutton"
@@ -171,29 +171,29 @@ Partial Class TeamSelection
         Me.backbutton.Text = "Back"
         Me.backbutton.UseVisualStyleBackColor = False
         '
-        'team1lbl
+        'llUserbl
         '
-        Me.team1lbl.AutoSize = True
-        Me.team1lbl.BackColor = System.Drawing.Color.Transparent
-        Me.team1lbl.Font = New System.Drawing.Font("Aircruiser", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.team1lbl.ForeColor = System.Drawing.Color.White
-        Me.team1lbl.Location = New System.Drawing.Point(185, 123)
-        Me.team1lbl.Name = "team1lbl"
-        Me.team1lbl.Size = New System.Drawing.Size(129, 29)
-        Me.team1lbl.TabIndex = 10
-        Me.team1lbl.Text = "Team 1"
+        Me.llUserbl.AutoSize = True
+        Me.llUserbl.BackColor = System.Drawing.Color.Transparent
+        Me.llUserbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llUserbl.ForeColor = System.Drawing.Color.White
+        Me.llUserbl.Location = New System.Drawing.Point(185, 123)
+        Me.llUserbl.Name = "llUserbl"
+        Me.llUserbl.Size = New System.Drawing.Size(114, 33)
+        Me.llUserbl.TabIndex = 10
+        Me.llUserbl.Text = "Team 1"
         '
-        'Team2lbl
+        'rlUserbl
         '
-        Me.Team2lbl.AutoSize = True
-        Me.Team2lbl.BackColor = System.Drawing.Color.Transparent
-        Me.Team2lbl.Font = New System.Drawing.Font("Aircruiser", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Team2lbl.ForeColor = System.Drawing.Color.White
-        Me.Team2lbl.Location = New System.Drawing.Point(570, 123)
-        Me.Team2lbl.Name = "Team2lbl"
-        Me.Team2lbl.Size = New System.Drawing.Size(135, 29)
-        Me.Team2lbl.TabIndex = 11
-        Me.Team2lbl.Text = "Team 2"
+        Me.rlUserbl.AutoSize = True
+        Me.rlUserbl.BackColor = System.Drawing.Color.Transparent
+        Me.rlUserbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rlUserbl.ForeColor = System.Drawing.Color.White
+        Me.rlUserbl.Location = New System.Drawing.Point(570, 123)
+        Me.rlUserbl.Name = "rlUserbl"
+        Me.rlUserbl.Size = New System.Drawing.Size(114, 33)
+        Me.rlUserbl.TabIndex = 11
+        Me.rlUserbl.Text = "Team 2"
         '
         'TeamSelection
         '
@@ -202,41 +202,41 @@ Partial Class TeamSelection
         Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.teamSelectionBackground
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(885, 557)
-        Me.Controls.Add(Me.Team2lbl)
-        Me.Controls.Add(Me.team1lbl)
+        Me.Controls.Add(Me.rlUserbl)
+        Me.Controls.Add(Me.llUserbl)
         Me.Controls.Add(Me.backbutton)
         Me.Controls.Add(Me.optionlbl)
-        Me.Controls.Add(Me.P1Confirm)
-        Me.Controls.Add(Me.P2Confirm)
-        Me.Controls.Add(Me.P2Right)
-        Me.Controls.Add(Me.P2Left)
-        Me.Controls.Add(Me.P1Right)
-        Me.Controls.Add(Me.P1Left)
-        Me.Controls.Add(Me.Player2)
-        Me.Controls.Add(Me.Player1)
+        Me.Controls.Add(Me.lUserConfirm)
+        Me.Controls.Add(Me.rUserConfirm)
+        Me.Controls.Add(Me.rUserRight)
+        Me.Controls.Add(Me.rlUsereft)
+        Me.Controls.Add(Me.lUserRight)
+        Me.Controls.Add(Me.llUsereft)
+        Me.Controls.Add(Me.rUserPlayerTeam)
+        Me.Controls.Add(Me.lUserPlayerTeam)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "TeamSelection"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "TeamSelection"
-        CType(Me.Player1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Player2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lUserPlayerTeam, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rUserPlayerTeam, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents playerSprites As System.Windows.Forms.ImageList
-    Friend WithEvents Player1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Player2 As System.Windows.Forms.PictureBox
-    Friend WithEvents P1Left As System.Windows.Forms.Button
-    Friend WithEvents P1Right As System.Windows.Forms.Button
-    Friend WithEvents P2Left As System.Windows.Forms.Button
-    Friend WithEvents P2Right As System.Windows.Forms.Button
-    Friend WithEvents P2Confirm As System.Windows.Forms.Button
-    Friend WithEvents P1Confirm As System.Windows.Forms.Button
+    Friend WithEvents lUserPlayerTeam As System.Windows.Forms.PictureBox
+    Friend WithEvents rUserPlayerTeam As System.Windows.Forms.PictureBox
+    Friend WithEvents llUsereft As System.Windows.Forms.Button
+    Friend WithEvents lUserRight As System.Windows.Forms.Button
+    Friend WithEvents rlUsereft As System.Windows.Forms.Button
+    Friend WithEvents rUserRight As System.Windows.Forms.Button
+    Friend WithEvents rUserConfirm As System.Windows.Forms.Button
+    Friend WithEvents lUserConfirm As System.Windows.Forms.Button
     Friend WithEvents optionlbl As System.Windows.Forms.Label
     Friend WithEvents backbutton As System.Windows.Forms.Button
-    Friend WithEvents team1lbl As System.Windows.Forms.Label
-    Friend WithEvents Team2lbl As System.Windows.Forms.Label
+    Friend WithEvents llUserbl As System.Windows.Forms.Label
+    Friend WithEvents rlUserbl As System.Windows.Forms.Label
 End Class

@@ -1,26 +1,26 @@
 ﻿Public Class MainGame
     Dim puckXV, puckYV As Integer 'Puck's X and Y Velocity
     Dim playerXV, playerYV As Integer 'Player's X and Y Velocity
-    Dim userGoalieYV As Integer = 2 'userGoalie's Y velocitiy
-    Dim compGoalieYV As Integer = 2 'compGoalie's Y velocitiy
-    Dim playerAccelerating As Boolean 'Whether the player is in the process of accelerating
+    Dim lUserGoalieYV As Integer = 2 'userGoalie's Y velocitiy
+    Dim rUserGoalieYV As Integer = 2 'rUserGoalie's Y velocitiy
+    Dim lUserPlayerAccelerating, rUserPlayerAccelerating As Boolean 'Whether the player is in the process of accelerating
     Dim heldByPlayer As Boolean 'Whether the puck is held by the player
     Dim heldByWhichTeam As String 'which team has possession of the puck
-    Dim userScore, compScore As Integer 'the scores of the respective teams
+    Dim lUserScore, rUserScore As Integer 'the scores of the respective teams
     Dim Framenum As Integer = 0 'used in animation of the players
     Dim goalieMovementCounter As Integer 'counts the amount of ticks since the goalie last randomly switched directions
     Dim goalieMovementInterval As Integer = 30 ' amount of ticks before the goalie randomly switches directions
 
     Dim maxPlayerSpeed As Integer = 5 'max speed a player can accelerate to
     Dim playerAccelerationSpeed As Integer = 5 'increments the player accelerates by
-    Dim userPlayerDirection As Integer '0: left, 1: right :used in animation/shooting
-    Dim compPlayerDirection As Integer '0: left, 1: right :used in animation/shooting
+    Dim lUserPlayerDirection As Integer '0: left, 1: right :used in animation/shooting
+    Dim rUserPlayerDirection As Integer '0: left, 1: right :used in animation/shooting
 
     Dim puckResetPosition As New Point(382, 185) 'reset positions for all moving objects
-    Dim userPlayerResetPosition As New Point(255, 165)
-    Dim compPlayerResetPosition As New Point(478, 165)
-    Dim userGoalieResetPosition As New Point(136, 167)
-    Dim compGoalieResetPosition As New Point(599, 167)
+    Dim lUserPlayerResetPosition As New Point(255, 165)
+    Dim rUserPlayerResetPosition As New Point(478, 165)
+    Dim lUserGoalieResetPosition As New Point(136, 167)
+    Dim rUserGoalieResetPosition As New Point(599, 167)
     Dim countdown As Integer = 4
     Dim winshowtime As Integer = 2
     Dim buzzertimer As Integer
@@ -28,30 +28,30 @@
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
         checkForGoal() 'checks if a goal has been made
-        moveObject(userPlayer, playerXV, playerYV, playerAccelerating) 'calculates movement of player
-        moveGoalie(userGoalie, userGoalieYV) 'moves userGoalie
-        moveGoalie(compGoalie, compGoalieYV) 'moves compGoalie
-        If objectCollisionDetect(puck, userGoalie) Then 'deflects puck if touched by goalie
+        moveObject(lUserPlayer, playerXV, playerYV, lUserPlayerAccelerating) 'calculates movement of player
+        moveGoalie(lUserGoalie, lUserGoalieYV) 'moves userGoalie
+        moveGoalie(rUserGoalie, rUserGoalieYV) 'moves rUserGoalie
+        If objectCollisionDetect(puck, lUserGoalie) Then 'deflects puck if touched by goalie
             heldByPlayer = False
             puckXV = 15
-        ElseIf objectCollisionDetect(puck, compGoalie) Then
+        ElseIf objectCollisionDetect(puck, rUserGoalie) Then
             heldByPlayer = False
             puckXV = -15
         End If
 
-        If objectCollisionDetect(puck, userPlayer) Then 'checks if and which player is touching puck
-            heldByWhichTeam = "user"
+        If objectCollisionDetect(puck, lUserPlayer) Then 'checks if and which player is touching puck
+            heldByWhichTeam = "lUser"
             heldByPlayer = True
-        ElseIf objectCollisionDetect(puck, compPlayer) Then
-            heldByWhichTeam = "comp"
+        ElseIf objectCollisionDetect(puck, rUserPlayer) Then
+            heldByWhichTeam = "rUser"
             heldByPlayer = True
         End If
 
         If heldByPlayer = True Then 'makes puck follow the appropriate player if held or normally if not held
-            If heldByWhichTeam = "user" Then
-                followPlayer(puck, userPlayer, userPlayerDirection) 'makes the puck follow the user player
-            ElseIf heldByWhichTeam = "comp" Then
-                followPlayer(puck, compPlayer, compPlayerDirection) 'makes the puck follow the comp player
+            If heldByWhichTeam = "lUser" Then
+                followPlayer(puck, lUserPlayer, lUserPlayerDirection) 'makes the puck follow the user player
+            ElseIf heldByWhichTeam = "rUser" Then
+                followPlayer(puck, rUserPlayer, rUserPlayerDirection) 'makes the puck follow the rUser player
             End If
         Else
             moveObject(puck, puckXV, puckYV) 'puck moves normally
@@ -65,32 +65,32 @@
                 If playerXV > -maxPlayerSpeed Then 'caps player max speed
                     playerXV = playerXV - playerAccelerationSpeed 'sets speed
                 End If
-                playerAccelerating = True 'player is accelerating
+                lUserPlayerAccelerating = True 'player is accelerating
                 e.Handled = True 'control has been handled
-                animatePlayer(userPlayer, "left")
+                animatePlayer(lUserPlayer, "left")
             Case Keys.Right 'right arrow key
                 If playerXV < maxPlayerSpeed Then
                     playerXV = playerXV + playerAccelerationSpeed
                 End If
-                playerAccelerating = True
+                lUserPlayerAccelerating = True
                 e.Handled = True
-                animatePlayer(userPlayer, "right")
+                animatePlayer(lUserPlayer, "right")
             Case Keys.Up 'up arrow key
                 If playerYV > -maxPlayerSpeed Then
                     playerYV = playerYV - playerAccelerationSpeed
                 End If
-                playerAccelerating = True
+                lUserPlayerAccelerating = True
                 e.Handled = True
-                animatePlayer(userPlayer, "up")
+                animatePlayer(lUserPlayer, "up")
             Case Keys.Down 'down arrow key
                 If playerYV < maxPlayerSpeed Then
                     playerYV = playerYV + playerAccelerationSpeed
                 End If
-                playerAccelerating = True
+                lUserPlayerAccelerating = True
                 e.Handled = True
-                animatePlayer(userPlayer, "down")
+                animatePlayer(lUserPlayer, "down")
             Case Keys.Space
-                shoot(userPlayerDirection)
+                shoot(lUserPlayerDirection)
         End Select
     End Sub
 
@@ -99,42 +99,42 @@
         Framenum = 0
         Select Case e.KeyCode
             Case Keys.Left, Keys.Right, Keys.Up, Keys.Down
-                playerAccelerating = False
+                lUserPlayerAccelerating = False
 
         End Select
     End Sub
 
     Private Sub MainGame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Randomize()
-        compNet.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
-        Select Case TeamSelection.team1
+        rUserNet.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
+        Select Case TeamSelection.lUser
             Case 0
-                userPlayer.Image = blueAnimation.Images(0)
+                lUserPlayer.Image = blueAnimation.Images(0)
             Case 1
-                userPlayer.Image = greenAnimation.Images(0)
+                lUserPlayer.Image = greenAnimation.Images(0)
             Case 2
-                userPlayer.Image = orangeAnimation.Images(0)
+                lUserPlayer.Image = orangeAnimation.Images(0)
             Case 3
-                userPlayer.Image = redAnimation.Images(0)
+                lUserPlayer.Image = redAnimation.Images(0)
             Case 4
-                userPlayer.Image = whiteAnimation.Images(0)
+                lUserPlayer.Image = whiteAnimation.Images(0)
         End Select
-        Select Case TeamSelection.team2
+        Select Case TeamSelection.rUser
             Case 0
-                compPlayer.Image = blueAnimation.Images(0)
+                rUserPlayer.Image = blueAnimation.Images(0)
             Case 1
-                compPlayer.Image = greenAnimation.Images(0)
+                rUserPlayer.Image = greenAnimation.Images(0)
             Case 2
-                compPlayer.Image = orangeAnimation.Images(0)
+                rUserPlayer.Image = orangeAnimation.Images(0)
             Case 3
-                compPlayer.Image = redAnimation.Images(0)
+                rUserPlayer.Image = redAnimation.Images(0)
             Case 4
-                compPlayer.Image = whiteAnimation.Images(0)
+                rUserPlayer.Image = whiteAnimation.Images(0)
         End Select
-        userGoalie.Image = goalieColours.Images(TeamSelection.team1)
-        compGoalie.Image = goalieColours.Images(TeamSelection.team2)
-        userPlayer.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
-        userGoalie.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
+        lUserGoalie.Image = goalieColours.Images(TeamSelection.lUser)
+        rUserGoalie.Image = goalieColours.Images(TeamSelection.rUser)
+        lUserPlayer.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
+        lUserGoalie.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
         resumebtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
         Quitbtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
         count.Start()
@@ -239,60 +239,60 @@
     End Sub
 
     Sub checkForGoal()
-        If objectCollisionDetect(puck, compNet) And puck.Location.X > userNet.Location.X + userNet.Width - 10 Then 'checks if puck is touching net and is past net
+        If objectCollisionDetect(puck, rUserNet) And puck.Location.X > lUserNet.Location.X + lUserNet.Width - 10 Then 'checks if puck is touching net and is past net
             My.Computer.Audio.Play(My.Resources.buzzer, _
         AudioPlayMode.Background)
-            goalScored("user")
+            goalScored("lUser")
             Buzzertime.Start()
-        ElseIf objectCollisionDetect(puck, userNet) And puck.Location.X + puck.Width < compNet.Location.X + 10 Then
+        ElseIf objectCollisionDetect(puck, lUserNet) And puck.Location.X + puck.Width < rUserNet.Location.X + 10 Then
             My.Computer.Audio.Play(My.Resources.buzzer, _
        AudioPlayMode.Background)
-            goalScored("comp")
+            goalScored("rUser")
             Buzzertime.Start()
         End If
     End Sub
 
     Sub goalScored(ByVal scoringTeam As String) 'adds 1 to the score, then checks if any teams have at least 9 points, then triggers win if it's met
-        If scoringTeam = "user" Then
-            userScore += 1
+        If scoringTeam = "lUser" Then
+            lUserScore += 1
             updateScoreBoard()
             resetGoal()
 
-        ElseIf scoringTeam = "comp" Then
-            compScore += 1
+        ElseIf scoringTeam = "rUser" Then
+            rUserScore += 1
             updateScoreBoard()
             resetGoal()
         End If
         If OptionsMenu.points5.Checked = True Then
-            If userScore = 5 Then
+            If lUserScore = 5 Then
                 gameWin(scoringTeam)
-            ElseIf compScore = 5 Then
+            ElseIf rUserScore = 5 Then
                 gameWin(scoringTeam)
             End If
         ElseIf OptionsMenu.points7.Checked = True Then
-            If userScore = 7 Then
+            If lUserScore = 7 Then
                 gameWin(scoringTeam)
-            ElseIf compScore = 7 Then
+            ElseIf rUserScore = 7 Then
                 gameWin(scoringTeam)
             End If
         ElseIf OptionsMenu.points9.Checked = True Then
-            If userScore = 9 Then
+            If lUserScore = 9 Then
                 gameWin(scoringTeam)
-            ElseIf compScore = 9 Then
+            ElseIf rUserScore = 9 Then
                 gameWin(scoringTeam)
             End If
         End If
     End Sub
 
     Sub gameWin(ByRef team As String) 'announces winner of the game and allows player to replay or return to main menu
-        If team = "user" Then
+        If team = "lUser" Then
             wintimer.Start()
             Winlbl.Text = "Team 1 wins!"
             Winlbl.Visible = True
             My.Computer.Audio.Play(My.Resources.IHaveWonned, _
         AudioPlayMode.BackgroundLoop)
             MsgBox("Team 1 Wins")
-        Else
+        ElseIf team = "rUser" Then
             wintimer.Start()
             Winlbl.Text = "Team 2 wins!"
             Winlbl.Visible = True
@@ -300,8 +300,8 @@
        AudioPlayMode.BackgroundLoop)
             MsgBox("Team 2 Wins")
         End If
-        userScore = 0
-        compScore = 0
+        lUserScore = 0
+        rUserScore = 0
         updateScoreBoard()
         resetGoal()
         tick.Stop()
@@ -311,8 +311,8 @@
     End Sub
 
     Sub updateScoreBoard() 'updates the scoreboard graphic to reflect the latest scores
-        team1score.Text = userScore
-        team2score.Text = compScore
+        lUserScoreboard.Text = lUserScore
+        rUserScoreboard.Text = rUserScore
     End Sub
 
     Sub resetGoal() 'resets the game after each goal
@@ -323,50 +323,50 @@
         playerYV = 0
         heldByPlayer = False
         puck.Location = puckResetPosition
-        userPlayer.Location = userPlayerResetPosition
-        compPlayer.Location = compPlayerResetPosition
-        userGoalie.Location = userGoalieResetPosition
-        compGoalie.Location = compGoalieResetPosition
+        lUserPlayer.Location = lUserPlayerResetPosition
+        rUserPlayer.Location = rUserPlayerResetPosition
+        lUserGoalie.Location = lUserGoalieResetPosition
+        rUserGoalie.Location = rUserGoalieResetPosition
         tick.Start()
     End Sub
 
     Sub resetGame() 'resets the game when it ends or is quit
         resetGoal()
         tick.Stop()
-        userScore = 0
-        compScore = 0
+        lUserScore = 0
+        rUserScore = 0
         updateScoreBoard()
         countdownlbl.Text = 3
     End Sub
 
     Sub animatePlayer(ByVal player As PictureBox, ByVal directionHeading As String)
 
-        Select Case TeamSelection.team1
+        Select Case TeamSelection.lUser
             Case 0
-                userPlayer.Image = blueAnimation.Images(Framenum)
+                lUserPlayer.Image = blueAnimation.Images(Framenum)
             Case 1
-                userPlayer.Image = greenAnimation.Images(Framenum)
+                lUserPlayer.Image = greenAnimation.Images(Framenum)
             Case 2
-                userPlayer.Image = orangeAnimation.Images(Framenum)
+                lUserPlayer.Image = orangeAnimation.Images(Framenum)
             Case 3
-                userPlayer.Image = redAnimation.Images(Framenum)
+                lUserPlayer.Image = redAnimation.Images(Framenum)
             Case 4
-                userPlayer.Image = whiteAnimation.Images(Framenum)
+                lUserPlayer.Image = whiteAnimation.Images(Framenum)
         End Select
 
         Select Case directionHeading
             Case "left"
-                userPlayerDirection = 0
+                lUserPlayerDirection = 0
             Case "right"
-                userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
-                userPlayerDirection = 1
+                lUserPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
+                lUserPlayerDirection = 1
             Case "up"
-                If userPlayerDirection = 1 Then
-                    userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
+                If lUserPlayerDirection = 1 Then
+                    lUserPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
                 End If
             Case "down"
-                If userPlayerDirection = 1 Then
-                    userPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
+                If lUserPlayerDirection = 1 Then
+                    lUserPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
                 End If
         End Select
     End Sub

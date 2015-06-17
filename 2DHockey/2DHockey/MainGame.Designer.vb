@@ -34,17 +34,17 @@ Partial Class MainGame
         Me.goalieColours = New System.Windows.Forms.ImageList(Me.components)
         Me.Pausebutton = New System.Windows.Forms.PictureBox()
         Me.scoreboard = New System.Windows.Forms.PictureBox()
-        Me.team2score = New System.Windows.Forms.Label()
-        Me.team1score = New System.Windows.Forms.Label()
+        Me.rUserScoreboard = New System.Windows.Forms.Label()
+        Me.lUserScoreboard = New System.Windows.Forms.Label()
         Me.count = New System.Windows.Forms.Timer(Me.components)
         Me.wintimer = New System.Windows.Forms.Timer(Me.components)
-        Me.compPlayer = New System.Windows.Forms.PictureBox()
-        Me.userPlayer = New System.Windows.Forms.PictureBox()
-        Me.userGoalie = New System.Windows.Forms.PictureBox()
-        Me.compGoalie = New System.Windows.Forms.PictureBox()
-        Me.userNet = New System.Windows.Forms.PictureBox()
+        Me.rUserPlayer = New System.Windows.Forms.PictureBox()
+        Me.lUserPlayer = New System.Windows.Forms.PictureBox()
+        Me.lUserGoalie = New System.Windows.Forms.PictureBox()
+        Me.rUserGoalie = New System.Windows.Forms.PictureBox()
+        Me.lUserNet = New System.Windows.Forms.PictureBox()
         Me.countdownlbl = New System.Windows.Forms.Label()
-        Me.compNet = New System.Windows.Forms.PictureBox()
+        Me.rUserNet = New System.Windows.Forms.PictureBox()
         Me.puck = New System.Windows.Forms.PictureBox()
         Me.pauseMenuPanel = New System.Windows.Forms.Panel()
         Me.resumebtn = New System.Windows.Forms.Button()
@@ -56,12 +56,12 @@ Partial Class MainGame
         Me.Buzzertime = New System.Windows.Forms.Timer(Me.components)
         CType(Me.Pausebutton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.scoreboard, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.compPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.userPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.userGoalie, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.compGoalie, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.userNet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.compNet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rUserPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lUserPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lUserGoalie, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rUserGoalie, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lUserNet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rUserNet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pauseMenuPanel.SuspendLayout()
         CType(Me.hockeyrink, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -143,29 +143,29 @@ Partial Class MainGame
         Me.scoreboard.TabIndex = 14
         Me.scoreboard.TabStop = False
         '
-        'team2score
+        'rUserScoreboard
         '
-        Me.team2score.AutoSize = True
-        Me.team2score.BackColor = System.Drawing.Color.Black
-        Me.team2score.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.team2score.ForeColor = System.Drawing.Color.Gold
-        Me.team2score.Location = New System.Drawing.Point(446, 435)
-        Me.team2score.Name = "team2score"
-        Me.team2score.Size = New System.Drawing.Size(48, 52)
-        Me.team2score.TabIndex = 12
-        Me.team2score.Text = "0"
+        Me.rUserScoreboard.AutoSize = True
+        Me.rUserScoreboard.BackColor = System.Drawing.Color.Black
+        Me.rUserScoreboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rUserScoreboard.ForeColor = System.Drawing.Color.Gold
+        Me.rUserScoreboard.Location = New System.Drawing.Point(446, 435)
+        Me.rUserScoreboard.Name = "rUserScoreboard"
+        Me.rUserScoreboard.Size = New System.Drawing.Size(48, 52)
+        Me.rUserScoreboard.TabIndex = 12
+        Me.rUserScoreboard.Text = "0"
         '
-        'team1score
+        'lUserScoreboard
         '
-        Me.team1score.AutoSize = True
-        Me.team1score.BackColor = System.Drawing.Color.Black
-        Me.team1score.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.team1score.ForeColor = System.Drawing.Color.Gold
-        Me.team1score.Location = New System.Drawing.Point(293, 435)
-        Me.team1score.Name = "team1score"
-        Me.team1score.Size = New System.Drawing.Size(48, 52)
-        Me.team1score.TabIndex = 11
-        Me.team1score.Text = "0"
+        Me.lUserScoreboard.AutoSize = True
+        Me.lUserScoreboard.BackColor = System.Drawing.Color.Black
+        Me.lUserScoreboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lUserScoreboard.ForeColor = System.Drawing.Color.Gold
+        Me.lUserScoreboard.Location = New System.Drawing.Point(293, 435)
+        Me.lUserScoreboard.Name = "lUserScoreboard"
+        Me.lUserScoreboard.Size = New System.Drawing.Size(48, 52)
+        Me.lUserScoreboard.TabIndex = 11
+        Me.lUserScoreboard.Text = "0"
         '
         'count
         '
@@ -175,55 +175,55 @@ Partial Class MainGame
         '
         Me.wintimer.Interval = 1000
         '
-        'compPlayer
+        'rUserPlayer
         '
-        Me.compPlayer.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.compPlayer.Image = Global._2DHockey.My.Resources.Resources.GreenPlayer1
-        Me.compPlayer.Location = New System.Drawing.Point(484, 167)
-        Me.compPlayer.Name = "compPlayer"
-        Me.compPlayer.Size = New System.Drawing.Size(50, 50)
-        Me.compPlayer.TabIndex = 4
-        Me.compPlayer.TabStop = False
+        Me.rUserPlayer.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.rUserPlayer.Image = Global._2DHockey.My.Resources.Resources.GreenPlayer1
+        Me.rUserPlayer.Location = New System.Drawing.Point(478, 165)
+        Me.rUserPlayer.Name = "rUserPlayer"
+        Me.rUserPlayer.Size = New System.Drawing.Size(50, 50)
+        Me.rUserPlayer.TabIndex = 4
+        Me.rUserPlayer.TabStop = False
         '
-        'userPlayer
+        'lUserPlayer
         '
-        Me.userPlayer.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.userPlayer.Image = Global._2DHockey.My.Resources.Resources.BluePlayer1
-        Me.userPlayer.Location = New System.Drawing.Point(285, 164)
-        Me.userPlayer.Name = "userPlayer"
-        Me.userPlayer.Size = New System.Drawing.Size(50, 50)
-        Me.userPlayer.TabIndex = 0
-        Me.userPlayer.TabStop = False
+        Me.lUserPlayer.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.lUserPlayer.Image = Global._2DHockey.My.Resources.Resources.BluePlayer1
+        Me.lUserPlayer.Location = New System.Drawing.Point(285, 164)
+        Me.lUserPlayer.Name = "lUserPlayer"
+        Me.lUserPlayer.Size = New System.Drawing.Size(50, 50)
+        Me.lUserPlayer.TabIndex = 0
+        Me.lUserPlayer.TabStop = False
         '
-        'userGoalie
+        'lUserGoalie
         '
-        Me.userGoalie.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.userGoalie.Image = Global._2DHockey.My.Resources.Resources.Blue_Goalie1
-        Me.userGoalie.Location = New System.Drawing.Point(137, 167)
-        Me.userGoalie.Name = "userGoalie"
-        Me.userGoalie.Size = New System.Drawing.Size(50, 47)
-        Me.userGoalie.TabIndex = 9
-        Me.userGoalie.TabStop = False
+        Me.lUserGoalie.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.lUserGoalie.Image = Global._2DHockey.My.Resources.Resources.Blue_Goalie1
+        Me.lUserGoalie.Location = New System.Drawing.Point(137, 167)
+        Me.lUserGoalie.Name = "lUserGoalie"
+        Me.lUserGoalie.Size = New System.Drawing.Size(50, 47)
+        Me.lUserGoalie.TabIndex = 9
+        Me.lUserGoalie.TabStop = False
         '
-        'compGoalie
+        'rUserGoalie
         '
-        Me.compGoalie.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.compGoalie.Image = Global._2DHockey.My.Resources.Resources.Green_Goalie1
-        Me.compGoalie.Location = New System.Drawing.Point(593, 167)
-        Me.compGoalie.Name = "compGoalie"
-        Me.compGoalie.Size = New System.Drawing.Size(50, 47)
-        Me.compGoalie.TabIndex = 10
-        Me.compGoalie.TabStop = False
+        Me.rUserGoalie.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.rUserGoalie.Image = Global._2DHockey.My.Resources.Resources.Green_Goalie1
+        Me.rUserGoalie.Location = New System.Drawing.Point(593, 167)
+        Me.rUserGoalie.Name = "rUserGoalie"
+        Me.rUserGoalie.Size = New System.Drawing.Size(50, 47)
+        Me.rUserGoalie.TabIndex = 10
+        Me.rUserGoalie.TabStop = False
         '
-        'userNet
+        'lUserNet
         '
-        Me.userNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
-        Me.userNet.Location = New System.Drawing.Point(101, 149)
-        Me.userNet.Name = "userNet"
-        Me.userNet.Size = New System.Drawing.Size(30, 80)
-        Me.userNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.userNet.TabIndex = 2
-        Me.userNet.TabStop = False
+        Me.lUserNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
+        Me.lUserNet.Location = New System.Drawing.Point(101, 149)
+        Me.lUserNet.Name = "lUserNet"
+        Me.lUserNet.Size = New System.Drawing.Size(30, 80)
+        Me.lUserNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.lUserNet.TabIndex = 2
+        Me.lUserNet.TabStop = False
         '
         'countdownlbl
         '
@@ -237,15 +237,15 @@ Partial Class MainGame
         Me.countdownlbl.TabIndex = 15
         Me.countdownlbl.Text = "3"
         '
-        'compNet
+        'rUserNet
         '
-        Me.compNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
-        Me.compNet.Location = New System.Drawing.Point(649, 149)
-        Me.compNet.Name = "compNet"
-        Me.compNet.Size = New System.Drawing.Size(30, 80)
-        Me.compNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.compNet.TabIndex = 3
-        Me.compNet.TabStop = False
+        Me.rUserNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
+        Me.rUserNet.Location = New System.Drawing.Point(649, 149)
+        Me.rUserNet.Name = "rUserNet"
+        Me.rUserNet.Size = New System.Drawing.Size(30, 80)
+        Me.rUserNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.rUserNet.TabIndex = 3
+        Me.rUserNet.TabStop = False
         '
         'puck
         '
@@ -307,15 +307,15 @@ Partial Class MainGame
         '
         'Winlbl
         '
-        Me.Winlbl.AutoSize = True
         Me.Winlbl.BackColor = System.Drawing.Color.White
-        Me.Winlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 71.99999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Winlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 45.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Winlbl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Winlbl.Location = New System.Drawing.Point(45, 131)
+        Me.Winlbl.Location = New System.Drawing.Point(0, 131)
         Me.Winlbl.Name = "Winlbl"
-        Me.Winlbl.Size = New System.Drawing.Size(695, 108)
+        Me.Winlbl.Size = New System.Drawing.Size(784, 108)
         Me.Winlbl.TabIndex = 17
-        Me.Winlbl.Text = "TEAM 1 WINS!"
+        Me.Winlbl.Text = "LEFT PLAYER WINS!"
+        Me.Winlbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'hockeyrink
         '
@@ -353,17 +353,17 @@ Partial Class MainGame
         Me.Controls.Add(Me.pauseMenuPanel)
         Me.Controls.Add(Me.countdownpanel)
         Me.Controls.Add(Me.Winlbl)
-        Me.Controls.Add(Me.compNet)
+        Me.Controls.Add(Me.rUserNet)
         Me.Controls.Add(Me.puck)
-        Me.Controls.Add(Me.compGoalie)
-        Me.Controls.Add(Me.compPlayer)
-        Me.Controls.Add(Me.team2score)
-        Me.Controls.Add(Me.team1score)
+        Me.Controls.Add(Me.rUserGoalie)
+        Me.Controls.Add(Me.rUserPlayer)
+        Me.Controls.Add(Me.rUserScoreboard)
+        Me.Controls.Add(Me.lUserScoreboard)
         Me.Controls.Add(Me.Pausebutton)
         Me.Controls.Add(Me.scoreboard)
-        Me.Controls.Add(Me.userNet)
-        Me.Controls.Add(Me.userPlayer)
-        Me.Controls.Add(Me.userGoalie)
+        Me.Controls.Add(Me.lUserNet)
+        Me.Controls.Add(Me.lUserPlayer)
+        Me.Controls.Add(Me.lUserGoalie)
         Me.Controls.Add(Me.hockeyrink)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -375,12 +375,12 @@ Partial Class MainGame
         Me.Text = "2D Hockey"
         CType(Me.Pausebutton, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.scoreboard, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.compPlayer, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.userPlayer, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.userGoalie, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.compGoalie, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.userNet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.compNet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rUserPlayer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lUserPlayer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lUserGoalie, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rUserGoalie, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lUserNet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rUserNet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pauseMenuPanel.ResumeLayout(False)
         CType(Me.hockeyrink, System.ComponentModel.ISupportInitialize).EndInit()
@@ -400,17 +400,17 @@ Partial Class MainGame
     Friend WithEvents Pausebutton As System.Windows.Forms.PictureBox
     Friend WithEvents goalieColours As System.Windows.Forms.ImageList
     Friend WithEvents scoreboard As System.Windows.Forms.PictureBox
-    Friend WithEvents team2score As System.Windows.Forms.Label
-    Friend WithEvents team1score As System.Windows.Forms.Label
+    Friend WithEvents rUserScoreboard As System.Windows.Forms.Label
+    Friend WithEvents lUserScoreboard As System.Windows.Forms.Label
     Friend WithEvents count As System.Windows.Forms.Timer
     Friend WithEvents wintimer As System.Windows.Forms.Timer
-    Friend WithEvents compPlayer As System.Windows.Forms.PictureBox
-    Friend WithEvents userPlayer As System.Windows.Forms.PictureBox
-    Friend WithEvents userGoalie As System.Windows.Forms.PictureBox
-    Friend WithEvents compGoalie As System.Windows.Forms.PictureBox
-    Friend WithEvents userNet As System.Windows.Forms.PictureBox
+    Friend WithEvents rUserPlayer As System.Windows.Forms.PictureBox
+    Friend WithEvents lUserPlayer As System.Windows.Forms.PictureBox
+    Friend WithEvents lUserGoalie As System.Windows.Forms.PictureBox
+    Friend WithEvents rUserGoalie As System.Windows.Forms.PictureBox
+    Friend WithEvents lUserNet As System.Windows.Forms.PictureBox
     Friend WithEvents countdownlbl As System.Windows.Forms.Label
-    Friend WithEvents compNet As System.Windows.Forms.PictureBox
+    Friend WithEvents rUserNet As System.Windows.Forms.PictureBox
     Friend WithEvents puck As System.Windows.Forms.PictureBox
     Friend WithEvents pauseMenuPanel As System.Windows.Forms.Panel
     Friend WithEvents resumebtn As System.Windows.Forms.Button
