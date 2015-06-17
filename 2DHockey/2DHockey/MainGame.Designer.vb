@@ -372,7 +372,6 @@ Partial Class MainGame
         '
         Me.Buzzertime.Interval = 1000
         '
-<<<<<<< HEAD
         'Start
         '
         Me.Start.Interval = 1050
@@ -406,7 +405,7 @@ Partial Class MainGame
         Me.retire.Text = "Retire"
         Me.retire.UseVisualStyleBackColor = False
         Me.retire.Visible = False
-=======
+		'
         'WinPlayer
         '
         Me.WinPlayer.Location = New System.Drawing.Point(87, 287)
@@ -444,7 +443,6 @@ Partial Class MainGame
         Me.WinGoalieImages.Images.SetKeyName(2, "OrangeGoalielarger1.png")
         Me.WinGoalieImages.Images.SetKeyName(3, "RedGoalieLarger1.png")
         Me.WinGoalieImages.Images.SetKeyName(4, "WhiteGoalieLarger1.png")
->>>>>>> origin/master
         '
         'MainGame
         '
@@ -455,13 +453,10 @@ Partial Class MainGame
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1045, 626)
         Me.ControlBox = False
-<<<<<<< HEAD
         Me.Controls.Add(Me.retire)
         Me.Controls.Add(Me.again)
-=======
         Me.Controls.Add(Me.WinGoalie)
         Me.Controls.Add(Me.WinPlayer)
->>>>>>> origin/master
         Me.Controls.Add(Me.pauseMenuPanel)
         Me.Controls.Add(Me.countdownpanel)
         Me.Controls.Add(Me.Winlbl)
@@ -535,15 +530,12 @@ Partial Class MainGame
     Friend WithEvents hockeyrink As System.Windows.Forms.PictureBox
     Friend WithEvents countdownpanel As System.Windows.Forms.Panel
     Friend WithEvents Buzzertime As System.Windows.Forms.Timer
-<<<<<<< HEAD
     Friend WithEvents Start As System.Windows.Forms.Timer
     Friend WithEvents again As System.Windows.Forms.Button
     Friend WithEvents retire As System.Windows.Forms.Button
-=======
     Friend WithEvents WinPlayer As System.Windows.Forms.PictureBox
     Friend WithEvents WinPlayerImages As System.Windows.Forms.ImageList
     Friend WithEvents WinGoalie As System.Windows.Forms.PictureBox
     Friend WithEvents WinGoalieImages As System.Windows.Forms.ImageList
->>>>>>> origin/master
 
 End Class
