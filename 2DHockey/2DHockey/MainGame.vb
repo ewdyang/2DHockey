@@ -292,14 +292,6 @@
             My.Computer.Audio.Play(My.Resources.IHaveWonned, _
         AudioPlayMode.BackgroundLoop)
             MsgBox("Team 1 Wins")
-            userScore = 0
-            compScore = 0
-            updateScoreBoard()
-            resetGoal()
-            tick.Stop()
-            countdownlbl.Visible = True
-            countdown = 4
-            countdownlbl.Text = 3
         Else
             wintimer.Start()
             Winlbl.Text = "Team 2 wins!"
@@ -307,15 +299,15 @@
             My.Computer.Audio.Play(My.Resources.IHaveWonned, _
        AudioPlayMode.BackgroundLoop)
             MsgBox("Team 2 Wins")
-            userScore = 0
-            compScore = 0
-            updateScoreBoard()
-            resetGoal()
-            tick.Stop()
-            countdownlbl.Visible = True
-            countdown = 4
-            countdownlbl.Text = 3
         End If
+        userScore = 0
+        compScore = 0
+        updateScoreBoard()
+        resetGoal()
+        tick.Stop()
+        countdownlbl.Visible = True
+        countdown = 4
+        countdownlbl.Text = 3
     End Sub
 
     Sub updateScoreBoard() 'updates the scoreboard graphic to reflect the latest scores
