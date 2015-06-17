@@ -330,7 +330,7 @@
             updateScoreBoard()
             resetGoal()
         End If
-        If OptionsMenu.points5.Checked = True Then
+        If OptionsMenu.points5.Checked = True Then 'checks the radio buttons in the options menu
             Buzzertime.Stop()
             buzzertimer = 0
             If lUserScore = 5 Then
@@ -494,20 +494,20 @@
         pauseMenuPanel.Show()
     End Sub
 
-    Private Sub Pausebutton_Click(sender As Object, e As EventArgs) Handles Pausebutton.Click
+    Private Sub Pausebutton_Click(sender As Object, e As EventArgs) Handles Pausebutton.Click 'executes the pause code
         pauseMenu()
     End Sub
 
-    Private Sub resumebtn_Click(sender As Object, e As EventArgs) Handles resumebtn.Click
+    Private Sub resumebtn_Click(sender As Object, e As EventArgs) Handles resumebtn.Click 'resumes the game
         pauseMenuPanel.Hide()
         tick.Start()
     End Sub
 
     Private Sub Quitbtn_Click(sender As Object, e As EventArgs) Handles Quitbtn.Click
-        resetGame()
-        pauseMenuPanel.Hide()
-        TeamSelection.resetTeamSelectionForm()
-        Me.Close()
+        resetGame()                          'resets the game
+        pauseMenuPanel.Hide()                           'hides the pause menu
+        TeamSelection.resetTeamSelectionForm()     'resets the team selection
+        Me.Close()         'hides the game and shows main game
         MainMenu.Visible = True
     End Sub
 
