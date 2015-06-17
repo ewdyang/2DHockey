@@ -404,11 +404,7 @@ Partial Class MainGame
         '
         'WinGoalie
         '
-<<<<<<< HEAD
         Me.WinGoalie.Location = New System.Drawing.Point(553, 300)
-=======
-        Me.WinGoalie.Location = New System.Drawing.Point(562, 300)
->>>>>>> origin/master
         Me.WinGoalie.Margin = New System.Windows.Forms.Padding(2)
         Me.WinGoalie.Name = "WinGoalie"
         Me.WinGoalie.Size = New System.Drawing.Size(200, 188)
