@@ -106,7 +106,7 @@
         lUserRight.Font = Aircruiser.GetInstance(14.25, FontStyle.Regular)
         lUserConfirm.Font = Aircruiser.GetInstance(14.25, FontStyle.Regular)
         rUserleft.Font = Aircruiser.GetInstance(14.25, FontStyle.Regular)
-        rUserleft.Font = Aircruiser.GetInstance(14.25, FontStyle.Regular)
+        rUserRight.Font = Aircruiser.GetInstance(14.25, FontStyle.Regular)
         rUserConfirm.Font = Aircruiser.GetInstance(14.25, FontStyle.Regular)
         backbutton.Font = Aircruiser.GetInstance(14.25, FontStyle.Regular)
     End Sub
