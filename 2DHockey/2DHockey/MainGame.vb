@@ -559,6 +559,7 @@
 
     Private Sub retire_Click(sender As Object, e As EventArgs) Handles retire.Click
         resetGame()
+        My.Computer.Audio.Stop()
         pauseMenuPanel.Hide()
         TeamSelection.resetTeamSelectionForm()
         Me.Close()
