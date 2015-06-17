@@ -124,6 +124,9 @@
   <data name="WhitePlayer2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\WhitePlayer\WhitePlayer2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Red_Goalie1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\graphics\Red Goalie\Red Goalie1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Main_Screen_Music_wav_file" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Main_Screen_Music wav file.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -141,6 +144,9 @@
   </data>
   <data name="RedPlayer2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\RedPlayer\RedPlayer2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IHaveWonned" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IHaveWonned.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,6 +169,9 @@
   <data name="Blue_Goalie1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\Blue Goalie\Blue Goalie1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Arrowkeys" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Arrowkeys.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Orange_Goalie1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\Orange Goalie\Orange Goalie1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,8 +184,14 @@
   <data name="teamSelectionBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ice-skating-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="letter_q1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_q1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mainMenuBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\main menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wasd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wasd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RedPlayer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\RedPlayer\RedPlayer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,11 +199,26 @@
   <data name="OrangePlayer2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\OrangePlayer\OrangePlayer2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="letter_q" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter_q.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Background 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mainGamePauseButtonWhiteImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\pause button white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Red_Goalie1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\graphics\Red Goalie\Red Goalie1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wasd again" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wasd again.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LETSAGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LETSAGO.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buzzer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buzzer.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="space_key_m" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\space_key_m.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WhitePlayer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\graphics\WhitePlayer\WhitePlayer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,16 +229,7 @@
   <data name="aircruiser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\aircruiser.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Background 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="buzzer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buzzer.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="IHaveWonned" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IHaveWonned.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LETSAGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LETSAGO.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="space_key_s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\space_key_s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

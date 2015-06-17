@@ -287,6 +287,27 @@
   <ItemGroup>
     <None Include="Resources\LETSAGO.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wasd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_q.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wasd again.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrowkeys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\space_key_m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_q1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\space_key_s.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
