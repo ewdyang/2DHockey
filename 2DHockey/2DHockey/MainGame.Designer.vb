@@ -110,57 +110,6 @@ Partial Class MainGame
         Me.whiteAnimation.Images.SetKeyName(0, "WhitePlayer1.png")
         Me.whiteAnimation.Images.SetKeyName(1, "WhitePlayer2.png")
         '
-<<<<<<< HEAD
-=======
-        'resumebtn
-        '
-        Me.resumebtn.BackColor = System.Drawing.Color.DarkBlue
-        Me.resumebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.resumebtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.resumebtn.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.resumebtn.Location = New System.Drawing.Point(15, 19)
-        Me.resumebtn.Name = "resumebtn"
-        Me.resumebtn.Size = New System.Drawing.Size(170, 35)
-        Me.resumebtn.TabIndex = 6
-        Me.resumebtn.Text = "Resume"
-        Me.resumebtn.UseVisualStyleBackColor = False
-        '
-        'Quitbtn
-        '
-        Me.Quitbtn.BackColor = System.Drawing.Color.DarkBlue
-        Me.Quitbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Quitbtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Quitbtn.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Quitbtn.Location = New System.Drawing.Point(15, 92)
-        Me.Quitbtn.Name = "Quitbtn"
-        Me.Quitbtn.Size = New System.Drawing.Size(170, 35)
-        Me.Quitbtn.TabIndex = 7
-        Me.Quitbtn.Text = "Quit"
-        Me.Quitbtn.UseVisualStyleBackColor = False
-        '
-        'pauseMenuPanel
-        '
-        Me.pauseMenuPanel.Controls.Add(Me.Quitbtn)
-        Me.pauseMenuPanel.Controls.Add(Me.resumebtn)
-        Me.pauseMenuPanel.Location = New System.Drawing.Point(292, 127)
-        Me.pauseMenuPanel.Name = "pauseMenuPanel"
-        Me.pauseMenuPanel.Size = New System.Drawing.Size(200, 150)
-        Me.pauseMenuPanel.TabIndex = 8
-        Me.pauseMenuPanel.Visible = False
-        '
-        'countdownlbl
-        '
-        Me.countdownlbl.AutoSize = True
-        Me.countdownlbl.BackColor = System.Drawing.Color.Transparent
-        Me.countdownlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.countdownlbl.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.countdownlbl.Location = New System.Drawing.Point(361, 156)
-        Me.countdownlbl.Name = "countdownlbl"
-        Me.countdownlbl.Size = New System.Drawing.Size(68, 73)
-        Me.countdownlbl.TabIndex = 15
-        Me.countdownlbl.Text = "3"
-        '
->>>>>>> origin/master
         'goalieColours
         '
         Me.goalieColours.ImageStream = CType(resources.GetObject("goalieColours.ImageStream"), System.Windows.Forms.ImageListStreamer)
@@ -182,59 +131,6 @@ Partial Class MainGame
         Me.Pausebutton.TabIndex = 5
         Me.Pausebutton.TabStop = False
         '
-<<<<<<< HEAD
-=======
-        'compPlayer
-        '
-        Me.compPlayer.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.compPlayer.Image = Global._2DHockey.My.Resources.Resources.GreenPlayer1
-        Me.compPlayer.Location = New System.Drawing.Point(478, 165)
-        Me.compPlayer.Name = "compPlayer"
-        Me.compPlayer.Size = New System.Drawing.Size(50, 50)
-        Me.compPlayer.TabIndex = 4
-        Me.compPlayer.TabStop = False
-        '
-        'compNet
-        '
-        Me.compNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
-        Me.compNet.Location = New System.Drawing.Point(650, 148)
-        Me.compNet.Name = "compNet"
-        Me.compNet.Size = New System.Drawing.Size(30, 80)
-        Me.compNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.compNet.TabIndex = 3
-        Me.compNet.TabStop = False
-        '
-        'userNet
-        '
-        Me.userNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
-        Me.userNet.Location = New System.Drawing.Point(105, 148)
-        Me.userNet.Name = "userNet"
-        Me.userNet.Size = New System.Drawing.Size(30, 80)
-        Me.userNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.userNet.TabIndex = 2
-        Me.userNet.TabStop = False
-        '
-        'puck
-        '
-        Me.puck.BackgroundImage = Global._2DHockey.My.Resources.Resources.Puck1
-        Me.puck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.puck.Location = New System.Drawing.Point(382, 185)
-        Me.puck.Name = "puck"
-        Me.puck.Size = New System.Drawing.Size(18, 10)
-        Me.puck.TabIndex = 1
-        Me.puck.TabStop = False
-        '
-        'userPlayer
-        '
-        Me.userPlayer.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.userPlayer.Image = Global._2DHockey.My.Resources.Resources.BluePlayer1
-        Me.userPlayer.Location = New System.Drawing.Point(255, 165)
-        Me.userPlayer.Name = "userPlayer"
-        Me.userPlayer.Size = New System.Drawing.Size(50, 50)
-        Me.userPlayer.TabIndex = 0
-        Me.userPlayer.TabStop = False
-        '
->>>>>>> origin/master
         'scoreboard
         '
         Me.scoreboard.BackColor = System.Drawing.Color.Transparent
@@ -276,7 +172,6 @@ Partial Class MainGame
         '
         'wintimer
         '
-<<<<<<< HEAD
         Me.wintimer.Interval = 1000
         '
         'compPlayer
@@ -396,18 +291,7 @@ Partial Class MainGame
         Me.Quitbtn.TabIndex = 7
         Me.Quitbtn.Text = "Quit"
         Me.Quitbtn.UseVisualStyleBackColor = False
-=======
-        Me.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Panel1.BackgroundImage = Global._2DHockey.My.Resources.Resources.Hockeyrink
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Controls.Add(Me.pauseMenuPanel)
-        Me.Panel1.Controls.Add(Me.Golbl)
-        Me.Panel1.Controls.Add(Me.countdownlbl)
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(784, 361)
-        Me.Panel1.TabIndex = 16
->>>>>>> origin/master
+
         '
         'Golbl
         '

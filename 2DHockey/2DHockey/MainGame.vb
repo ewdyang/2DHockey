@@ -22,12 +22,7 @@
     Dim userGoalieResetPosition As New Point(136, 167)
     Dim compGoalieResetPosition As New Point(599, 167)
     Dim countdown As Integer = 4
-<<<<<<< HEAD
     Dim winshowtime As Integer = 2
-    
-=======
-
->>>>>>> origin/master
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
         checkForGoal() 'checks if a goal has been made
@@ -429,8 +424,6 @@
 
     End Sub
 
-<<<<<<< HEAD
-  
     Private Sub wintimer_Tick(sender As Object, e As EventArgs) Handles wintimer.Tick
         winshowtime = winshowtime - 1
         If winshowtime = 0 Then
@@ -458,10 +451,5 @@
         End If
 
     End Sub
-
-   
-=======
-
->>>>>>> origin/master
 
 End Class
