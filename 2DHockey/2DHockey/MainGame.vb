@@ -300,8 +300,8 @@
                 puckYV = 5
             End If
         ElseIf objectCollisionDetect(puck, rUserNet) Then
-            If puck.Location.X + puck.Width < rUserNet.Location.X + 10 And puck.Location.Y > rUserGoalie.Location.Y And puck.Location.Y + puck.Height < lUserNet.Location.Y + lUserNet.Height Then
-                goalScored("rUser")
+            If puck.Location.X + puck.Width < rUserNet.Location.X + 10 And puck.Location.Y > rUserGoalie.Location.Y And puck.Location.Y + puck.Height < rUserNet.Location.Y + rUserNet.Height Then
+                goalScored("lUser")
             Else
                 heldByPlayer = False
                 puckXV = 10
@@ -438,6 +438,8 @@
         rUserScore = 0
         updateScoreBoard()
         countdownlbl.Text = 3
+        WinGoalie.Visible = False
+        WinPlayer.Visible = False
     End Sub
 
     Sub animatePlayer(ByVal player As PictureBox, ByVal team As String, ByVal directionHeading As String, ByRef playerDirection As Integer) 'animates the player skating, facing the correct direction
