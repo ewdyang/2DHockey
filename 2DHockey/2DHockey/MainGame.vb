@@ -289,6 +289,11 @@
             wintimer.Start()
             Winlbl.Text = "Team 1 wins!"
             Winlbl.Visible = True
+
+            WinPlayer.Image = WinPlayerImages.Images(TeamSelection.lUser)                     'Shows the player and goalie of the winning team
+            WinPlayer.Visible = True
+            WinGoalie.Image = WinGoalieImages.Images(TeamSelection.lUser)
+
             My.Computer.Audio.Play(My.Resources.IHaveWonned, _
         AudioPlayMode.BackgroundLoop)
             MsgBox("Team 1 Wins")
@@ -296,6 +301,11 @@
             wintimer.Start()
             Winlbl.Text = "Team 2 wins!"
             Winlbl.Visible = True
+
+            WinPlayer.Image = WinPlayerImages.Images(TeamSelection.rUser)                     'Shows the player and goalie of the winning team
+            WinPlayer.Visible = True
+            WinGoalie.Image = WinGoalieImages.Images(TeamSelection.rUser)
+
             My.Computer.Audio.Play(My.Resources.IHaveWonned, _
        AudioPlayMode.BackgroundLoop)
             MsgBox("Team 2 Wins")
@@ -308,6 +318,7 @@
         countdownlbl.Visible = True
         countdown = 4
         countdownlbl.Text = 3
+        WinPlayer.Visible = False
     End Sub
 
     Sub updateScoreBoard() 'updates the scoreboard graphic to reflect the latest scores
