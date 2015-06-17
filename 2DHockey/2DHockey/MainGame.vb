@@ -573,6 +573,7 @@
         retire.Visible = False
         again.Visible = False
         Winlbl.Visible = False
+        My.Computer.Audio.Stop()
         countdownpanel.Visible = True
         count.Start()
         If GlobalVariables.sounds = True Then
