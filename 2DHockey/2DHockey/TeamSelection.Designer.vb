@@ -89,9 +89,9 @@ Partial Class TeamSelection
         'lUserleft
         '
         Me.lUserleft.BackColor = System.Drawing.Color.DarkBlue
-        Me.lUserleft.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lUserleft.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lUserleft.ForeColor = System.Drawing.Color.White
-        Me.lUserleft.Location = New System.Drawing.Point(237, 351)
+        Me.lUserleft.Location = New System.Drawing.Point(234, 347)
         Me.lUserleft.Name = "lUserleft"
         Me.lUserleft.Size = New System.Drawing.Size(90, 35)
         Me.lUserleft.TabIndex = 2
@@ -101,9 +101,9 @@ Partial Class TeamSelection
         'lUserRight
         '
         Me.lUserRight.BackColor = System.Drawing.Color.DarkBlue
-        Me.lUserRight.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lUserRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lUserRight.ForeColor = System.Drawing.Color.White
-        Me.lUserRight.Location = New System.Drawing.Point(333, 351)
+        Me.lUserRight.Location = New System.Drawing.Point(340, 347)
         Me.lUserRight.Name = "lUserRight"
         Me.lUserRight.Size = New System.Drawing.Size(90, 35)
         Me.lUserRight.TabIndex = 3
@@ -113,9 +113,9 @@ Partial Class TeamSelection
         'rUserleft
         '
         Me.rUserleft.BackColor = System.Drawing.Color.DarkBlue
-        Me.rUserleft.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rUserleft.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rUserleft.ForeColor = System.Drawing.Color.Transparent
-        Me.rUserleft.Location = New System.Drawing.Point(463, 351)
+        Me.rUserleft.Location = New System.Drawing.Point(464, 347)
         Me.rUserleft.Name = "rUserleft"
         Me.rUserleft.Size = New System.Drawing.Size(90, 35)
         Me.rUserleft.TabIndex = 4
@@ -125,9 +125,9 @@ Partial Class TeamSelection
         'rUserRight
         '
         Me.rUserRight.BackColor = System.Drawing.Color.DarkBlue
-        Me.rUserRight.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rUserRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rUserRight.ForeColor = System.Drawing.Color.White
-        Me.rUserRight.Location = New System.Drawing.Point(569, 351)
+        Me.rUserRight.Location = New System.Drawing.Point(570, 347)
         Me.rUserRight.Name = "rUserRight"
         Me.rUserRight.Size = New System.Drawing.Size(90, 35)
         Me.rUserRight.TabIndex = 5
@@ -137,9 +137,9 @@ Partial Class TeamSelection
         'rUserConfirm
         '
         Me.rUserConfirm.BackColor = System.Drawing.Color.DarkBlue
-        Me.rUserConfirm.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rUserConfirm.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rUserConfirm.ForeColor = System.Drawing.Color.White
-        Me.rUserConfirm.Location = New System.Drawing.Point(509, 392)
+        Me.rUserConfirm.Location = New System.Drawing.Point(503, 403)
         Me.rUserConfirm.Name = "rUserConfirm"
         Me.rUserConfirm.Size = New System.Drawing.Size(120, 35)
         Me.rUserConfirm.TabIndex = 6
@@ -149,9 +149,9 @@ Partial Class TeamSelection
         'lUserConfirm
         '
         Me.lUserConfirm.BackColor = System.Drawing.Color.DarkBlue
-        Me.lUserConfirm.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lUserConfirm.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lUserConfirm.ForeColor = System.Drawing.Color.White
-        Me.lUserConfirm.Location = New System.Drawing.Point(268, 392)
+        Me.lUserConfirm.Location = New System.Drawing.Point(273, 403)
         Me.lUserConfirm.Name = "lUserConfirm"
         Me.lUserConfirm.Size = New System.Drawing.Size(120, 35)
         Me.lUserConfirm.TabIndex = 7
@@ -162,11 +162,11 @@ Partial Class TeamSelection
         '
         Me.optionlbl.AutoSize = True
         Me.optionlbl.BackColor = System.Drawing.Color.Transparent
-        Me.optionlbl.Font = New System.Drawing.Font("Aircruiser", 50.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.optionlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 50.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.optionlbl.ForeColor = System.Drawing.Color.DarkBlue
         Me.optionlbl.Location = New System.Drawing.Point(104, 36)
         Me.optionlbl.Name = "optionlbl"
-        Me.optionlbl.Size = New System.Drawing.Size(674, 68)
+        Me.optionlbl.Size = New System.Drawing.Size(496, 76)
         Me.optionlbl.TabIndex = 8
         Me.optionlbl.Text = "Team Selection"
         '
@@ -174,7 +174,7 @@ Partial Class TeamSelection
         '
         Me.backbutton.BackColor = System.Drawing.Color.DarkBlue
         Me.backbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.backbutton.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.backbutton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.backbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.backbutton.Location = New System.Drawing.Point(311, 492)
         Me.backbutton.Name = "backbutton"
@@ -187,11 +187,11 @@ Partial Class TeamSelection
         '
         Me.llUserbl.AutoSize = True
         Me.llUserbl.BackColor = System.Drawing.Color.Transparent
-        Me.llUserbl.Font = New System.Drawing.Font("Aircruiser", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llUserbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.llUserbl.ForeColor = System.Drawing.Color.White
         Me.llUserbl.Location = New System.Drawing.Point(162, 123)
         Me.llUserbl.Name = "llUserbl"
-        Me.llUserbl.Size = New System.Drawing.Size(129, 29)
+        Me.llUserbl.Size = New System.Drawing.Size(114, 33)
         Me.llUserbl.TabIndex = 10
         Me.llUserbl.Text = "Team 1"
         '
@@ -199,11 +199,11 @@ Partial Class TeamSelection
         '
         Me.rlUserbl.AutoSize = True
         Me.rlUserbl.BackColor = System.Drawing.Color.Transparent
-        Me.rlUserbl.Font = New System.Drawing.Font("Aircruiser", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rlUserbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rlUserbl.ForeColor = System.Drawing.Color.White
         Me.rlUserbl.Location = New System.Drawing.Point(594, 123)
         Me.rlUserbl.Name = "rlUserbl"
-        Me.rlUserbl.Size = New System.Drawing.Size(135, 29)
+        Me.rlUserbl.Size = New System.Drawing.Size(114, 33)
         Me.rlUserbl.TabIndex = 11
         Me.rlUserbl.Text = "Team 2"
         '
@@ -234,11 +234,11 @@ Partial Class TeamSelection
         '
         Me.team2move.AutoSize = True
         Me.team2move.BackColor = System.Drawing.Color.Transparent
-        Me.team2move.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.team2move.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.team2move.ForeColor = System.Drawing.Color.DarkBlue
         Me.team2move.Location = New System.Drawing.Point(706, 294)
         Me.team2move.Name = "team2move"
-        Me.team2move.Size = New System.Drawing.Size(105, 20)
+        Me.team2move.Size = New System.Drawing.Size(85, 24)
         Me.team2move.TabIndex = 14
         Me.team2move.Text = "To Move"
         '
@@ -246,11 +246,11 @@ Partial Class TeamSelection
         '
         Me.tomoveteam1.AutoSize = True
         Me.tomoveteam1.BackColor = System.Drawing.Color.Transparent
-        Me.tomoveteam1.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tomoveteam1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tomoveteam1.ForeColor = System.Drawing.Color.DarkBlue
         Me.tomoveteam1.Location = New System.Drawing.Point(75, 294)
         Me.tomoveteam1.Name = "tomoveteam1"
-        Me.tomoveteam1.Size = New System.Drawing.Size(105, 20)
+        Me.tomoveteam1.Size = New System.Drawing.Size(85, 24)
         Me.tomoveteam1.TabIndex = 15
         Me.tomoveteam1.Text = "To Move"
         '
@@ -269,11 +269,11 @@ Partial Class TeamSelection
         '
         Me.team2shoot.AutoSize = True
         Me.team2shoot.BackColor = System.Drawing.Color.Transparent
-        Me.team2shoot.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.team2shoot.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.team2shoot.ForeColor = System.Drawing.Color.DarkBlue
         Me.team2shoot.Location = New System.Drawing.Point(706, 407)
         Me.team2shoot.Name = "team2shoot"
-        Me.team2shoot.Size = New System.Drawing.Size(118, 20)
+        Me.team2shoot.Size = New System.Drawing.Size(87, 24)
         Me.team2shoot.TabIndex = 17
         Me.team2shoot.Text = "To Shoot"
         '
@@ -292,11 +292,11 @@ Partial Class TeamSelection
         '
         Me.toshootteam1.AutoSize = True
         Me.toshootteam1.BackColor = System.Drawing.Color.Transparent
-        Me.toshootteam1.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.toshootteam1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.toshootteam1.ForeColor = System.Drawing.Color.DarkBlue
         Me.toshootteam1.Location = New System.Drawing.Point(75, 407)
         Me.toshootteam1.Name = "toshootteam1"
-        Me.toshootteam1.Size = New System.Drawing.Size(118, 20)
+        Me.toshootteam1.Size = New System.Drawing.Size(87, 24)
         Me.toshootteam1.TabIndex = 19
         Me.toshootteam1.Text = "To Shoot"
         '
