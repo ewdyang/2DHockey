@@ -45,22 +45,22 @@ Partial Class About
         Me.team1lbl.BackColor = System.Drawing.Color.Transparent
         Me.team1lbl.Font = New System.Drawing.Font("Aircruiser", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.team1lbl.ForeColor = System.Drawing.Color.White
-        Me.team1lbl.Location = New System.Drawing.Point(85, 170)
+        Me.team1lbl.Location = New System.Drawing.Point(68, 168)
         Me.team1lbl.Name = "team1lbl"
-        Me.team1lbl.Size = New System.Drawing.Size(399, 315)
+        Me.team1lbl.Size = New System.Drawing.Size(353, 245)
         Me.team1lbl.TabIndex = 11
         Me.team1lbl.Text = "This is a 2 dimensional hockey game made by Grade 10 students for Mrs. Kutschke's" & _
-    " ICS2O summative. The game was designed in collaboration with grade 5 students E" & _
-    "than and Ayman." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+    "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ICS2O summative. The game was designed in collaboration with grade 5 students " & _
+    "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ethan and Ayman." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Aircruiser", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(524, 170)
+        Me.Label1.Location = New System.Drawing.Point(528, 200)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(281, 315)
+        Me.Label1.Size = New System.Drawing.Size(281, 162)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Developpers:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Edward Yang" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ryan Shi" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Derek Xu" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kevin Zhu" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
