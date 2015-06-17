@@ -44,7 +44,7 @@ AudioPlayMode.BackgroundLoop)
 End Class
 
 
-Module Aircruiser                                   'Module for embedding the Aircruiser font (from the Internet)
+Module Aircruiser
 
     'PRIVATE FONT COLLECTION TO HOLD THE DYNAMIC FONT
     Private _pfc As PrivateFontCollection = Nothing
@@ -63,7 +63,7 @@ Module Aircruiser                                   'Module for embedding the Ai
         End Get
     End Property
 
-    Private Sub LoadFont()                              'Code to add custom font, this was taken from the internet
+    Private Sub LoadFont()
         Try
             'INIT THE FONT COLLECTION
             _pfc = New PrivateFontCollection
@@ -92,7 +92,7 @@ Module Aircruiser                                   'Module for embedding the Ai
 
 End Module
 
-Module ScoreboardFont                                   'Module for embedding the ScoreBoard font (from the Internet)
+Module ScoreboardFont
 
     'PRIVATE FONT COLLECTION TO HOLD THE DYNAMIC FONT
     Private _pfc As PrivateFontCollection = Nothing
@@ -111,7 +111,7 @@ Module ScoreboardFont                                   'Module for embedding th
         End Get
     End Property
 
-    Private Sub LoadFont()                              'Code to add custom font, this was taken from the internet
+    Private Sub LoadFont()
         Try
             'INIT THE FONT COLLECTION
             _pfc = New PrivateFontCollection

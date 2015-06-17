@@ -6,6 +6,7 @@
         lUserPlayerTeam.Image = playerSprites.Images(0)
         rUserPlayerTeam.Image = playerSprites.Images(0)
 
+        ChangeFonts()
     End Sub
 
     Private Sub P1Left_Click(sender As Object, e As EventArgs) Handles lUserleft.Click
