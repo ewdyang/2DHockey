@@ -508,6 +508,7 @@
 
     Private Sub resumebtn_Click(sender As Object, e As EventArgs) Handles resumebtn.Click 'resumes the game
         pauseMenuPanel.Hide()
+        Me.Focus()
         tick.Start()
     End Sub
 
