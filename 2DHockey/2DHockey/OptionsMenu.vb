@@ -23,8 +23,8 @@
     End Sub
 
     Private Sub backbutton_Click(sender As Object, e As EventArgs) Handles backbutton.Click
-        Me.Visible = False
-        MainMenu.Visible = True
+        Me.Hide()
+        MainMenu.Show()
     End Sub
     Private Sub points5_CheckedChanged(sender As Object, e As EventArgs) Handles points5.CheckedChanged
         optionPointsNeeded = 5
