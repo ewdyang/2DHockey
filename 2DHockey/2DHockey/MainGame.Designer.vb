@@ -229,11 +229,11 @@ Partial Class MainGame
         '
         Me.countdownlbl.AutoSize = True
         Me.countdownlbl.BackColor = System.Drawing.Color.Transparent
-        Me.countdownlbl.Font = New System.Drawing.Font("Score Board", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.countdownlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.countdownlbl.ForeColor = System.Drawing.SystemColors.ControlText
         Me.countdownlbl.Location = New System.Drawing.Point(22, 18)
         Me.countdownlbl.Name = "countdownlbl"
-        Me.countdownlbl.Size = New System.Drawing.Size(64, 72)
+        Me.countdownlbl.Size = New System.Drawing.Size(68, 73)
         Me.countdownlbl.TabIndex = 15
         Me.countdownlbl.Text = "3"
         '
@@ -271,7 +271,7 @@ Partial Class MainGame
         '
         Me.resumebtn.BackColor = System.Drawing.Color.DarkBlue
         Me.resumebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.resumebtn.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.resumebtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.resumebtn.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.resumebtn.Location = New System.Drawing.Point(15, 19)
         Me.resumebtn.Name = "resumebtn"
@@ -284,7 +284,7 @@ Partial Class MainGame
         '
         Me.Quitbtn.BackColor = System.Drawing.Color.DarkBlue
         Me.Quitbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Quitbtn.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Quitbtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Quitbtn.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Quitbtn.Location = New System.Drawing.Point(15, 92)
         Me.Quitbtn.Name = "Quitbtn"
@@ -292,7 +292,6 @@ Partial Class MainGame
         Me.Quitbtn.TabIndex = 7
         Me.Quitbtn.Text = "Quit"
         Me.Quitbtn.UseVisualStyleBackColor = False
-
         '
         'Golbl
         '
@@ -310,11 +309,11 @@ Partial Class MainGame
         '
         Me.Winlbl.AutoSize = True
         Me.Winlbl.BackColor = System.Drawing.Color.White
-        Me.Winlbl.Font = New System.Drawing.Font("Aircruiser", 71.99999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Winlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 71.99999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Winlbl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Winlbl.Location = New System.Drawing.Point(12, 131)
+        Me.Winlbl.Location = New System.Drawing.Point(45, 131)
         Me.Winlbl.Name = "Winlbl"
-        Me.Winlbl.Size = New System.Drawing.Size(801, 97)
+        Me.Winlbl.Size = New System.Drawing.Size(695, 108)
         Me.Winlbl.TabIndex = 17
         Me.Winlbl.Text = "TEAM 1 WINS!"
         '
@@ -333,7 +332,7 @@ Partial Class MainGame
         Me.countdownpanel.BackColor = System.Drawing.Color.White
         Me.countdownpanel.Controls.Add(Me.countdownlbl)
         Me.countdownpanel.Controls.Add(Me.Golbl)
-        Me.countdownpanel.Location = New System.Drawing.Point(341, 138)
+        Me.countdownpanel.Location = New System.Drawing.Point(338, 138)
         Me.countdownpanel.Name = "countdownpanel"
         Me.countdownpanel.Size = New System.Drawing.Size(108, 100)
         Me.countdownpanel.TabIndex = 19
