@@ -238,10 +238,11 @@ Partial Class MainGame
         '
         Me.countdownlbl.AutoSize = True
         Me.countdownlbl.BackColor = System.Drawing.Color.Transparent
+        Me.countdownlbl.Font = New System.Drawing.Font("Score Board", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.countdownlbl.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.countdownlbl.Location = New System.Drawing.Point(24, 11)
+        Me.countdownlbl.Location = New System.Drawing.Point(9, -7)
         Me.countdownlbl.Name = "countdownlbl"
-        Me.countdownlbl.Size = New System.Drawing.Size(13, 13)
+        Me.countdownlbl.Size = New System.Drawing.Size(96, 107)
         Me.countdownlbl.TabIndex = 15
         Me.countdownlbl.Text = "3"
         '
@@ -269,7 +270,7 @@ Partial Class MainGame
         '
         Me.pauseMenuPanel.Controls.Add(Me.resumebtn)
         Me.pauseMenuPanel.Controls.Add(Me.Quitbtn)
-        Me.pauseMenuPanel.Location = New System.Drawing.Point(292, 114)
+        Me.pauseMenuPanel.Location = New System.Drawing.Point(292, 113)
         Me.pauseMenuPanel.Name = "pauseMenuPanel"
         Me.pauseMenuPanel.Size = New System.Drawing.Size(200, 150)
         Me.pauseMenuPanel.TabIndex = 8
@@ -305,10 +306,11 @@ Partial Class MainGame
         '
         Me.Golbl.AutoSize = True
         Me.Golbl.BackColor = System.Drawing.Color.Transparent
+        Me.Golbl.Font = New System.Drawing.Font("Score Board", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Golbl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Golbl.Location = New System.Drawing.Point(3, 11)
+        Me.Golbl.Location = New System.Drawing.Point(-13, -6)
         Me.Golbl.Name = "Golbl"
-        Me.Golbl.Size = New System.Drawing.Size(21, 13)
+        Me.Golbl.Size = New System.Drawing.Size(147, 107)
         Me.Golbl.TabIndex = 16
         Me.Golbl.Text = "Go"
         '
@@ -425,7 +427,7 @@ Partial Class MainGame
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = Global._2DHockey.My.Resources.Background2
+        Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.Background2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(784, 509)
         Me.ControlBox = False
