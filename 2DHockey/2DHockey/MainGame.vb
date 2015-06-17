@@ -288,22 +288,23 @@
     End Sub
 
     Sub checkForGoal() 'checks if the puck has collided with a goalnet and if so, plays sound then runs goalScored for the team that scored
-        If objectCollisionDetect(puck, rUserNet) And puck.Location.X > lUserNet.Location.X + lUserNet.Width - 10 Then 'checks if puck is touching net and is past net
-            If GlobalVariables.sounds = True Then
-                My.Computer.Audio.Play(My.Resources.buzzer, _
-            AudioPlayMode.Background)
-            End If
-            Buzzertime.Start()
-            goalScored("lUser")
+        If objectCollisionDetect(puck, lUserNet) Then 'checks if puck is touching net and is past net
+            If puck.Location.X > lUserNet.Location.X + lUserNet.Width - 10 And puck.Location.Y > lUserNet.Location.Y And puck.Location.Y + puck.Height < lUserNet.Location.Y + lUserNet.Height Then
+                goalScored("rUser")
+            Else
+                heldByPlayer = False
+                puckXV = -10
+                puckYV = 5
 
-        ElseIf objectCollisionDetect(puck, lUserNet) And puck.Location.X + puck.Width < rUserNet.Location.X + 10 Then
-            If GlobalVariables.sounds = True Then
-                My.Computer.Audio.Play(My.Resources.buzzer, _
-           AudioPlayMode.Background)
             End If
-            Buzzertime.Start()
-            goalScored("rUser")
-
+        ElseIf objectCollisionDetect(puck, rUserNet) Then
+            If puck.Location.X + puck.Width < rUserNet.Location.X + 10 And puck.Location.Y > rUserGoalie.Location.Y And puck.Location.Y + puck.Height < lUserNet.Location.Y + lUserNet.Height Then
+                goalScored("rUser")
+            Else
+                heldByPlayer = False
+                puckXV = 10
+                puckYV = 5
+            End If
         End If
     End Sub
 
@@ -320,11 +321,15 @@
     End Sub
 
     Sub goalScored(ByVal scoringTeam As String) 'adds 1 to the score, then checks if any teams have enough points to win, then triggers win if it's met
+        If GlobalVariables.sounds = True Then
+            My.Computer.Audio.Play(My.Resources.buzzer, _
+        AudioPlayMode.Background)
+        End If
+        Buzzertime.Start()
         If scoringTeam = "lUser" Then
             lUserScore += 1
             updateScoreBoard()
             resetGoal()
-
         ElseIf scoringTeam = "rUser" Then
             rUserScore += 1
             updateScoreBoard()
@@ -389,13 +394,13 @@
             End If
 
         End If
-            lUserScore = 0
-            rUserScore = 0
-            updateScoreBoard()
-            resetGoal()
-            tick.Stop()
-            countdownlbl.Visible = True
-            countdown = 4
+        lUserScore = 0
+        rUserScore = 0
+        updateScoreBoard()
+        resetGoal()
+        tick.Stop()
+        countdownlbl.Visible = True
+        countdown = 4
         countdownlbl.Text = 3
         WinPlayer.Visible = False
     End Sub
