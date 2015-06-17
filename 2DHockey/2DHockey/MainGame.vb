@@ -26,7 +26,6 @@
     Dim winshowtime As Integer = 2
     Dim buzzertimer As Integer
     Dim starttimer As Integer
-    Dim ILOVEEDWARD As Boolean = False
 
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
@@ -288,7 +287,7 @@
         goalie.location = newLocation
     End Sub
 
-    Sub checkForGoal()
+    Sub checkForGoal() 'checks if the puck has collided with a goalnet and if so, plays sound then runs goalScored for the team that scored
         If objectCollisionDetect(puck, rUserNet) And puck.Location.X > lUserNet.Location.X + lUserNet.Width - 10 Then 'checks if puck is touching net and is past net
             If GlobalVariables.sounds = True Then
                 My.Computer.Audio.Play(My.Resources.buzzer, _
@@ -320,7 +319,7 @@
         End If
     End Sub
 
-    Sub goalScored(ByVal scoringTeam As String) 'adds 1 to the score, then checks if any teams have at least 9 points, then triggers win if it's met
+    Sub goalScored(ByVal scoringTeam As String) 'adds 1 to the score, then checks if any teams have enough points to win, then triggers win if it's met
         If scoringTeam = "lUser" Then
             lUserScore += 1
             updateScoreBoard()
@@ -422,7 +421,7 @@
         countdownlbl.Text = 3
     End Sub
 
-    Sub animatePlayer(ByVal player As PictureBox, ByVal team As String, ByVal directionHeading As String, ByRef playerDirection As Integer)
+    Sub animatePlayer(ByVal player As PictureBox, ByVal team As String, ByVal directionHeading As String, ByRef playerDirection As Integer) 'animates the player skating, facing the correct direction
         If team = "lUser" Then
             Select Case TeamSelection.lUser
                 Case 0
@@ -480,7 +479,7 @@
         tick.Stop()
     End Sub
 
-    Sub pauseMenu()
+    Sub pauseMenu() 'pauses game then shows pause menu
         tick.Stop()
         pauseMenuPanel.Show()
     End Sub
@@ -502,7 +501,7 @@
         MainMenu.Visible = True
     End Sub
 
-    Private Sub count_Tick(sender As Object, e As EventArgs) Handles count.Tick
+    Private Sub count_Tick(sender As Object, e As EventArgs) Handles count.Tick 'runs the countdown before the game starts
         countdown = countdown - 1
         If countdown = 4 Then
             countdownlbl.Text = 3
