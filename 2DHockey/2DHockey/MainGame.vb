@@ -25,6 +25,7 @@
     Dim winshowtime As Integer = 2
     Dim buzzertimer As Integer
     Dim starttimer As Integer
+    Dim ILOVEEDWARD As Boolean = False
 
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse

@@ -54,9 +54,16 @@ Partial Class MainGame
         Me.hockeyrink = New System.Windows.Forms.PictureBox()
         Me.countdownpanel = New System.Windows.Forms.Panel()
         Me.Buzzertime = New System.Windows.Forms.Timer(Me.components)
+<<<<<<< HEAD
         Me.Start = New System.Windows.Forms.Timer(Me.components)
         Me.again = New System.Windows.Forms.Button()
         Me.retire = New System.Windows.Forms.Button()
+=======
+        Me.WinPlayer = New System.Windows.Forms.PictureBox()
+        Me.WinPlayerImages = New System.Windows.Forms.ImageList(Me.components)
+        Me.WinGoalie = New System.Windows.Forms.PictureBox()
+        Me.WinGoalieImages = New System.Windows.Forms.ImageList(Me.components)
+>>>>>>> origin/master
         CType(Me.Pausebutton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.scoreboard, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.rUserPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,6 +76,8 @@ Partial Class MainGame
         Me.pauseMenuPanel.SuspendLayout()
         CType(Me.hockeyrink, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.countdownpanel.SuspendLayout()
+        CType(Me.WinPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.WinGoalie, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tick
@@ -363,6 +372,7 @@ Partial Class MainGame
         '
         Me.Buzzertime.Interval = 1000
         '
+<<<<<<< HEAD
         'Start
         '
         Me.Start.Interval = 1050
@@ -396,6 +406,45 @@ Partial Class MainGame
         Me.retire.Text = "Retire"
         Me.retire.UseVisualStyleBackColor = False
         Me.retire.Visible = False
+=======
+        'WinPlayer
+        '
+        Me.WinPlayer.Location = New System.Drawing.Point(87, 287)
+        Me.WinPlayer.Name = "WinPlayer"
+        Me.WinPlayer.Size = New System.Drawing.Size(200, 200)
+        Me.WinPlayer.TabIndex = 20
+        Me.WinPlayer.TabStop = False
+        Me.WinPlayer.Visible = False
+        '
+        'WinPlayerImages
+        '
+        Me.WinPlayerImages.ImageStream = CType(resources.GetObject("WinPlayerImages.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.WinPlayerImages.TransparentColor = System.Drawing.Color.Transparent
+        Me.WinPlayerImages.Images.SetKeyName(0, "BlueLarger1.png")
+        Me.WinPlayerImages.Images.SetKeyName(1, "GreenLarger1.png")
+        Me.WinPlayerImages.Images.SetKeyName(2, "OrangeLarger1.png")
+        Me.WinPlayerImages.Images.SetKeyName(3, "Redlarger1.png")
+        Me.WinPlayerImages.Images.SetKeyName(4, "Whitelarger1.png")
+        '
+        'WinGoalie
+        '
+        Me.WinGoalie.Location = New System.Drawing.Point(499, 292)
+        Me.WinGoalie.Name = "WinGoalie"
+        Me.WinGoalie.Size = New System.Drawing.Size(200, 188)
+        Me.WinGoalie.TabIndex = 21
+        Me.WinGoalie.TabStop = False
+        Me.WinGoalie.Visible = False
+        '
+        'WinGoalieImages
+        '
+        Me.WinGoalieImages.ImageStream = CType(resources.GetObject("WinGoalieImages.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.WinGoalieImages.TransparentColor = System.Drawing.Color.Transparent
+        Me.WinGoalieImages.Images.SetKeyName(0, "BlueGoalieLarger1.png")
+        Me.WinGoalieImages.Images.SetKeyName(1, "GreenGoalieLarger1.png")
+        Me.WinGoalieImages.Images.SetKeyName(2, "OrangeGoalielarger1.png")
+        Me.WinGoalieImages.Images.SetKeyName(3, "RedGoalieLarger1.png")
+        Me.WinGoalieImages.Images.SetKeyName(4, "WhiteGoalieLarger1.png")
+>>>>>>> origin/master
         '
         'MainGame
         '
@@ -406,8 +455,13 @@ Partial Class MainGame
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1045, 626)
         Me.ControlBox = False
+<<<<<<< HEAD
         Me.Controls.Add(Me.retire)
         Me.Controls.Add(Me.again)
+=======
+        Me.Controls.Add(Me.WinGoalie)
+        Me.Controls.Add(Me.WinPlayer)
+>>>>>>> origin/master
         Me.Controls.Add(Me.pauseMenuPanel)
         Me.Controls.Add(Me.countdownpanel)
         Me.Controls.Add(Me.Winlbl)
@@ -445,6 +499,8 @@ Partial Class MainGame
         CType(Me.hockeyrink, System.ComponentModel.ISupportInitialize).EndInit()
         Me.countdownpanel.ResumeLayout(False)
         Me.countdownpanel.PerformLayout()
+        CType(Me.WinPlayer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.WinGoalie, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -479,8 +535,15 @@ Partial Class MainGame
     Friend WithEvents hockeyrink As System.Windows.Forms.PictureBox
     Friend WithEvents countdownpanel As System.Windows.Forms.Panel
     Friend WithEvents Buzzertime As System.Windows.Forms.Timer
+<<<<<<< HEAD
     Friend WithEvents Start As System.Windows.Forms.Timer
     Friend WithEvents again As System.Windows.Forms.Button
     Friend WithEvents retire As System.Windows.Forms.Button
+=======
+    Friend WithEvents WinPlayer As System.Windows.Forms.PictureBox
+    Friend WithEvents WinPlayerImages As System.Windows.Forms.ImageList
+    Friend WithEvents WinGoalie As System.Windows.Forms.PictureBox
+    Friend WithEvents WinGoalieImages As System.Windows.Forms.ImageList
+>>>>>>> origin/master
 
 End Class
