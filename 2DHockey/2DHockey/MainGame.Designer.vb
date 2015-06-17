@@ -66,7 +66,6 @@ Partial Class MainGame
         CType(Me.compNet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pauseMenuPanel.SuspendLayout()
-        CType(Me.hockeyrink, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.countdownpanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -420,7 +419,6 @@ Partial Class MainGame
         Me.Controls.Add(Me.userNet)
         Me.Controls.Add(Me.userPlayer)
         Me.Controls.Add(Me.userGoalie)
-        Me.Controls.Add(Me.hockeyrink)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -440,7 +438,6 @@ Partial Class MainGame
         CType(Me.compNet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.puck, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pauseMenuPanel.ResumeLayout(False)
-        CType(Me.hockeyrink, System.ComponentModel.ISupportInitialize).EndInit()
         Me.countdownpanel.ResumeLayout(False)
         Me.countdownpanel.PerformLayout()
         Me.ResumeLayout(False)

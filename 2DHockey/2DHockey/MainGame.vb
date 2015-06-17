@@ -287,7 +287,7 @@
     Sub gameWin(ByRef team As String) 'announces winner of the game and allows player to replay or return to main menu
         If team = "user" Then
             wintimer.Start()
-            Winlbl.Text = "Team 2 wins!"
+            Winlbl.Text = "Team 1 wins!"
             Winlbl.Visible = True
             My.Computer.Audio.Play(My.Resources.IHaveWonned, _
         AudioPlayMode.BackgroundLoop)
@@ -315,6 +315,7 @@
             countdownlbl.Visible = True
             countdown = 4
             countdownlbl.Text = 3
+        End If
     End Sub
 
     Sub updateScoreBoard() 'updates the scoreboard graphic to reflect the latest scores
