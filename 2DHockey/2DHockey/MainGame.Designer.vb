@@ -170,7 +170,7 @@ Partial Class MainGame
         Me.lUserScoreboard.BackColor = System.Drawing.Color.Black
         Me.lUserScoreboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lUserScoreboard.ForeColor = System.Drawing.Color.Gold
-        Me.lUserScoreboard.Location = New System.Drawing.Point(293, 435)
+        Me.lUserScoreboard.Location = New System.Drawing.Point(293, 436)
         Me.lUserScoreboard.Name = "lUserScoreboard"
         Me.lUserScoreboard.Size = New System.Drawing.Size(48, 52)
         Me.lUserScoreboard.TabIndex = 11
@@ -238,11 +238,10 @@ Partial Class MainGame
         '
         Me.countdownlbl.AutoSize = True
         Me.countdownlbl.BackColor = System.Drawing.Color.Transparent
-        Me.countdownlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.countdownlbl.ForeColor = System.Drawing.SystemColors.ControlText
         Me.countdownlbl.Location = New System.Drawing.Point(24, 11)
         Me.countdownlbl.Name = "countdownlbl"
-        Me.countdownlbl.Size = New System.Drawing.Size(68, 73)
+        Me.countdownlbl.Size = New System.Drawing.Size(13, 13)
         Me.countdownlbl.TabIndex = 15
         Me.countdownlbl.Text = "3"
         '
@@ -270,7 +269,7 @@ Partial Class MainGame
         '
         Me.pauseMenuPanel.Controls.Add(Me.resumebtn)
         Me.pauseMenuPanel.Controls.Add(Me.Quitbtn)
-        Me.pauseMenuPanel.Location = New System.Drawing.Point(293, 113)
+        Me.pauseMenuPanel.Location = New System.Drawing.Point(292, 114)
         Me.pauseMenuPanel.Name = "pauseMenuPanel"
         Me.pauseMenuPanel.Size = New System.Drawing.Size(200, 150)
         Me.pauseMenuPanel.TabIndex = 8
@@ -306,11 +305,10 @@ Partial Class MainGame
         '
         Me.Golbl.AutoSize = True
         Me.Golbl.BackColor = System.Drawing.Color.Transparent
-        Me.Golbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Golbl.ForeColor = System.Drawing.Color.DarkBlue
         Me.Golbl.Location = New System.Drawing.Point(3, 11)
         Me.Golbl.Name = "Golbl"
-        Me.Golbl.Size = New System.Drawing.Size(118, 73)
+        Me.Golbl.Size = New System.Drawing.Size(21, 13)
         Me.Golbl.TabIndex = 16
         Me.Golbl.Text = "Go"
         '
@@ -384,7 +382,7 @@ Partial Class MainGame
         '
         'WinPlayer
         '
-        Me.WinPlayer.Location = New System.Drawing.Point(65, 233)
+        Me.WinPlayer.Location = New System.Drawing.Point(65, 325)
         Me.WinPlayer.Margin = New System.Windows.Forms.Padding(2)
         Me.WinPlayer.Name = "WinPlayer"
         Me.WinPlayer.Size = New System.Drawing.Size(150, 162)
@@ -404,7 +402,7 @@ Partial Class MainGame
         '
         'WinGoalie
         '
-        Me.WinGoalie.Location = New System.Drawing.Point(374, 237)
+        Me.WinGoalie.Location = New System.Drawing.Point(568, 325)
         Me.WinGoalie.Margin = New System.Windows.Forms.Padding(2)
         Me.WinGoalie.Name = "WinGoalie"
         Me.WinGoalie.Size = New System.Drawing.Size(150, 153)
@@ -427,7 +425,7 @@ Partial Class MainGame
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.Background_2
+        Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.Background2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(784, 509)
         Me.ControlBox = False

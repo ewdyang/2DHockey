@@ -211,8 +211,8 @@ Partial Class TeamSelection
         '
         Me.wasdpic.BackColor = System.Drawing.Color.Transparent
         Me.wasdpic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.wasdpic.Image = Global._2DHockey.My.Resources.Resources.wasd_again
-        Me.wasdpic.Location = New System.Drawing.Point(681, 173)
+        Me.wasdpic.Image = Global._2DHockey.My.Resources.Resources.wasdagain
+        Me.wasdpic.Location = New System.Drawing.Point(51, 173)
         Me.wasdpic.Name = "wasdpic"
         Me.wasdpic.Size = New System.Drawing.Size(167, 101)
         Me.wasdpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -223,7 +223,7 @@ Partial Class TeamSelection
         '
         Me.arrowkeypic.BackColor = System.Drawing.Color.Transparent
         Me.arrowkeypic.Image = Global._2DHockey.My.Resources.Resources.Arrowkeys
-        Me.arrowkeypic.Location = New System.Drawing.Point(41, 173)
+        Me.arrowkeypic.Location = New System.Drawing.Point(681, 173)
         Me.arrowkeypic.Name = "arrowkeypic"
         Me.arrowkeypic.Size = New System.Drawing.Size(167, 101)
         Me.arrowkeypic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -258,7 +258,7 @@ Partial Class TeamSelection
         '
         Me.qpic.BackColor = System.Drawing.Color.Transparent
         Me.qpic.Image = Global._2DHockey.My.Resources.Resources.letter_q1
-        Me.qpic.Location = New System.Drawing.Point(728, 329)
+        Me.qpic.Location = New System.Drawing.Point(89, 336)
         Me.qpic.Name = "qpic"
         Me.qpic.Size = New System.Drawing.Size(63, 57)
         Me.qpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -281,7 +281,7 @@ Partial Class TeamSelection
         '
         Me.spacepic.BackColor = System.Drawing.Color.Transparent
         Me.spacepic.Image = Global._2DHockey.My.Resources.Resources.space_key_s
-        Me.spacepic.Location = New System.Drawing.Point(41, 329)
+        Me.spacepic.Location = New System.Drawing.Point(681, 336)
         Me.spacepic.Name = "spacepic"
         Me.spacepic.Size = New System.Drawing.Size(167, 50)
         Me.spacepic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage

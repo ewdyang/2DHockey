@@ -335,7 +335,7 @@
             updateScoreBoard()
             resetGoal()
         End If
-        If OptionsMenu.points5.Checked = True Then
+        If OptionsMenu.points5.Checked = True Then 'checks the radio buttons in the options menu
             Buzzertime.Stop()
             buzzertimer = 0
             If lUserScore = 5 Then
@@ -364,7 +364,7 @@
 
     Sub gameWin(ByRef team As String) 'announces winner of the game and allows player to replay or return to main menu
         If team = "lUser" Then
-            
+
             Winlbl.Text = "Team 1 wins!"
             Winlbl.Visible = True
             retire.Visible = True
@@ -499,26 +499,26 @@
         pauseMenuPanel.Show()
     End Sub
 
-    Private Sub Pausebutton_Click(sender As Object, e As EventArgs) Handles Pausebutton.Click
+    Private Sub Pausebutton_Click(sender As Object, e As EventArgs) Handles Pausebutton.Click 'executes the pause code
         pauseMenu()
     End Sub
 
-    Private Sub resumebtn_Click(sender As Object, e As EventArgs) Handles resumebtn.Click
+    Private Sub resumebtn_Click(sender As Object, e As EventArgs) Handles resumebtn.Click 'resumes the game
         pauseMenuPanel.Hide()
         tick.Start()
     End Sub
 
     Private Sub Quitbtn_Click(sender As Object, e As EventArgs) Handles Quitbtn.Click
-        resetGame()
-        pauseMenuPanel.Hide()
-        TeamSelection.resetTeamSelectionForm()
-        Me.Close()
+        resetGame()                          'resets the game
+        pauseMenuPanel.Hide()                           'hides the pause menu
+        TeamSelection.resetTeamSelectionForm()     'resets the team selection
+        Me.Close()         'hides the game and shows main game
         MainMenu.Visible = True
     End Sub
 
     Private Sub count_Tick(sender As Object, e As EventArgs) Handles count.Tick 'runs the countdown before the game starts
-        countdown = countdown - 1
-        If countdown = 4 Then
+        countdown = countdown - 1         'makes countdown variable go down
+        If countdown = 4 Then                  'displays countdown and go for the appropriate time
             countdownlbl.Text = 3
         ElseIf countdown = 3 Then
             countdownlbl.Text = 2
@@ -527,7 +527,7 @@
         ElseIf countdown = 1 Then
             countdownlbl.Visible = False
             Golbl.Visible = True
-        ElseIf countdown = 0 Then
+        ElseIf countdown = 0 Then         'hides the countdown timer, shows puck, and resets countdown variable and stop the count timer.
             Golbl.Visible = False
             countdownpanel.Visible = False
             puck.Visible = True
