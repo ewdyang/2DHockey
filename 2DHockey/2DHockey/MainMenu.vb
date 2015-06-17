@@ -3,7 +3,7 @@ Imports System.Drawing.Text
 Public Class MainMenu
 
     Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If OptionsMenu.Musicoff.Checked Then
+        If OptionsMenu.Musicoff.Checked Then                                       'stops audio from playing and plays it if sound is on
             My.Computer.Audio.Stop()
         Else
             My.Computer.Audio.Play(My.Resources.Main_Screen_Music_wav_file, _
@@ -20,16 +20,16 @@ AudioPlayMode.BackgroundLoop)
     End Sub
 
     Private Sub exitButton_Click(sender As Object, e As EventArgs) Handles exitButton.Click
-        End
+        End              'ends game when exit menu is pressed
     End Sub
 
     Private Sub Optionbutton_Click(sender As Object, e As EventArgs) Handles Optionbutton.Click
-        OptionsMenu.Show()
+        OptionsMenu.Show()           'shows options menu and hides main menu
         Me.Hide()
     End Sub
 
     Private Sub Aboutbutton_Click(sender As Object, e As EventArgs) Handles Aboutbutton.Click
-        About.Show()
+        About.Show()                    'shows about menu and hides main menu
         Me.Hide()
     End Sub
 End Class

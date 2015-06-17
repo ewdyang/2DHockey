@@ -359,7 +359,7 @@
 
     Sub gameWin(ByRef team As String) 'announces winner of the game and allows player to replay or return to main menu
         If team = "lUser" Then
-            
+
             Winlbl.Text = "Team 1 wins!"
             Winlbl.Visible = True
             retire.Visible = True
@@ -389,13 +389,13 @@
             End If
 
         End If
-            lUserScore = 0
-            rUserScore = 0
-            updateScoreBoard()
-            resetGoal()
-            tick.Stop()
-            countdownlbl.Visible = True
-            countdown = 4
+        lUserScore = 0
+        rUserScore = 0
+        updateScoreBoard()
+        resetGoal()
+        tick.Stop()
+        countdownlbl.Visible = True
+        countdown = 4
         countdownlbl.Text = 3
         WinPlayer.Visible = False
     End Sub
@@ -512,8 +512,8 @@
     End Sub
 
     Private Sub count_Tick(sender As Object, e As EventArgs) Handles count.Tick 'runs the countdown before the game starts
-        countdown = countdown - 1
-        If countdown = 4 Then
+        countdown = countdown - 1         'makes countdown variable go down
+        If countdown = 4 Then                  'displays countdown and go for the appropriate time
             countdownlbl.Text = 3
         ElseIf countdown = 3 Then
             countdownlbl.Text = 2
@@ -522,7 +522,7 @@
         ElseIf countdown = 1 Then
             countdownlbl.Visible = False
             Golbl.Visible = True
-        ElseIf countdown = 0 Then
+        ElseIf countdown = 0 Then         'hides the countdown timer, shows puck, and resets countdown variable and stop the count timer.
             Golbl.Visible = False
             countdownpanel.Visible = False
             puck.Visible = True
