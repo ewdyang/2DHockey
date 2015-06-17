@@ -425,7 +425,7 @@ Partial Class MainGame
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.Background2
+        Me.BackgroundImage = Global._2DHockey.My.Resources.Background2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(784, 509)
         Me.ControlBox = False
