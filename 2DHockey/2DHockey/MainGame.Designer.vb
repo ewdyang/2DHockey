@@ -53,6 +53,10 @@ Partial Class MainGame
         Me.Winlbl = New System.Windows.Forms.Label()
         Me.hockeyrink = New System.Windows.Forms.PictureBox()
         Me.countdownpanel = New System.Windows.Forms.Panel()
+        Me.Buzzertime = New System.Windows.Forms.Timer(Me.components)
+        Me.pauseMenuPanel.SuspendLayout()
+        CType(Me.compGoalie, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.userGoalie, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pausebutton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.scoreboard, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.compPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -127,7 +131,7 @@ Partial Class MainGame
         Me.Pausebutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Pausebutton.Location = New System.Drawing.Point(734, 12)
         Me.Pausebutton.Name = "Pausebutton"
-        Me.Pausebutton.Size = New System.Drawing.Size(38, 40)
+        Me.Pausebutton.Size = New System.Drawing.Size(51, 49)
         Me.Pausebutton.TabIndex = 5
         Me.Pausebutton.TabStop = False
         '
@@ -180,7 +184,7 @@ Partial Class MainGame
         Me.compPlayer.Image = Global._2DHockey.My.Resources.Resources.GreenPlayer1
         Me.compPlayer.Location = New System.Drawing.Point(484, 167)
         Me.compPlayer.Name = "compPlayer"
-        Me.compPlayer.Size = New System.Drawing.Size(50, 50)
+        Me.compPlayer.Size = New System.Drawing.Size(67, 62)
         Me.compPlayer.TabIndex = 4
         Me.compPlayer.TabStop = False
         '
@@ -217,9 +221,14 @@ Partial Class MainGame
         'userNet
         '
         Me.userNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
+<<<<<<< HEAD
         Me.userNet.Location = New System.Drawing.Point(101, 149)
+=======
+        Me.userNet.Location = New System.Drawing.Point(140, 182)
+        Me.userNet.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+>>>>>>> howToCommit
         Me.userNet.Name = "userNet"
-        Me.userNet.Size = New System.Drawing.Size(30, 80)
+        Me.userNet.Size = New System.Drawing.Size(40, 98)
         Me.userNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.userNet.TabIndex = 2
         Me.userNet.TabStop = False
@@ -252,7 +261,7 @@ Partial Class MainGame
         Me.puck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.puck.Location = New System.Drawing.Point(382, 190)
         Me.puck.Name = "puck"
-        Me.puck.Size = New System.Drawing.Size(18, 10)
+        Me.puck.Size = New System.Drawing.Size(24, 12)
         Me.puck.TabIndex = 1
         Me.puck.TabStop = False
         '
@@ -337,14 +346,18 @@ Partial Class MainGame
         Me.countdownpanel.Size = New System.Drawing.Size(108, 100)
         Me.countdownpanel.TabIndex = 19
         '
+        'Buzzertime
+        '
+        Me.Buzzertime.Interval = 1000
+        '
         'MainGame
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.Background_2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(784, 509)
+        Me.ClientSize = New System.Drawing.Size(1045, 626)
         Me.ControlBox = False
         Me.Controls.Add(Me.pauseMenuPanel)
         Me.Controls.Add(Me.countdownpanel)
@@ -364,6 +377,7 @@ Partial Class MainGame
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "MainGame"
@@ -415,5 +429,5 @@ Partial Class MainGame
     Friend WithEvents Winlbl As System.Windows.Forms.Label
     Friend WithEvents hockeyrink As System.Windows.Forms.PictureBox
     Friend WithEvents countdownpanel As System.Windows.Forms.Panel
-
+	
 End Class

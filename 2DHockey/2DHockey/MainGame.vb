@@ -23,6 +23,8 @@
     Dim compGoalieResetPosition As New Point(599, 167)
     Dim countdown As Integer = 4
     Dim winshowtime As Integer = 2
+    Dim buzzertimer As Integer
+	
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
         checkForGoal() 'checks if a goal has been made
@@ -238,9 +240,15 @@
 
     Sub checkForGoal()
         If objectCollisionDetect(puck, compNet) And puck.Location.X > userNet.Location.X + userNet.Width - 10 Then 'checks if puck is touching net and is past net
+            My.Computer.Audio.Play(My.Resources.buzzer, _
+        AudioPlayMode.Background)
             goalScored("user")
+            Buzzertime.Start()
         ElseIf objectCollisionDetect(puck, userNet) And puck.Location.X + puck.Width < compNet.Location.X + 10 Then
+            My.Computer.Audio.Play(My.Resources.buzzer, _
+       AudioPlayMode.Background)
             goalScored("comp")
+            Buzzertime.Start()
         End If
     End Sub
 
@@ -249,6 +257,7 @@
             userScore += 1
             updateScoreBoard()
             resetGoal()
+
         ElseIf scoringTeam = "comp" Then
             compScore += 1
             updateScoreBoard()
@@ -280,19 +289,18 @@
             wintimer.Start()
             Winlbl.Text = "Team 1 wins!"
             Winlbl.Visible = True
-            userScore = 0
-            compScore = 0
-            updateScoreBoard()
-            resetGoal()
-            tick.Stop()
-            countdownlbl.Visible = True
-            countdown = 4
-            countdownlbl.Text = 3
+            My.Computer.Audio.Play(My.Resources.IHaveWonned, _
+        AudioPlayMode.BackgroundLoop)
+            MsgBox("Team 1 Wins")
         Else
             wintimer.Start()
             Winlbl.Text = "Team 2 wins!"
             Winlbl.Visible = True
-            userScore = 0
+            My.Computer.Audio.Play(My.Resources.IHaveWonned, _
+       AudioPlayMode.BackgroundLoop)
+            MsgBox("Team 2 Wins")
+        End If
+		userScore = 0
             compScore = 0
             updateScoreBoard()
             resetGoal()
@@ -300,7 +308,6 @@
             countdownlbl.Visible = True
             countdown = 4
             countdownlbl.Text = 3
-        End If
     End Sub
 
     Sub updateScoreBoard() 'updates the scoreboard graphic to reflect the latest scores
@@ -402,7 +409,6 @@
 
     End Sub
 
-
     Private Sub count_Tick(sender As Object, e As EventArgs) Handles count.Tick
         countdown = countdown - 1
         If countdown = 4 Then
@@ -450,6 +456,16 @@
             End If
         End If
 
+    End Sub
+
+    Private Sub Buzzertime_Tick(sender As Object, e As EventArgs) Handles Buzzertime.Tick
+        buzzertimer = buzzertimer + 1
+        If buzzertimer = 3 Then
+            Buzzertime.Stop()
+            My.Computer.Audio.Play(My.Resources.Main_Screen_Music_wav_file, _
+AudioPlayMode.BackgroundLoop)
+            buzzertimer = 0
+        End If
     End Sub
 
 End Class
