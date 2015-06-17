@@ -405,10 +405,6 @@
         MainMenu.Visible = True
     End Sub
 
-    Private Sub MainGame_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-
-    End Sub
-
     Private Sub count_Tick(sender As Object, e As EventArgs) Handles count.Tick
         countdown = countdown - 1
         If countdown = 4 Then

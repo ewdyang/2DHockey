@@ -1,5 +1,4 @@
 ﻿Public Class OptionsMenu
-    Public optionPointsNeeded As Integer = 7
 
     Private Sub OptionsMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Musicon.Checked = True
@@ -25,16 +24,5 @@
     Private Sub backbutton_Click(sender As Object, e As EventArgs) Handles backbutton.Click
         Me.Hide()
         MainMenu.Show()
-    End Sub
-    Private Sub points5_CheckedChanged(sender As Object, e As EventArgs) Handles points5.CheckedChanged
-        optionPointsNeeded = 5
-    End Sub
-
-    Private Sub points7_CheckedChanged(sender As Object, e As EventArgs) Handles points7.CheckedChanged
-        optionPointsNeeded = 7
-    End Sub
-
-    Private Sub points9_CheckedChanged(sender As Object, e As EventArgs) Handles points9.CheckedChanged
-        optionPointsNeeded = 9
     End Sub
 End Class
