@@ -238,11 +238,11 @@ Partial Class MainGame
         '
         Me.countdownlbl.AutoSize = True
         Me.countdownlbl.BackColor = System.Drawing.Color.Transparent
-        Me.countdownlbl.Font = New System.Drawing.Font("Score Board", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.countdownlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.countdownlbl.ForeColor = System.Drawing.SystemColors.ControlText
         Me.countdownlbl.Location = New System.Drawing.Point(9, -7)
         Me.countdownlbl.Name = "countdownlbl"
-        Me.countdownlbl.Size = New System.Drawing.Size(96, 107)
+        Me.countdownlbl.Size = New System.Drawing.Size(98, 108)
         Me.countdownlbl.TabIndex = 15
         Me.countdownlbl.Text = "3"
         '
@@ -306,11 +306,11 @@ Partial Class MainGame
         '
         Me.Golbl.AutoSize = True
         Me.Golbl.BackColor = System.Drawing.Color.Transparent
-        Me.Golbl.Font = New System.Drawing.Font("Score Board", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Golbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Golbl.ForeColor = System.Drawing.Color.DarkBlue
         Me.Golbl.Location = New System.Drawing.Point(-13, -6)
         Me.Golbl.Name = "Golbl"
-        Me.Golbl.Size = New System.Drawing.Size(147, 107)
+        Me.Golbl.Size = New System.Drawing.Size(173, 108)
         Me.Golbl.TabIndex = 16
         Me.Golbl.Text = "Go"
         '
@@ -384,10 +384,10 @@ Partial Class MainGame
         '
         'WinPlayer
         '
-        Me.WinPlayer.Location = New System.Drawing.Point(65, 325)
+        Me.WinPlayer.Location = New System.Drawing.Point(31, 298)
         Me.WinPlayer.Margin = New System.Windows.Forms.Padding(2)
         Me.WinPlayer.Name = "WinPlayer"
-        Me.WinPlayer.Size = New System.Drawing.Size(150, 162)
+        Me.WinPlayer.Size = New System.Drawing.Size(200, 200)
         Me.WinPlayer.TabIndex = 20
         Me.WinPlayer.TabStop = False
         Me.WinPlayer.Visible = False
@@ -407,7 +407,7 @@ Partial Class MainGame
         Me.WinGoalie.Location = New System.Drawing.Point(568, 325)
         Me.WinGoalie.Margin = New System.Windows.Forms.Padding(2)
         Me.WinGoalie.Name = "WinGoalie"
-        Me.WinGoalie.Size = New System.Drawing.Size(150, 153)
+        Me.WinGoalie.Size = New System.Drawing.Size(200, 188)
         Me.WinGoalie.TabIndex = 21
         Me.WinGoalie.TabStop = False
         Me.WinGoalie.Visible = False
@@ -457,7 +457,6 @@ Partial Class MainGame
         Me.MinimizeBox = False
         Me.Name = "MainGame"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "2D Hockey"
         CType(Me.Pausebutton, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.scoreboard, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.rUserPlayer, System.ComponentModel.ISupportInitialize).EndInit()

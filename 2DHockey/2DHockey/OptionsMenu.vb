@@ -30,6 +30,7 @@
     Private Sub ChangeFonts()
         'Changes the fonts to the custom fonts in the resources
 
+        backbutton.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
         optionlbl.Font = Aircruiser.GetInstance(48, FontStyle.Regular)
         Musicname.Font = Aircruiser.GetInstance(27.25, FontStyle.Regular)
         Pointsetter.Font = Aircruiser.GetInstance(27.25, FontStyle.Regular)

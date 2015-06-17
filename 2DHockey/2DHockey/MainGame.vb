@@ -376,6 +376,7 @@
             WinPlayer.Image = WinPlayerImages.Images(TeamSelection.lUser)                     'Shows the player and goalie of the winning team
             WinPlayer.Visible = True
             WinGoalie.Image = WinGoalieImages.Images(TeamSelection.lUser)
+            WinGoalie.Visible = True
 
             If GlobalVariables.sounds = True Then
                 My.Computer.Audio.Play(My.Resources.IHaveWonned, _
@@ -390,6 +391,7 @@
             WinPlayer.Image = WinPlayerImages.Images(TeamSelection.rUser)                     'Shows the player and goalie of the winning team
             WinPlayer.Visible = True
             WinGoalie.Image = WinGoalieImages.Images(TeamSelection.rUser)
+            WinGoalie.Visible = True
 
             If GlobalVariables.sounds = True Then
                 My.Computer.Audio.Play(My.Resources.IHaveWonned, _
@@ -405,7 +407,6 @@
         countdownlbl.Visible = True
         countdown = 4
         countdownlbl.Text = 3
-        WinPlayer.Visible = False
     End Sub
 
     Sub updateScoreBoard() 'updates the scoreboard graphic to reflect the latest scores
