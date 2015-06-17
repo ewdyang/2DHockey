@@ -211,7 +211,7 @@ Partial Class TeamSelection
         '
         Me.wasdpic.BackColor = System.Drawing.Color.Transparent
         Me.wasdpic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.wasdpic.Image = Global._2DHockey.My.Resources.Resources.wasd_again
+        Me.wasdpic.Image = Global._2DHockey.My.Resources.Resources.wasdagain
         Me.wasdpic.Location = New System.Drawing.Point(681, 173)
         Me.wasdpic.Name = "wasdpic"
         Me.wasdpic.Size = New System.Drawing.Size(167, 101)

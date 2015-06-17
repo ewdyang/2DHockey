@@ -269,7 +269,7 @@ Partial Class MainGame
         '
         Me.pauseMenuPanel.Controls.Add(Me.resumebtn)
         Me.pauseMenuPanel.Controls.Add(Me.Quitbtn)
-        Me.pauseMenuPanel.Location = New System.Drawing.Point(293, 113)
+        Me.pauseMenuPanel.Location = New System.Drawing.Point(292, 114)
         Me.pauseMenuPanel.Name = "pauseMenuPanel"
         Me.pauseMenuPanel.Size = New System.Drawing.Size(200, 150)
         Me.pauseMenuPanel.TabIndex = 8
@@ -425,7 +425,7 @@ Partial Class MainGame
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.Background_2
+        Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.Background2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(784, 509)
         Me.ControlBox = False
