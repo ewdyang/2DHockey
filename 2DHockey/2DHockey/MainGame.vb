@@ -364,16 +364,25 @@
             Winlbl.Visible = True
             retire.Visible = True
             again.Visible = True
+
+            WinPlayer.Image = WinPlayerImages.Images(TeamSelection.lUser)                     'Shows the player and goalie of the winning team
+            WinPlayer.Visible = True
+            WinGoalie.Image = WinGoalieImages.Images(TeamSelection.lUser)
+
             If GlobalVariables.sounds = True Then
                 My.Computer.Audio.Play(My.Resources.IHaveWonned, _
             AudioPlayMode.BackgroundLoop)
             End If
         ElseIf team = "rUser" Then
-
             Winlbl.Text = "Team 2 wins!"
             Winlbl.Visible = True
             retire.Visible = True
             again.Visible = True
+
+            WinPlayer.Image = WinPlayerImages.Images(TeamSelection.rUser)                     'Shows the player and goalie of the winning team
+            WinPlayer.Visible = True
+            WinGoalie.Image = WinGoalieImages.Images(TeamSelection.rUser)
+
             If GlobalVariables.sounds = True Then
                 My.Computer.Audio.Play(My.Resources.IHaveWonned, _
            AudioPlayMode.BackgroundLoop)
@@ -387,7 +396,8 @@
             tick.Stop()
             countdownlbl.Visible = True
             countdown = 4
-            countdownlbl.Text = 3
+        countdownlbl.Text = 3
+        WinPlayer.Visible = False
     End Sub
 
     Sub updateScoreBoard() 'updates the scoreboard graphic to reflect the latest scores
