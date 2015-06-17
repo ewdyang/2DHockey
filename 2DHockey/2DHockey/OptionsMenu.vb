@@ -15,9 +15,11 @@
 
     Private Sub Musicoff_CheckedChanged(sender As Object, e As EventArgs) Handles Musicoff.CheckedChanged
         My.Computer.Audio.Stop()
+        GlobalVariables.sounds = False
         If Musicoff.Checked = False Then
             My.Computer.Audio.Play(My.Resources.Main_Screen_Music_wav_file, _
    AudioPlayMode.BackgroundLoop)
+            GlobalVariables.sounds = True
         End If
     End Sub
 
@@ -25,4 +27,11 @@
         Me.Hide()
         MainMenu.Show()
     End Sub
+
+
 End Class
+
+Public Class GlobalVariables
+    Public Shared sounds As Boolean = True
+End Class
+
