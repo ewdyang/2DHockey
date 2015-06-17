@@ -42,12 +42,11 @@ Partial Class OptionsMenu
         '
         Me.optionlbl.AutoSize = True
         Me.optionlbl.BackColor = System.Drawing.Color.Transparent
-        Me.optionlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.optionlbl.Font = New System.Drawing.Font("Aircruiser", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.optionlbl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.optionlbl.Location = New System.Drawing.Point(153, 48)
-        Me.optionlbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.optionlbl.Location = New System.Drawing.Point(115, 39)
         Me.optionlbl.Name = "optionlbl"
-        Me.optionlbl.Size = New System.Drawing.Size(398, 91)
+        Me.optionlbl.Size = New System.Drawing.Size(354, 64)
         Me.optionlbl.TabIndex = 0
         Me.optionlbl.Text = "OPTIONS"
         '
@@ -55,12 +54,11 @@ Partial Class OptionsMenu
         '
         Me.Musicname.AutoSize = True
         Me.Musicname.BackColor = System.Drawing.Color.Transparent
-        Me.Musicname.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Musicname.Font = New System.Drawing.Font("Aircruiser", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Musicname.ForeColor = System.Drawing.Color.White
-        Me.Musicname.Location = New System.Drawing.Point(75, 156)
-        Me.Musicname.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Musicname.Location = New System.Drawing.Point(56, 127)
         Me.Musicname.Name = "Musicname"
-        Me.Musicname.Size = New System.Drawing.Size(182, 54)
+        Me.Musicname.Size = New System.Drawing.Size(189, 38)
         Me.Musicname.TabIndex = 4
         Me.Musicname.Text = "Sounds"
         '
@@ -70,10 +68,9 @@ Partial Class OptionsMenu
         Me.backbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.backbutton.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.backbutton.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.backbutton.Location = New System.Drawing.Point(205, 555)
-        Me.backbutton.Margin = New System.Windows.Forms.Padding(4)
+        Me.backbutton.Location = New System.Drawing.Point(154, 451)
         Me.backbutton.Name = "backbutton"
-        Me.backbutton.Size = New System.Drawing.Size(391, 48)
+        Me.backbutton.Size = New System.Drawing.Size(293, 39)
         Me.backbutton.TabIndex = 5
         Me.backbutton.Text = "Back"
         Me.backbutton.UseVisualStyleBackColor = False
@@ -82,12 +79,11 @@ Partial Class OptionsMenu
         '
         Me.Musicon.AutoSize = True
         Me.Musicon.BackColor = System.Drawing.Color.Transparent
-        Me.Musicon.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Musicon.Font = New System.Drawing.Font("Aircruiser", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Musicon.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Musicon.Location = New System.Drawing.Point(8, 34)
-        Me.Musicon.Margin = New System.Windows.Forms.Padding(4)
+        Me.Musicon.Location = New System.Drawing.Point(6, 28)
         Me.Musicon.Name = "Musicon"
-        Me.Musicon.Size = New System.Drawing.Size(80, 40)
+        Me.Musicon.Size = New System.Drawing.Size(68, 29)
         Me.Musicon.TabIndex = 6
         Me.Musicon.TabStop = True
         Me.Musicon.Text = "ON"
@@ -97,12 +93,11 @@ Partial Class OptionsMenu
         '
         Me.Musicoff.AutoSize = True
         Me.Musicoff.BackColor = System.Drawing.Color.Transparent
-        Me.Musicoff.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Musicoff.Font = New System.Drawing.Font("Aircruiser", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Musicoff.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Musicoff.Location = New System.Drawing.Point(148, 34)
-        Me.Musicoff.Margin = New System.Windows.Forms.Padding(4)
+        Me.Musicoff.Location = New System.Drawing.Point(111, 28)
         Me.Musicoff.Name = "Musicoff"
-        Me.Musicoff.Size = New System.Drawing.Size(94, 40)
+        Me.Musicoff.Size = New System.Drawing.Size(83, 29)
         Me.Musicoff.TabIndex = 7
         Me.Musicoff.TabStop = True
         Me.Musicoff.Text = "OFF"
@@ -112,12 +107,11 @@ Partial Class OptionsMenu
         '
         Me.Pointsetter.AutoSize = True
         Me.Pointsetter.BackColor = System.Drawing.Color.Transparent
-        Me.Pointsetter.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Pointsetter.Font = New System.Drawing.Font("Aircruiser", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Pointsetter.ForeColor = System.Drawing.Color.White
-        Me.Pointsetter.Location = New System.Drawing.Point(75, 325)
-        Me.Pointsetter.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Pointsetter.Location = New System.Drawing.Point(56, 264)
         Me.Pointsetter.Name = "Pointsetter"
-        Me.Pointsetter.Size = New System.Drawing.Size(296, 54)
+        Me.Pointsetter.Size = New System.Drawing.Size(330, 38)
         Me.Pointsetter.TabIndex = 8
         Me.Pointsetter.Text = "Points to Win"
         '
@@ -125,12 +119,11 @@ Partial Class OptionsMenu
         '
         Me.points5.AutoSize = True
         Me.points5.BackColor = System.Drawing.Color.Transparent
-        Me.points5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.points5.Font = New System.Drawing.Font("Aircruiser", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.points5.ForeColor = System.Drawing.Color.DarkBlue
-        Me.points5.Location = New System.Drawing.Point(33, 53)
-        Me.points5.Margin = New System.Windows.Forms.Padding(4)
+        Me.points5.Location = New System.Drawing.Point(25, 43)
         Me.points5.Name = "points5"
-        Me.points5.Size = New System.Drawing.Size(53, 40)
+        Me.points5.Size = New System.Drawing.Size(47, 29)
         Me.points5.TabIndex = 9
         Me.points5.TabStop = True
         Me.points5.Text = "5"
@@ -140,12 +133,11 @@ Partial Class OptionsMenu
         '
         Me.points7.AutoSize = True
         Me.points7.BackColor = System.Drawing.Color.Transparent
-        Me.points7.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.points7.Font = New System.Drawing.Font("Aircruiser", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.points7.ForeColor = System.Drawing.Color.DarkBlue
-        Me.points7.Location = New System.Drawing.Point(145, 53)
-        Me.points7.Margin = New System.Windows.Forms.Padding(4)
+        Me.points7.Location = New System.Drawing.Point(109, 43)
         Me.points7.Name = "points7"
-        Me.points7.Size = New System.Drawing.Size(53, 40)
+        Me.points7.Size = New System.Drawing.Size(47, 29)
         Me.points7.TabIndex = 10
         Me.points7.TabStop = True
         Me.points7.Text = "7"
@@ -155,12 +147,11 @@ Partial Class OptionsMenu
         '
         Me.points9.AutoSize = True
         Me.points9.BackColor = System.Drawing.Color.Transparent
-        Me.points9.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.points9.Font = New System.Drawing.Font("Aircruiser", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.points9.ForeColor = System.Drawing.Color.DarkBlue
-        Me.points9.Location = New System.Drawing.Point(257, 53)
-        Me.points9.Margin = New System.Windows.Forms.Padding(4)
+        Me.points9.Location = New System.Drawing.Point(193, 43)
         Me.points9.Name = "points9"
-        Me.points9.Size = New System.Drawing.Size(53, 40)
+        Me.points9.Size = New System.Drawing.Size(47, 29)
         Me.points9.TabIndex = 11
         Me.points9.TabStop = True
         Me.points9.Text = "9"
@@ -172,11 +163,10 @@ Partial Class OptionsMenu
         Me.points.Controls.Add(Me.points9)
         Me.points.Controls.Add(Me.points5)
         Me.points.Controls.Add(Me.points7)
-        Me.points.Location = New System.Drawing.Point(84, 388)
-        Me.points.Margin = New System.Windows.Forms.Padding(4)
+        Me.points.Font = New System.Drawing.Font("Aircruiser", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.points.Location = New System.Drawing.Point(63, 315)
         Me.points.Name = "points"
-        Me.points.Padding = New System.Windows.Forms.Padding(4)
-        Me.points.Size = New System.Drawing.Size(341, 133)
+        Me.points.Size = New System.Drawing.Size(256, 108)
         Me.points.TabIndex = 12
         Me.points.TabStop = False
         '
@@ -185,21 +175,20 @@ Partial Class OptionsMenu
         Me.musiconoff.BackColor = System.Drawing.Color.Transparent
         Me.musiconoff.Controls.Add(Me.Musicoff)
         Me.musiconoff.Controls.Add(Me.Musicon)
-        Me.musiconoff.Location = New System.Drawing.Point(84, 219)
-        Me.musiconoff.Margin = New System.Windows.Forms.Padding(4)
+        Me.musiconoff.Font = New System.Drawing.Font("Aircruiser", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.musiconoff.Location = New System.Drawing.Point(63, 178)
         Me.musiconoff.Name = "musiconoff"
-        Me.musiconoff.Padding = New System.Windows.Forms.Padding(4)
-        Me.musiconoff.Size = New System.Drawing.Size(267, 90)
+        Me.musiconoff.Size = New System.Drawing.Size(200, 73)
         Me.musiconoff.TabIndex = 13
         Me.musiconoff.TabStop = False
         '
         'OptionsMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.mainMenuBackground
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1180, 686)
+        Me.ClientSize = New System.Drawing.Size(885, 557)
         Me.Controls.Add(Me.musiconoff)
         Me.Controls.Add(Me.points)
         Me.Controls.Add(Me.Pointsetter)
@@ -209,7 +198,6 @@ Partial Class OptionsMenu
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "OptionsMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "OptionsMenu"

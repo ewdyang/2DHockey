@@ -1,9 +1,10 @@
 ﻿Public Class MainGame
     Dim puckXV, puckYV As Integer 'Puck's X and Y Velocity
-    Dim playerXV, playerYV As Integer 'Player's X and Y Velocity
-    Dim lUserGoalieYV As Integer = 2 'userGoalie's Y velocitiy
+    Dim lUserPlayerXV, lUserPlayerYV As Integer 'lUser Player's X and Y Velocity
+    Dim rUserPlayerXV, rUserPlayerYV As Integer 'rUser Player's X and Y Velocity
+    Dim lUserGoalieYV As Integer = 2 'lUserGoalie's Y velocitiy
     Dim rUserGoalieYV As Integer = 2 'rUserGoalie's Y velocitiy
-    Dim lUserPlayerAccelerating, rUserPlayerAccelerating As Boolean 'Whether the player is in the process of accelerating
+    Dim lUserPlayerAccelerating, rUserPlayerAccelerating As Boolean 'Whether a player is in the process of accelerating
     Dim heldByPlayer As Boolean 'Whether the puck is held by the player
     Dim heldByWhichTeam As String 'which team has possession of the puck
     Dim lUserScore, rUserScore As Integer 'the scores of the respective teams
@@ -25,12 +26,12 @@
     Dim winshowtime As Integer = 2
     Dim buzzertimer As Integer
     Dim starttimer As Integer
-    Dim ILOVEEDWARD As Boolean = False
 
     Private Sub Tick_Tick(sender As Object, e As EventArgs) Handles tick.Tick 'Calculates movement of all objects every tick (10 milliseconds)
         'followMouse(player) 'old controls of having player follow the mouse
         checkForGoal() 'checks if a goal has been made
-        moveObject(lUserPlayer, playerXV, playerYV, lUserPlayerAccelerating) 'calculates movement of player
+        moveObject(lUserPlayer, lUserPlayerXV, lUserPlayerYV, lUserPlayerAccelerating) 'calculates movement of lUser player
+        moveObject(rUserPlayer, rUserPlayerXV, rUserPlayerYV, rUserPlayerAccelerating) 'calculates movement of rUser player
         moveGoalie(lUserGoalie, lUserGoalieYV) 'moves userGoalie
         moveGoalie(rUserGoalie, rUserGoalieYV) 'moves rUserGoalie
         If objectCollisionDetect(puck, lUserGoalie) Then 'deflects puck if touched by goalie
@@ -51,7 +52,7 @@
 
         If heldByPlayer = True Then 'makes puck follow the appropriate player if held or normally if not held
             If heldByWhichTeam = "lUser" Then
-                followPlayer(puck, lUserPlayer, lUserPlayerDirection) 'makes the puck follow the user player
+                followPlayer(puck, lUserPlayer, lUserPlayerDirection) 'makes the puck follow the lUser player
             ElseIf heldByWhichTeam = "rUser" Then
                 followPlayer(puck, rUserPlayer, rUserPlayerDirection) 'makes the puck follow the rUser player
             End If
@@ -60,39 +61,79 @@
         End If
     End Sub
 
-    Private Sub arrowControls(sender As Object, e As KeyEventArgs) Handles Me.KeyDown 'Allows for control of player using arrow keys
+    Private Sub arrowControls(sender As Object, e As KeyEventArgs) Handles Me.KeyDown 'Allows for control of rUser player using arrow keys
         FrameTimer.Start()
         Select Case e.KeyCode
             Case Keys.Left 'left arrow key
-                If playerXV > -maxPlayerSpeed Then 'caps player max speed
-                    playerXV = playerXV - playerAccelerationSpeed 'sets speed
+                If rUserPlayerXV > -maxPlayerSpeed Then 'caps player max speed
+                    rUserPlayerXV = rUserPlayerXV - playerAccelerationSpeed 'sets speed
+                End If
+                rUserPlayerAccelerating = True 'player is accelerating
+                e.Handled = True 'control has been handled
+                animatePlayer(rUserPlayer, "rUser", "left", rUserPlayerDirection)
+            Case Keys.Right 'right arrow key
+                If rUserPlayerXV < maxPlayerSpeed Then
+                    rUserPlayerXV = rUserPlayerXV + playerAccelerationSpeed
+                End If
+                rUserPlayerAccelerating = True
+                e.Handled = True
+                animatePlayer(rUserPlayer, "rUser", "right", rUserPlayerDirection)
+            Case Keys.Up 'up arrow key
+                If rUserPlayerYV > -maxPlayerSpeed Then
+                    rUserPlayerYV = rUserPlayerYV - playerAccelerationSpeed
+                End If
+                rUserPlayerAccelerating = True
+                e.Handled = True
+                animatePlayer(rUserPlayer, "rUser", "up", rUserPlayerDirection)
+            Case Keys.Down 'down arrow key
+                If rUserPlayerYV < maxPlayerSpeed Then
+                    rUserPlayerYV = rUserPlayerYV + playerAccelerationSpeed
+                End If
+                rUserPlayerAccelerating = True
+                e.Handled = True
+                animatePlayer(rUserPlayer, "rUser", "down", rUserPlayerDirection)
+            Case Keys.Space
+                If heldByWhichTeam = "rUser" Then 'checks if the correct team is holding the puck
+                    shoot(rUserPlayerDirection)
+                End If
+        End Select
+    End Sub
+
+    Private Sub WASDControls(sender As Object, e As KeyEventArgs) Handles Me.KeyDown 'Allows for control of lUser player using WASD
+        FrameTimer.Start()
+        Select Case e.KeyCode
+            Case Keys.A 'left arrow key
+                If lUserPlayerXV > -maxPlayerSpeed Then 'caps player max speed
+                    lUserPlayerXV = lUserPlayerXV - playerAccelerationSpeed 'sets speed
                 End If
                 lUserPlayerAccelerating = True 'player is accelerating
                 e.Handled = True 'control has been handled
-                animatePlayer(lUserPlayer, "left")
-            Case Keys.Right 'right arrow key
-                If playerXV < maxPlayerSpeed Then
-                    playerXV = playerXV + playerAccelerationSpeed
+                animatePlayer(lUserPlayer, "lUser", "left", lUserPlayerDirection)
+            Case Keys.D 'right arrow key
+                If lUserPlayerXV < maxPlayerSpeed Then
+                    lUserPlayerXV = lUserPlayerXV + playerAccelerationSpeed
                 End If
                 lUserPlayerAccelerating = True
                 e.Handled = True
-                animatePlayer(lUserPlayer, "right")
-            Case Keys.Up 'up arrow key
-                If playerYV > -maxPlayerSpeed Then
-                    playerYV = playerYV - playerAccelerationSpeed
+                animatePlayer(lUserPlayer, "lUser", "right", lUserPlayerDirection)
+            Case Keys.W 'up arrow key
+                If lUserPlayerYV > -maxPlayerSpeed Then
+                    lUserPlayerYV = lUserPlayerYV - playerAccelerationSpeed
                 End If
                 lUserPlayerAccelerating = True
                 e.Handled = True
-                animatePlayer(lUserPlayer, "up")
-            Case Keys.Down 'down arrow key
-                If playerYV < maxPlayerSpeed Then
-                    playerYV = playerYV + playerAccelerationSpeed
+                animatePlayer(lUserPlayer, "lUser", "up", lUserPlayerDirection)
+            Case Keys.S 'down arrow key
+                If lUserPlayerYV < maxPlayerSpeed Then
+                    lUserPlayerYV = lUserPlayerYV + playerAccelerationSpeed
                 End If
                 lUserPlayerAccelerating = True
                 e.Handled = True
-                animatePlayer(lUserPlayer, "down")
-            Case Keys.Space
-                shoot(lUserPlayerDirection)
+                animatePlayer(lUserPlayer, "luser", "down", lUserPlayerDirection)
+            Case Keys.Q
+                If heldByWhichTeam = "lUser" Then 'checks if the correct team is holding the puck
+                    shoot(lUserPlayerDirection)
+                End If
         End Select
     End Sub
 
@@ -101,8 +142,9 @@
         Framenum = 0
         Select Case e.KeyCode
             Case Keys.Left, Keys.Right, Keys.Up, Keys.Down
+                rUserPlayerAccelerating = False
+            Case Keys.A, Keys.D, Keys.W, Keys.S
                 lUserPlayerAccelerating = False
-
         End Select
     End Sub
 
@@ -146,7 +188,6 @@
         End If
         count.Start()
         Start.Start()
-
         puck.Visible = False
         Golbl.Visible = False
         Winlbl.Visible = False
@@ -219,9 +260,9 @@
             puckYV = 10 - Rnd() * 20
             Select Case playerDirection
                 Case 0
-                    puckXV = -30
+                    puckXV = -20
                 Case 1
-                    puckXV = 30
+                    puckXV = 20
             End Select
         End If
     End Sub
@@ -247,7 +288,7 @@
         goalie.location = newLocation
     End Sub
 
-    Sub checkForGoal()
+    Sub checkForGoal() 'checks if the puck has collided with a goalnet and if so, plays sound then runs goalScored for the team that scored
         If objectCollisionDetect(puck, rUserNet) And puck.Location.X > lUserNet.Location.X + lUserNet.Width - 10 Then 'checks if puck is touching net and is past net
             'code that checks if a goal is scored
             If GlobalVariables.sounds = True Then
@@ -266,7 +307,7 @@
             Buzzertime.Start()
             goalScored("rUser")
 
-            End If
+        End If
     End Sub
 
     Private Sub Buzzertime_Tick(sender As Object, e As EventArgs) Handles Buzzertime.Tick
@@ -282,7 +323,7 @@
         End If
     End Sub
 
-    Sub goalScored(ByVal scoringTeam As String) 'adds 1 to the score, then checks if any teams have at least 9 points, then triggers win if it's met
+    Sub goalScored(ByVal scoringTeam As String) 'adds 1 to the score, then checks if any teams have enough points to win, then triggers win if it's met
         If scoringTeam = "lUser" Then
             lUserScore += 1
             updateScoreBoard()
@@ -293,7 +334,7 @@
             updateScoreBoard()
             resetGoal()
         End If
-        If OptionsMenu.points5.Checked = True Then
+        If OptionsMenu.points5.Checked = True Then 'checks the radio buttons in the options menu
             Buzzertime.Stop()
             buzzertimer = 0
             If lUserScore = 5 Then
@@ -322,35 +363,45 @@
 
     Sub gameWin(ByRef team As String) 'announces winner of the game and allows player to replay or return to main menu
         If team = "lUser" Then
-            
+
             Winlbl.Text = "Team 1 wins!"
             Winlbl.Visible = True
             retire.Visible = True
             again.Visible = True
+
+            WinPlayer.Image = WinPlayerImages.Images(TeamSelection.lUser)                     'Shows the player and goalie of the winning team
+            WinPlayer.Visible = True
+            WinGoalie.Image = WinGoalieImages.Images(TeamSelection.lUser)
+
             If GlobalVariables.sounds = True Then
                 My.Computer.Audio.Play(My.Resources.IHaveWonned, _
             AudioPlayMode.BackgroundLoop)
             End If
         ElseIf team = "rUser" Then
-
             Winlbl.Text = "Team 2 wins!"
             Winlbl.Visible = True
             retire.Visible = True
             again.Visible = True
+
+            WinPlayer.Image = WinPlayerImages.Images(TeamSelection.rUser)                     'Shows the player and goalie of the winning team
+            WinPlayer.Visible = True
+            WinGoalie.Image = WinGoalieImages.Images(TeamSelection.rUser)
+
             If GlobalVariables.sounds = True Then
                 My.Computer.Audio.Play(My.Resources.IHaveWonned, _
            AudioPlayMode.BackgroundLoop)
             End If
 
         End If
-            lUserScore = 0
-            rUserScore = 0
-            updateScoreBoard()
-            resetGoal()
-            tick.Stop()
-            countdownlbl.Visible = True
-            countdown = 4
-            countdownlbl.Text = 3
+        lUserScore = 0
+        rUserScore = 0
+        updateScoreBoard()
+        resetGoal()
+        tick.Stop()
+        countdownlbl.Visible = True
+        countdown = 4
+        countdownlbl.Text = 3
+        WinPlayer.Visible = False
     End Sub
 
     Sub updateScoreBoard() 'updates the scoreboard graphic to reflect the latest scores
@@ -362,8 +413,10 @@
         tick.Stop()
         puckXV = 0
         puckYV = 0
-        playerXV = 0
-        playerYV = 0
+        lUserPlayerXV = 0
+        lUserPlayerYV = 0
+        rUserPlayerXV = 0
+        rUserPlayerYV = 0
         heldByPlayer = False
         puck.Location = puckResetPosition
         lUserPlayer.Location = lUserPlayerResetPosition
@@ -382,33 +435,47 @@
         countdownlbl.Text = 3
     End Sub
 
-    Sub animatePlayer(ByVal player As PictureBox, ByVal directionHeading As String)
-
-        Select Case TeamSelection.lUser
-            Case 0
-                lUserPlayer.Image = blueAnimation.Images(Framenum)
-            Case 1
-                lUserPlayer.Image = greenAnimation.Images(Framenum)
-            Case 2
-                lUserPlayer.Image = orangeAnimation.Images(Framenum)
-            Case 3
-                lUserPlayer.Image = redAnimation.Images(Framenum)
-            Case 4
-                lUserPlayer.Image = whiteAnimation.Images(Framenum)
-        End Select
+    Sub animatePlayer(ByVal player As PictureBox, ByVal team As String, ByVal directionHeading As String, ByRef playerDirection As Integer) 'animates the player skating, facing the correct direction
+        If team = "lUser" Then
+            Select Case TeamSelection.lUser
+                Case 0
+                    player.Image = blueAnimation.Images(Framenum)
+                Case 1
+                    player.Image = greenAnimation.Images(Framenum)
+                Case 2
+                    player.Image = orangeAnimation.Images(Framenum)
+                Case 3
+                    player.Image = redAnimation.Images(Framenum)
+                Case 4
+                    player.Image = whiteAnimation.Images(Framenum)
+            End Select
+        ElseIf team = "rUser" Then
+            Select Case TeamSelection.rUser
+                Case 0
+                    player.Image = blueAnimation.Images(Framenum)
+                Case 1
+                    player.Image = greenAnimation.Images(Framenum)
+                Case 2
+                    player.Image = orangeAnimation.Images(Framenum)
+                Case 3
+                    player.Image = redAnimation.Images(Framenum)
+                Case 4
+                    player.Image = whiteAnimation.Images(Framenum)
+            End Select
+        End If
 
         Select Case directionHeading
             Case "left"
-                lUserPlayerDirection = 0
+                playerDirection = 0
             Case "right"
-                lUserPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
-                lUserPlayerDirection = 1
+                player.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
+                playerDirection = 1
             Case "up"
-                If lUserPlayerDirection = 1 Then
-                    lUserPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
+                If playerDirection = 1 Then
+                    player.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
                 End If
             Case "down"
-                If lUserPlayerDirection = 1 Then
+                If playerDirection = 1 Then
                     lUserPlayer.Image.RotateFlip(RotateFlipType.RotateNoneFlipX)
                 End If
         End Select
@@ -426,31 +493,35 @@
         tick.Stop()
     End Sub
 
-    Sub pauseMenu()
+    Sub pauseMenu() 'pauses game then shows pause menu
         tick.Stop()
         pauseMenuPanel.Show()
     End Sub
 
-    Private Sub Pausebutton_Click(sender As Object, e As EventArgs) Handles Pausebutton.Click
+    Private Sub Pausebutton_Click(sender As Object, e As EventArgs) Handles Pausebutton.Click 'executes the pause code
         pauseMenu()
     End Sub
 
-    Private Sub resumebtn_Click(sender As Object, e As EventArgs) Handles resumebtn.Click
+    Private Sub resumebtn_Click(sender As Object, e As EventArgs) Handles resumebtn.Click 'resumes the game
         pauseMenuPanel.Hide()
         tick.Start()
     End Sub
 
+
+
     Private Sub Quitbtn_Click(sender As Object, e As EventArgs) Handles Quitbtn.Click 'reset game and clses game
-        resetGame()
-        pauseMenuPanel.Hide()
-        TeamSelection.resetTeamSelectionForm()
-        Me.Close()
+
+        resetGame()                          'resets the game
+        pauseMenuPanel.Hide()                           'hides the pause menu
+        TeamSelection.resetTeamSelectionForm()     'resets the team selection
+        Me.Close()         'hides the game and shows main game
+
         MainMenu.Visible = True
     End Sub
 
-    Private Sub count_Tick(sender As Object, e As EventArgs) Handles count.Tick
-        countdown = countdown - 1
-        If countdown = 4 Then
+    Private Sub count_Tick(sender As Object, e As EventArgs) Handles count.Tick 'runs the countdown before the game starts
+        countdown = countdown - 1         'makes countdown variable go down
+        If countdown = 4 Then                  'displays countdown and go for the appropriate time
             countdownlbl.Text = 3
         ElseIf countdown = 3 Then
             countdownlbl.Text = 2
@@ -459,7 +530,7 @@
         ElseIf countdown = 1 Then
             countdownlbl.Visible = False
             Golbl.Visible = True
-        ElseIf countdown = 0 Then
+        ElseIf countdown = 0 Then         'hides the countdown timer, shows puck, and resets countdown variable and stop the count timer.
             Golbl.Visible = False
             countdownpanel.Visible = False
             puck.Visible = True
@@ -469,10 +540,6 @@
         End If
 
     End Sub
-
-
-
-
 
     Private Sub Start_Tick(sender As Object, e As EventArgs) Handles Start.Tick
         starttimer = starttimer + 1
@@ -509,4 +576,5 @@
         Start.Start()
         lUserPlayer.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
     End Sub
+
 End Class

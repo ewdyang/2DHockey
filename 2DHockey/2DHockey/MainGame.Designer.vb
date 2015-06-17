@@ -135,10 +135,9 @@ Partial Class MainGame
         Me.Pausebutton.BackColor = System.Drawing.Color.DarkBlue
         Me.Pausebutton.BackgroundImage = Global._2DHockey.My.Resources.Resources.mainGamePauseButtonImage
         Me.Pausebutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Pausebutton.Location = New System.Drawing.Point(979, 15)
-        Me.Pausebutton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Pausebutton.Location = New System.Drawing.Point(734, 12)
         Me.Pausebutton.Name = "Pausebutton"
-        Me.Pausebutton.Size = New System.Drawing.Size(51, 49)
+        Me.Pausebutton.Size = New System.Drawing.Size(38, 40)
         Me.Pausebutton.TabIndex = 5
         Me.Pausebutton.TabStop = False
         '
@@ -147,10 +146,9 @@ Partial Class MainGame
         Me.scoreboard.BackColor = System.Drawing.Color.Transparent
         Me.scoreboard.BackgroundImage = Global._2DHockey.My.Resources.Resources.Scoreboard
         Me.scoreboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.scoreboard.Location = New System.Drawing.Point(315, 454)
-        Me.scoreboard.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.scoreboard.Location = New System.Drawing.Point(236, 369)
         Me.scoreboard.Name = "scoreboard"
-        Me.scoreboard.Size = New System.Drawing.Size(416, 171)
+        Me.scoreboard.Size = New System.Drawing.Size(312, 139)
         Me.scoreboard.TabIndex = 14
         Me.scoreboard.TabStop = False
         '
@@ -158,12 +156,11 @@ Partial Class MainGame
         '
         Me.rUserScoreboard.AutoSize = True
         Me.rUserScoreboard.BackColor = System.Drawing.Color.Black
-        Me.rUserScoreboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rUserScoreboard.Font = New System.Drawing.Font("Score Board", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rUserScoreboard.ForeColor = System.Drawing.Color.Gold
-        Me.rUserScoreboard.Location = New System.Drawing.Point(595, 535)
-        Me.rUserScoreboard.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.rUserScoreboard.Location = New System.Drawing.Point(446, 435)
         Me.rUserScoreboard.Name = "rUserScoreboard"
-        Me.rUserScoreboard.Size = New System.Drawing.Size(60, 65)
+        Me.rUserScoreboard.Size = New System.Drawing.Size(46, 51)
         Me.rUserScoreboard.TabIndex = 12
         Me.rUserScoreboard.Text = "0"
         '
@@ -171,12 +168,11 @@ Partial Class MainGame
         '
         Me.lUserScoreboard.AutoSize = True
         Me.lUserScoreboard.BackColor = System.Drawing.Color.Black
-        Me.lUserScoreboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lUserScoreboard.Font = New System.Drawing.Font("Score Board", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lUserScoreboard.ForeColor = System.Drawing.Color.Gold
-        Me.lUserScoreboard.Location = New System.Drawing.Point(391, 535)
-        Me.lUserScoreboard.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lUserScoreboard.Location = New System.Drawing.Point(293, 436)
         Me.lUserScoreboard.Name = "lUserScoreboard"
-        Me.lUserScoreboard.Size = New System.Drawing.Size(60, 65)
+        Me.lUserScoreboard.Size = New System.Drawing.Size(46, 51)
         Me.lUserScoreboard.TabIndex = 11
         Me.lUserScoreboard.Text = "0"
         '
@@ -192,10 +188,9 @@ Partial Class MainGame
         '
         Me.rUserPlayer.BackColor = System.Drawing.Color.WhiteSmoke
         Me.rUserPlayer.Image = Global._2DHockey.My.Resources.Resources.GreenPlayer1
-        Me.rUserPlayer.Location = New System.Drawing.Point(637, 203)
-        Me.rUserPlayer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rUserPlayer.Location = New System.Drawing.Point(478, 165)
         Me.rUserPlayer.Name = "rUserPlayer"
-        Me.rUserPlayer.Size = New System.Drawing.Size(67, 62)
+        Me.rUserPlayer.Size = New System.Drawing.Size(50, 50)
         Me.rUserPlayer.TabIndex = 4
         Me.rUserPlayer.TabStop = False
         '
@@ -203,10 +198,9 @@ Partial Class MainGame
         '
         Me.lUserPlayer.BackColor = System.Drawing.Color.WhiteSmoke
         Me.lUserPlayer.Image = Global._2DHockey.My.Resources.Resources.BluePlayer1
-        Me.lUserPlayer.Location = New System.Drawing.Point(380, 202)
-        Me.lUserPlayer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lUserPlayer.Location = New System.Drawing.Point(285, 164)
         Me.lUserPlayer.Name = "lUserPlayer"
-        Me.lUserPlayer.Size = New System.Drawing.Size(67, 62)
+        Me.lUserPlayer.Size = New System.Drawing.Size(50, 50)
         Me.lUserPlayer.TabIndex = 0
         Me.lUserPlayer.TabStop = False
         '
@@ -214,10 +208,9 @@ Partial Class MainGame
         '
         Me.lUserGoalie.BackColor = System.Drawing.Color.WhiteSmoke
         Me.lUserGoalie.Image = Global._2DHockey.My.Resources.Resources.Blue_Goalie1
-        Me.lUserGoalie.Location = New System.Drawing.Point(183, 206)
-        Me.lUserGoalie.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lUserGoalie.Location = New System.Drawing.Point(137, 167)
         Me.lUserGoalie.Name = "lUserGoalie"
-        Me.lUserGoalie.Size = New System.Drawing.Size(67, 58)
+        Me.lUserGoalie.Size = New System.Drawing.Size(50, 47)
         Me.lUserGoalie.TabIndex = 9
         Me.lUserGoalie.TabStop = False
         '
@@ -225,20 +218,18 @@ Partial Class MainGame
         '
         Me.rUserGoalie.BackColor = System.Drawing.Color.WhiteSmoke
         Me.rUserGoalie.Image = Global._2DHockey.My.Resources.Resources.Green_Goalie1
-        Me.rUserGoalie.Location = New System.Drawing.Point(791, 206)
-        Me.rUserGoalie.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rUserGoalie.Location = New System.Drawing.Point(593, 167)
         Me.rUserGoalie.Name = "rUserGoalie"
-        Me.rUserGoalie.Size = New System.Drawing.Size(67, 58)
+        Me.rUserGoalie.Size = New System.Drawing.Size(50, 47)
         Me.rUserGoalie.TabIndex = 10
         Me.rUserGoalie.TabStop = False
         '
         'lUserNet
         '
         Me.lUserNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
-        Me.lUserNet.Location = New System.Drawing.Point(135, 183)
-        Me.lUserNet.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lUserNet.Location = New System.Drawing.Point(101, 149)
         Me.lUserNet.Name = "lUserNet"
-        Me.lUserNet.Size = New System.Drawing.Size(40, 98)
+        Me.lUserNet.Size = New System.Drawing.Size(30, 80)
         Me.lUserNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.lUserNet.TabIndex = 2
         Me.lUserNet.TabStop = False
@@ -247,22 +238,19 @@ Partial Class MainGame
         '
         Me.countdownlbl.AutoSize = True
         Me.countdownlbl.BackColor = System.Drawing.Color.Transparent
-        Me.countdownlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.countdownlbl.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.countdownlbl.Location = New System.Drawing.Point(29, 22)
-        Me.countdownlbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.countdownlbl.Location = New System.Drawing.Point(24, 11)
         Me.countdownlbl.Name = "countdownlbl"
-        Me.countdownlbl.Size = New System.Drawing.Size(83, 91)
+        Me.countdownlbl.Size = New System.Drawing.Size(13, 13)
         Me.countdownlbl.TabIndex = 15
         Me.countdownlbl.Text = "3"
         '
         'rUserNet
         '
         Me.rUserNet.Image = Global._2DHockey.My.Resources.Resources.HockeyNet
-        Me.rUserNet.Location = New System.Drawing.Point(865, 183)
-        Me.rUserNet.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rUserNet.Location = New System.Drawing.Point(649, 149)
         Me.rUserNet.Name = "rUserNet"
-        Me.rUserNet.Size = New System.Drawing.Size(40, 98)
+        Me.rUserNet.Size = New System.Drawing.Size(30, 80)
         Me.rUserNet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.rUserNet.TabIndex = 3
         Me.rUserNet.TabStop = False
@@ -271,10 +259,9 @@ Partial Class MainGame
         '
         Me.puck.BackgroundImage = Global._2DHockey.My.Resources.Resources.Puck1
         Me.puck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.puck.Location = New System.Drawing.Point(509, 234)
-        Me.puck.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.puck.Location = New System.Drawing.Point(382, 190)
         Me.puck.Name = "puck"
-        Me.puck.Size = New System.Drawing.Size(24, 12)
+        Me.puck.Size = New System.Drawing.Size(18, 10)
         Me.puck.TabIndex = 1
         Me.puck.TabStop = False
         '
@@ -282,10 +269,9 @@ Partial Class MainGame
         '
         Me.pauseMenuPanel.Controls.Add(Me.resumebtn)
         Me.pauseMenuPanel.Controls.Add(Me.Quitbtn)
-        Me.pauseMenuPanel.Location = New System.Drawing.Point(389, 139)
-        Me.pauseMenuPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pauseMenuPanel.Location = New System.Drawing.Point(292, 114)
         Me.pauseMenuPanel.Name = "pauseMenuPanel"
-        Me.pauseMenuPanel.Size = New System.Drawing.Size(267, 185)
+        Me.pauseMenuPanel.Size = New System.Drawing.Size(200, 150)
         Me.pauseMenuPanel.TabIndex = 8
         Me.pauseMenuPanel.Visible = False
         '
@@ -293,12 +279,11 @@ Partial Class MainGame
         '
         Me.resumebtn.BackColor = System.Drawing.Color.DarkBlue
         Me.resumebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.resumebtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.resumebtn.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.resumebtn.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.resumebtn.Location = New System.Drawing.Point(20, 23)
-        Me.resumebtn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.resumebtn.Location = New System.Drawing.Point(15, 19)
         Me.resumebtn.Name = "resumebtn"
-        Me.resumebtn.Size = New System.Drawing.Size(227, 43)
+        Me.resumebtn.Size = New System.Drawing.Size(170, 35)
         Me.resumebtn.TabIndex = 6
         Me.resumebtn.Text = "Resume"
         Me.resumebtn.UseVisualStyleBackColor = False
@@ -307,12 +292,11 @@ Partial Class MainGame
         '
         Me.Quitbtn.BackColor = System.Drawing.Color.DarkBlue
         Me.Quitbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Quitbtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Quitbtn.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Quitbtn.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Quitbtn.Location = New System.Drawing.Point(20, 113)
-        Me.Quitbtn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Quitbtn.Location = New System.Drawing.Point(15, 92)
         Me.Quitbtn.Name = "Quitbtn"
-        Me.Quitbtn.Size = New System.Drawing.Size(227, 43)
+        Me.Quitbtn.Size = New System.Drawing.Size(170, 35)
         Me.Quitbtn.TabIndex = 7
         Me.Quitbtn.Text = "Quit"
         Me.Quitbtn.UseVisualStyleBackColor = False
@@ -321,24 +305,21 @@ Partial Class MainGame
         '
         Me.Golbl.AutoSize = True
         Me.Golbl.BackColor = System.Drawing.Color.Transparent
-        Me.Golbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Golbl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Golbl.Location = New System.Drawing.Point(9, 22)
-        Me.Golbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Golbl.Location = New System.Drawing.Point(3, 11)
         Me.Golbl.Name = "Golbl"
-        Me.Golbl.Size = New System.Drawing.Size(145, 91)
+        Me.Golbl.Size = New System.Drawing.Size(21, 13)
         Me.Golbl.TabIndex = 16
         Me.Golbl.Text = "Go"
         '
         'Winlbl
         '
         Me.Winlbl.BackColor = System.Drawing.Color.White
-        Me.Winlbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 45.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Winlbl.Font = New System.Drawing.Font("Aircruiser", 45.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Winlbl.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Winlbl.Location = New System.Drawing.Point(0, 161)
-        Me.Winlbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Winlbl.Location = New System.Drawing.Point(0, 131)
         Me.Winlbl.Name = "Winlbl"
-        Me.Winlbl.Size = New System.Drawing.Size(1045, 133)
+        Me.Winlbl.Size = New System.Drawing.Size(784, 108)
         Me.Winlbl.TabIndex = 17
         Me.Winlbl.Text = "LEFT PLAYER WINS!"
         Me.Winlbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -348,9 +329,8 @@ Partial Class MainGame
         Me.hockeyrink.BackgroundImage = Global._2DHockey.My.Resources.Resources.Hockeyrink
         Me.hockeyrink.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.hockeyrink.Location = New System.Drawing.Point(-1, 1)
-        Me.hockeyrink.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.hockeyrink.Name = "hockeyrink"
-        Me.hockeyrink.Size = New System.Drawing.Size(1045, 444)
+        Me.hockeyrink.Size = New System.Drawing.Size(784, 361)
         Me.hockeyrink.TabIndex = 18
         Me.hockeyrink.TabStop = False
         '
@@ -359,10 +339,9 @@ Partial Class MainGame
         Me.countdownpanel.BackColor = System.Drawing.Color.White
         Me.countdownpanel.Controls.Add(Me.countdownlbl)
         Me.countdownpanel.Controls.Add(Me.Golbl)
-        Me.countdownpanel.Location = New System.Drawing.Point(451, 170)
-        Me.countdownpanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.countdownpanel.Location = New System.Drawing.Point(338, 138)
         Me.countdownpanel.Name = "countdownpanel"
-        Me.countdownpanel.Size = New System.Drawing.Size(144, 123)
+        Me.countdownpanel.Size = New System.Drawing.Size(108, 100)
         Me.countdownpanel.TabIndex = 19
         '
         'Buzzertime
@@ -377,12 +356,11 @@ Partial Class MainGame
         '
         Me.again.BackColor = System.Drawing.Color.DarkBlue
         Me.again.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.again.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.again.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.again.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.again.Location = New System.Drawing.Point(539, 332)
-        Me.again.Margin = New System.Windows.Forms.Padding(4)
+        Me.again.Location = New System.Drawing.Point(404, 270)
         Me.again.Name = "again"
-        Me.again.Size = New System.Drawing.Size(227, 43)
+        Me.again.Size = New System.Drawing.Size(183, 35)
         Me.again.TabIndex = 8
         Me.again.Text = "Play Again?"
         Me.again.UseVisualStyleBackColor = False
@@ -392,12 +370,11 @@ Partial Class MainGame
         '
         Me.retire.BackColor = System.Drawing.Color.DarkBlue
         Me.retire.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.retire.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.retire.Font = New System.Drawing.Font("Aircruiser", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.retire.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.retire.Location = New System.Drawing.Point(273, 332)
-        Me.retire.Margin = New System.Windows.Forms.Padding(4)
+        Me.retire.Location = New System.Drawing.Point(205, 270)
         Me.retire.Name = "retire"
-        Me.retire.Size = New System.Drawing.Size(227, 43)
+        Me.retire.Size = New System.Drawing.Size(174, 35)
         Me.retire.TabIndex = 8
         Me.retire.Text = "Retire"
         Me.retire.UseVisualStyleBackColor = False
@@ -405,9 +382,10 @@ Partial Class MainGame
         '
         'WinPlayer
         '
-        Me.WinPlayer.Location = New System.Drawing.Point(87, 287)
+        Me.WinPlayer.Location = New System.Drawing.Point(65, 325)
+        Me.WinPlayer.Margin = New System.Windows.Forms.Padding(2)
         Me.WinPlayer.Name = "WinPlayer"
-        Me.WinPlayer.Size = New System.Drawing.Size(200, 200)
+        Me.WinPlayer.Size = New System.Drawing.Size(150, 162)
         Me.WinPlayer.TabIndex = 20
         Me.WinPlayer.TabStop = False
         Me.WinPlayer.Visible = False
@@ -424,9 +402,10 @@ Partial Class MainGame
         '
         'WinGoalie
         '
-        Me.WinGoalie.Location = New System.Drawing.Point(499, 292)
+        Me.WinGoalie.Location = New System.Drawing.Point(568, 325)
+        Me.WinGoalie.Margin = New System.Windows.Forms.Padding(2)
         Me.WinGoalie.Name = "WinGoalie"
-        Me.WinGoalie.Size = New System.Drawing.Size(200, 188)
+        Me.WinGoalie.Size = New System.Drawing.Size(150, 153)
         Me.WinGoalie.TabIndex = 21
         Me.WinGoalie.TabStop = False
         Me.WinGoalie.Visible = False
@@ -443,12 +422,12 @@ Partial Class MainGame
         '
         'MainGame
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.Background_2
+        Me.BackgroundImage = Global._2DHockey.My.Resources.Resources.Background2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1045, 626)
+        Me.ClientSize = New System.Drawing.Size(784, 509)
         Me.ControlBox = False
         Me.Controls.Add(Me.again)
         Me.Controls.Add(Me.retire)
@@ -472,7 +451,6 @@ Partial Class MainGame
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "MainGame"
