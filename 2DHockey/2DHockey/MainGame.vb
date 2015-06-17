@@ -179,9 +179,14 @@
         rUserGoalie.Image = goalieColours.Images(TeamSelection.rUser)
         lUserPlayer.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
         lUserGoalie.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
+<<<<<<< HEAD
         resumebtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
         Quitbtn.Font = CustomFont.GetInstance(15.75, FontStyle.Regular)
         'code that checks if sound is on
+=======
+        resumebtn.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
+        Quitbtn.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
+>>>>>>> origin/master
         If GlobalVariables.sounds = True Then
             My.Computer.Audio.Play(My.Resources.LETSAGO, _
     AudioPlayMode.Background)
@@ -191,6 +196,8 @@
         puck.Visible = False
         Golbl.Visible = False
         Winlbl.Visible = False
+
+        ChangeFonts()
     End Sub
 
     Sub moveObject(ByVal movingObject As PictureBox, ByRef objectXV As Integer, ByRef objectYV As Integer, Optional ByRef objectAccelerating As Boolean = False) 'Moves an object according to it's X and Y velocity
@@ -289,6 +296,7 @@
     End Sub
 
     Sub checkForGoal() 'checks if the puck has collided with a goalnet and if so, plays sound then runs goalScored for the team that scored
+<<<<<<< HEAD
         If objectCollisionDetect(puck, rUserNet) And puck.Location.X > lUserNet.Location.X + lUserNet.Width - 10 Then 'checks if puck is touching net and is past net
             'code that checks if a goal is scored
             If GlobalVariables.sounds = True Then
@@ -303,10 +311,25 @@
             If GlobalVariables.sounds = True Then
                 My.Computer.Audio.Play(My.Resources.buzzer, _
            AudioPlayMode.Background)
-            End If
-            Buzzertime.Start()
-            goalScored("rUser")
+=======
+        If objectCollisionDetect(puck, lUserNet) Then 'checks if puck is touching net and is past net
+            If puck.Location.X > lUserNet.Location.X + lUserNet.Width - 10 And puck.Location.Y > lUserNet.Location.Y And puck.Location.Y + puck.Height < lUserNet.Location.Y + lUserNet.Height Then
+                goalScored("rUser")
+            Else
+                heldByPlayer = False
+                puckXV = -10
+                puckYV = 5
 
+>>>>>>> origin/master
+            End If
+        ElseIf objectCollisionDetect(puck, rUserNet) Then
+            If puck.Location.X + puck.Width < rUserNet.Location.X + 10 And puck.Location.Y > rUserGoalie.Location.Y And puck.Location.Y + puck.Height < lUserNet.Location.Y + lUserNet.Height Then
+                goalScored("rUser")
+            Else
+                heldByPlayer = False
+                puckXV = 10
+                puckYV = 5
+            End If
         End If
     End Sub
 
@@ -324,11 +347,15 @@
     End Sub
 
     Sub goalScored(ByVal scoringTeam As String) 'adds 1 to the score, then checks if any teams have enough points to win, then triggers win if it's met
+        If GlobalVariables.sounds = True Then
+            My.Computer.Audio.Play(My.Resources.buzzer, _
+        AudioPlayMode.Background)
+        End If
+        Buzzertime.Start()
         If scoringTeam = "lUser" Then
             lUserScore += 1
             updateScoreBoard()
             resetGoal()
-
         ElseIf scoringTeam = "rUser" Then
             rUserScore += 1
             updateScoreBoard()
@@ -577,4 +604,16 @@
         lUserPlayer.Image.RotateFlip(RotateFlipType.Rotate180FlipY)
     End Sub
 
+    Private Sub ChangeFonts()
+        'Changing the fonts to the custom embedded ones
+
+        countdownlbl.Font = ScoreboardFont.GetInstance(72, FontStyle.Regular)
+        lUserScoreboard.Font = ScoreboardFont.GetInstance(34, FontStyle.Regular)
+        rUserScoreboard.Font = ScoreboardFont.GetInstance(34, FontStyle.Regular)
+        resumebtn.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
+        Quitbtn.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
+        retire.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
+        again.Font = Aircruiser.GetInstance(15.75, FontStyle.Regular)
+        Winlbl.Font = Aircruiser.GetInstance(45, FontStyle.Regular)
+    End Sub
 End Class

@@ -86,11 +86,11 @@ Partial Class MainMenu
         '
         Me.gamename.AutoSize = True
         Me.gamename.BackColor = System.Drawing.Color.Transparent
-        Me.gamename.Font = New System.Drawing.Font("Microsoft Sans Serif", 50.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gamename.Font = New System.Drawing.Font("Aircruiser", 50.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gamename.ForeColor = System.Drawing.Color.DarkBlue
         Me.gamename.Location = New System.Drawing.Point(25, 48)
         Me.gamename.Name = "gamename"
-        Me.gamename.Size = New System.Drawing.Size(360, 76)
+        Me.gamename.Size = New System.Drawing.Size(462, 68)
         Me.gamename.TabIndex = 5
         Me.gamename.Text = "2D Hockey"
         '

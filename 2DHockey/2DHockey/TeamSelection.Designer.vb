@@ -27,9 +27,9 @@ Partial Class TeamSelection
         Me.playerSprites = New System.Windows.Forms.ImageList(Me.components)
         Me.lUserPlayerTeam = New System.Windows.Forms.PictureBox()
         Me.rUserPlayerTeam = New System.Windows.Forms.PictureBox()
-        Me.llUsereft = New System.Windows.Forms.Button()
+        Me.lUserleft = New System.Windows.Forms.Button()
         Me.lUserRight = New System.Windows.Forms.Button()
-        Me.rlUsereft = New System.Windows.Forms.Button()
+        Me.rUserleft = New System.Windows.Forms.Button()
         Me.rUserRight = New System.Windows.Forms.Button()
         Me.rUserConfirm = New System.Windows.Forms.Button()
         Me.lUserConfirm = New System.Windows.Forms.Button()
@@ -86,17 +86,17 @@ Partial Class TeamSelection
         Me.rUserPlayerTeam.TabIndex = 1
         Me.rUserPlayerTeam.TabStop = False
         '
-        'llUsereft
+        'lUserleft
         '
-        Me.llUsereft.BackColor = System.Drawing.Color.DarkBlue
-        Me.llUsereft.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.llUsereft.ForeColor = System.Drawing.Color.White
-        Me.llUsereft.Location = New System.Drawing.Point(237, 351)
-        Me.llUsereft.Name = "llUsereft"
-        Me.llUsereft.Size = New System.Drawing.Size(90, 35)
-        Me.llUsereft.TabIndex = 2
-        Me.llUsereft.Text = "Left"
-        Me.llUsereft.UseVisualStyleBackColor = False
+        Me.lUserleft.BackColor = System.Drawing.Color.DarkBlue
+        Me.lUserleft.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lUserleft.ForeColor = System.Drawing.Color.White
+        Me.lUserleft.Location = New System.Drawing.Point(237, 351)
+        Me.lUserleft.Name = "lUserleft"
+        Me.lUserleft.Size = New System.Drawing.Size(90, 35)
+        Me.lUserleft.TabIndex = 2
+        Me.lUserleft.Text = "Left"
+        Me.lUserleft.UseVisualStyleBackColor = False
         '
         'lUserRight
         '
@@ -110,17 +110,17 @@ Partial Class TeamSelection
         Me.lUserRight.Text = "Right"
         Me.lUserRight.UseVisualStyleBackColor = False
         '
-        'rlUsereft
+        'rUserleft
         '
-        Me.rlUsereft.BackColor = System.Drawing.Color.DarkBlue
-        Me.rlUsereft.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rlUsereft.ForeColor = System.Drawing.Color.Transparent
-        Me.rlUsereft.Location = New System.Drawing.Point(463, 351)
-        Me.rlUsereft.Name = "rlUsereft"
-        Me.rlUsereft.Size = New System.Drawing.Size(90, 35)
-        Me.rlUsereft.TabIndex = 4
-        Me.rlUsereft.Text = "Left"
-        Me.rlUsereft.UseVisualStyleBackColor = False
+        Me.rUserleft.BackColor = System.Drawing.Color.DarkBlue
+        Me.rUserleft.Font = New System.Drawing.Font("Aircruiser", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rUserleft.ForeColor = System.Drawing.Color.Transparent
+        Me.rUserleft.Location = New System.Drawing.Point(463, 351)
+        Me.rUserleft.Name = "rUserleft"
+        Me.rUserleft.Size = New System.Drawing.Size(90, 35)
+        Me.rUserleft.TabIndex = 4
+        Me.rUserleft.Text = "Left"
+        Me.rUserleft.UseVisualStyleBackColor = False
         '
         'rUserRight
         '
@@ -322,9 +322,9 @@ Partial Class TeamSelection
         Me.Controls.Add(Me.lUserConfirm)
         Me.Controls.Add(Me.rUserConfirm)
         Me.Controls.Add(Me.rUserRight)
-        Me.Controls.Add(Me.rlUsereft)
+        Me.Controls.Add(Me.rUserleft)
         Me.Controls.Add(Me.lUserRight)
-        Me.Controls.Add(Me.llUsereft)
+        Me.Controls.Add(Me.lUserleft)
         Me.Controls.Add(Me.rUserPlayerTeam)
         Me.Controls.Add(Me.lUserPlayerTeam)
         Me.DoubleBuffered = True
@@ -346,9 +346,9 @@ Partial Class TeamSelection
     Friend WithEvents playerSprites As System.Windows.Forms.ImageList
     Friend WithEvents lUserPlayerTeam As System.Windows.Forms.PictureBox
     Friend WithEvents rUserPlayerTeam As System.Windows.Forms.PictureBox
-    Friend WithEvents llUsereft As System.Windows.Forms.Button
+    Friend WithEvents lUserleft As System.Windows.Forms.Button
     Friend WithEvents lUserRight As System.Windows.Forms.Button
-    Friend WithEvents rlUsereft As System.Windows.Forms.Button
+    Friend WithEvents rUserleft As System.Windows.Forms.Button
     Friend WithEvents rUserRight As System.Windows.Forms.Button
     Friend WithEvents rUserConfirm As System.Windows.Forms.Button
     Friend WithEvents lUserConfirm As System.Windows.Forms.Button
