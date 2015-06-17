@@ -549,10 +549,6 @@
         If starttimer = 4 Then
             starttimer = 0
             Start.Stop()
-            If GlobalVariables.sounds = True Then
-                My.Computer.Audio.Play(My.Resources.Main_Screen_Music_wav_file, _
-    AudioPlayMode.BackgroundLoop)
-            End If
             tick.Start()
         End If
     End Sub
