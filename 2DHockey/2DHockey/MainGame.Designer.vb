@@ -149,7 +149,7 @@ Partial Class MainGame
         Me.team2score.BackColor = System.Drawing.Color.Black
         Me.team2score.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.team2score.ForeColor = System.Drawing.Color.Gold
-        Me.team2score.Location = New System.Drawing.Point(446, 436)
+        Me.team2score.Location = New System.Drawing.Point(446, 435)
         Me.team2score.Name = "team2score"
         Me.team2score.Size = New System.Drawing.Size(48, 52)
         Me.team2score.TabIndex = 12
@@ -161,7 +161,7 @@ Partial Class MainGame
         Me.team1score.BackColor = System.Drawing.Color.Black
         Me.team1score.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.team1score.ForeColor = System.Drawing.Color.Gold
-        Me.team1score.Location = New System.Drawing.Point(298, 436)
+        Me.team1score.Location = New System.Drawing.Point(293, 435)
         Me.team1score.Name = "team1score"
         Me.team1score.Size = New System.Drawing.Size(48, 52)
         Me.team1score.TabIndex = 11
